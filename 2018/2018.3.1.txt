@@ -1,0 +1,35 @@
+/unity/whats-new/2018.3.1
+Release notes
+Fixes
+
+Android: Removed extraneous log message that could be confused with a failure, when one did not occur 'Failed to load lib_burst_generated'. (1059752)
+Animation: Fixed tangent mode not enforced when changing keyframe in recording mode. (1097109)
+Asset Import: Fixed crash when importing an R16 texture as a normal map. (1105211)
+Build Pipeline: Fixed crash on AddBuildAssetInfoChecked when building project with scene that contains "Super Text Mesh" component. (1031313)
+Editor: Allow Application.targetFramerate to be used when Time.captureFrameRate is set. (1100116)
+Editor: Fixed issue with Menu items being enabled when modal windows are shown. (1093199)
+Editor: Removed close X button on dock area tabs. (1105463)
+Graphics: Fixed a legacy cubemap crash when its parameters are changed. (1038653)
+Graphics: Fixed against GPU driver assert for CopyTexture edge case. (1065883)
+Graphics: Fixed an issue where unbound UAVs in shaders would cause the Editor to crash. (988911, 1098906)
+Graphics: Fixed appdata not zero-initialized in domain shader causing compiler error about out parameter not being fully initialized.
+Graphics: Fixed edge/inside tesselation factors being improperly handled. (1065883)
+Graphics: Fixed shader translation of RWTexture2D. (1103036)
+Graphics: Fixed vertex/hull shader program translation into a tessellation compute kernel when there is no vertex input. (1086957)
+IL2CPP: Fixed crash when using StructLayout attribute and specifying a Pack value. (1099207)
+IL2CPP: Fixed not checking the managed thread id at thread creation time to prevent it from being overwritten if it has already been set. (1101331)
+iOS: Make "textures used in draw call" use our hash_set instead of std::set. (1061553)
+Prefabs: Fixed exceptions when right clicking on a nested Model Prefab and choosing Open Prefab Asset. It now shows the "Open Model" menu item instead like for non-nested models. (1102433, 1102759)
+Prefabs: Fixed not possible to revert and apply default override properties via the property context menu again, as in previous versions of Unity. (1104791)
+Prefabs: Fixed PrefabUtility.GetAddedGameObjects so it doesn't return added GameObjects that are themselves under added GameObjects. This is consistent with what we show in the Overrides dropdown. (1104805)
+Prefabs: Fixed that after building a Player opening Prefab Mode fails with: 'Could not detect a Prefab root after loading'. (1107035)
+SceneManager: Fixed editor crashing when creating a prefab of a GameObject whose parent's prefab instance is missing. (1107518)
+Scripting: Editor: Fixed potential crash when deleting Assembly Definition Files (.asmdefs) in packages. (1101390)
+Scripting: Fixed extreme rarely crash in Component.GetComponentsInChildren. (1088900)
+Scripting: Fixed plugins explicitly referencing from Assembly Definitions. (1110434)
+Scripting Upgrade: Fixed crash when debugger invoked method with ref return. (1076527)
+Shaders: Fixed ComputeShader.SetTextureFromGlobal() to work with 3d textures. (1088840, 1104047)
+Shaders: Fixed Shader bundle does not rebuild when changing an included HLSL file. (1064917)
+Terrain: Fixed single pixel border artifact for height and collider after Undoing paint operation. (1104915)
+
+Changeset: bb579dc42f1d

@@ -1,0 +1,21 @@
+/unity/whatsnew/unity-2017.4.15
+Release notes
+Fixes
+
+2D: Fixed tiled animated Sprites glitch when iterating over frames. (1076834, 1093240)
+Android: Fixed crash in "AudioManager::ShutdownReinitializeAndReload" with Bluetooth headset pairing. (1086597)
+Android: Fixed unpredictable ordering with FixedUpdate. (1071756)
+IL2CPP: Fixed COM Objects representing Windows.Foundation.IAsyncAction and Windows.Foundation.IAsyncOperation getting destroyed after converting them to System.Threading.Tasks.Task via "AsTask" extension method. (1086209)
+IL2CPP: Support Marshal.SizeOf for types with a generic base class when the base class does not use the generic type in any field. (1083239)
+iOS: Fixed a crash in iOS 7 due to the use of [UIScreen coordinateSpace]. (1050777, 1093249)
+iOS: Fixed an issue where the namespace UnityEditor.iOS.Xcode was not found when running the Editor in batch mode. (1018716, 1082694)
+iOS: Fixed screen.safeArea not reported correctly when orientation is changed. (1028312, 1044173)
+Physics: Fixed a crash when setting a too small size to Terrain size. (1048878, 1079802)
+Physics: Fixed an issue where colliders without physics material don't return correct default material in Physics Settings. (1058082, 1080052)
+Physics: Fixed an issue where mass properties are not correctly updated when changing collider scale. (1024453, 1079803)
+Physics: Fixed an issue where transform to CharacterController in OnControllerColliderHit is ignored. (1005564, 1080047)
+Scripting: Fixed crash with message box "GetThreadContext failed". (1082246)
+Scripting Upgrade: Fixed hang when running tests in Editor. (971923)
+Shaders: Fixed not able to load shaders from AssetBundles that were created in 2017.2. (1096788)
+
+Revision: 5d485b4897a7

@@ -1,0 +1,152 @@
+/unity/whats-new/2019.4.8
+Release notes
+Known Issues in 2019.4.8f1
+
+AI: Editor crashes on MemoryManager::GetAllocator when selecting NavMeshAgent Component in the Inspector window
+(1257220)
+Asset Bundles: [Performance Regression] AssetBundleLoadAllAssets - Load_Prefabs_AllAssets is significantly slower than 18.4
+(1203512)
+Asset Bundles: [Performance Regression] AssetBundleLoadSingleAssets : LoadAsync_Prefabs_SingleAssets is significantly slower than 18.4
+(1203511)
+Global Illumination: [URP] Transparencies are ignored because URP uses _BaseMap as main texture identifier
+(1246262)
+Global Illumination: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - LowLevel: Gfx.WaitForPresent / Gfx.WaitForPresentOnGfxThread huge spikes in Profiler when in Play Mode with vSync set to "Don't Sync"
+(1108469)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+IAP: Unity purchasing gives error on project upgrade due to failing to find UnityEngine.UI assembly
+(1193773)
+Inspector Framework: Crash on mono_method_signature_checked when selecting a Context Menu option that has been removed from code
+(1263906)
+Linux: Linux Editor returns the "O" key's KeyCode when the Space key is being pressed
+(1263921)
+MacOS: [macOS] Unity kernel crashes Mac with OpenGL when only Intel Graphics are present
+(1232673)
+Mono: Crash with various stack traces when exiting Play Mode after recompiling scripts
+(1238859)
+Profiling: Performance issue in "Profiler" UI with increasing number of events
+(967289)
+Scripting: [SerializedField] fields produce "Field is never assigned to..." warning
+(1080427)
+Serialization: [SerializeReference] Polymorphic instances are always recreated when applying any inspector value change
+(1193322)
+Shadows/Lights: Skybox lighting is not rendered after creating gameobjects in the new scene until the lighting is rebaked
+(1250293)
+Window Management: Crash on block_remove when initiating a drag and closing the window from which the drag originated
+(1221016)
+Window Management: ReloadAssembly -> EndReloadAssembly processing freezes Editor for minutes
+(1253165)
+
+2019.4.8f1 Release Notes
+Fixes
+
+2D: Fixed Edge and Polygon 2D collider tools not supporting multiple selection.
+(1224661)
+2D: GameObjects created by RuleTile are destroyed if Tilemap.CompressBounds is called during awake or start
+(1194166)
+AI: Resolves an issue where NavMeshQuery::Raycast could get stuck in an infinite loop if the NavMesh contains degenerate polygons.
+(1254813)
+Animation: Fixed an issue where the animator would be invalid when setting a runtime animator controller to null then assign it a value.
+(1253155)
+Asset Pipeline: Fixed performance problem with script type hash generation used for script type dependencies
+(1260657)
+Editor: Added internal CompilationPipeline.IsCodegenComplete()
+Editor: Added UNITY_TEST_FRAMEWORK define constraint to filter out test framework assemblies from platform build without tests
+(1210156)
+Editor: Fix tab dragging on Windows from a secondary monitor where the taskbar is on the left edge of the screen
+(1233409)
+Editor: Fixed 'BeginLayoutGroup must be called first' console errors being printed when canceling some editor dialogs.
+(1248979)
+Editor: Fixed an issue where the newly added menu item under GameObject context menu is always displayed as enabled inappropriately, irrespective of the validation function being verified.
+(1247020)
+Editor: Fixed application freezes when it is out of focus.
+(1247435)
+Editor: Fixed crashing when loading a project with duplicate scenes.
+(1069650)
+Editor: Fixed GUIClip errors when creating scripts while Project window is in a single column mode
+(1255353)
+Editor: Xcode projects generated for MacOS standalone builds will now correctly copy native plugins
+(1237217)
+Graphics: Fix CustomRenderTexture not using depth for camera rendering
+(1226411)
+Graphics: Fixed a bug with AsyncGPUReadback, where if you first read into a NativeArray, and then the request was recycled and used normally, it would fail to release the memory for the request.
+(1260624)
+Graphics: Fixed missing support for texture 2d (ms) arrays.
+Graphics: Fixed warmup of shaders with instancing variant crashing on some graphics api
+(1245347)
+Graphics: Metal: Fixed an Editor scene view issue causing artifacts on some GPU drivers
+(1240265)
+Graphics: Metal: Fixed Editor view repaint causing geometry explosion randomly
+(1267126)
+Graphics: Solve performance issues with reflection probe anchors when reloading scenes.
+iOS: Correctly implement touch reset when app resigns active
+(1253537)
+macOS: Change Plugins to PlugIns for code signing
+(1188947)
+Package Manager: Fixed an issue where the Diagnose button in the critical startup failure dialog would not launch a diagnostics window on Linux.
+Package Manager: List the samples of a package api doesn't work without opening package manager window
+(1259196)
+Package Manager: Project browser gets refreshed when a embed package name is modified.
+Package Manager: Trying to import an asset which is a complete project from the Package Manager will now display a popup dialog informing that the user's project settings will be overwritten if they choose to continue with the import.
+(1255256)
+Profiler: Added missing root to memory snapshots to account for executable and dll in memory size
+(989625)
+Profiler: Fixed a crash where triggering a Snapshot on a player with an Editor connected, would attempt to the snapshot to the Editor
+(1260560)
+Scripting: Fix crash when native hardware exceptions occur in Burst compiled code.
+(1253096)
+Scripting: Sort ILPostProcessors by name
+Serialization: Fix crash when using SerializedProperty::SetManagedReferenceValue with object instance containing boolean serialized field.
+(1256438)
+Shaders: Fixed Metal shader compilation error when half values are reinterpret-casted to integer values
+(1223279)
+Shaders: Fixed metal shader compilation error when half3 temporary arrays are used
+(1256024)
+Windows: Fixed visual artefacts that can appear when the window is minimized and restored after previously running the standalone player in fullscreen
+(1201766)
+XR: Correct culling frustum calculation for Windows Mixed Reality.
+XR: Fix for performance loss from lack of stereo and matrix buffer memory compares with CPU shadow memory.
+(1262059)
+XR: Projects targeting ARCore (Android only) can now use any Gradle version up to 3.6.0
+(1245185)
+
+Improvements
+
+2D: Improve placement of Tiles in Tile Palette for Spritesheets where there are gaps between Tiles
+Editor: Dark Theme editor preference is now available to all users
+
+Features
+
+Editor: Added -version argument to command line arguments which prints out the Unity version to console
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

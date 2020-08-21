@@ -1,0 +1,236 @@
+/unity/whats-new/2019.4.1
+Release notes
+Known Issues in 2019.4.1f1
+
+Animation: Inspector not displaying state and transition properties once duplicated
+(1251586)
+Cloth: Cloth does not correctly bend and fall when in contact with a Collider
+(1219030)
+CodeEditors: Crah with __pthread_kill + 10 when debugging with Rider
+(1241352)
+Global Illumination: [URP] Transparencies are ignored because URP uses _BaseMap as main texture identifier
+(1246262)
+Global Illumination: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - General: Plugging time into a master node on HDRP crashes Unity
+(1246991)
+Graphics - General: [Performance Regression] AssetBundleLoadAllAssets - Load_Prefabs_AllAssets is significantly slower than 18.4
+(1203512)
+Graphics - General: [Performance Regression] AssetBundleLoadSingleAssets : LoadAsync_Prefabs_SingleAssets is significantly slower than 18.4
+(1203511)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+IAP: Unity purchasing gives error on project upgrade due to failing to find UnityEngine.UI assembly
+(1193773)
+IMGUI: Editor crashes when using WebView_CUSTOM_AllowRightClickMenu
+(1249548)
+Linux:  Editor does not quit when pressing the X button
+(1175847)
+MacOS: [macOS] Crash in -[CocoaMainMenu validateMenuItem:] when using the Help menu search after building a player
+(1255419)
+Mono: Crash on buffer_add_value_full when debugging with code editor attached
+(1249172)
+Physics: Crash after "[Physics.PhysX] Foundation: Invalid registration detected" errors show up when using Physics.BakeMesh
+(1200588)
+Scene/Game View: Line Renderer Edit Points in Scene View gizmo is not responsive in the Scene View
+(1244789)
+Scripting: [SerializeReference] Polymorphic instances are always recreated when applying any inspector value change
+(1193322)
+Scripting: [SerializedField] fields produce "Field is never assigned to..." warning
+(1080427)
+Shadows/Lights: Skybox lighting is not rendered after creating gameobjects in the new scene until the lighting is rebaked
+(1250293)
+Terrain: Crash on Shader::GetLocalKeywordRemap or ShaderLab::Pass::ApplyPass when Trees are painted on a Terrain
+(1254964)
+Vulkan:  Crash on vk_optimusGetInstanceProcAddr when double clicking shader's Compiled Code drop down arrow
+(1248909)
+Window Management: ReloadAssembly -> EndReloadAssembly processing freezes Editor for minutes
+(1253165)
+Windows: Cannot activate license within a docker container
+(1193364)
+
+2019.4.1f1 Release Notes
+Fixes
+
+Android: Copy mapping file from the correct location
+Android: Detect new layout Android SDK tools
+(1229382)
+Android: Fix freeze on Galaxy S20 when using OpenGL ES GPU skinning with blend shapes
+(1236183)
+Android: Unity analytics does not get advertising ID anymore
+Animation: Fixed a crash that occurred when trying to reactivate a game object with an invalid playable output
+(1245074)
+Animation: Fixed manipulation jitters in the Animation Window recording with 2D IK character setups.
+(1225191)
+Asset Bundles: Fix bug that prevented adding a scriptable object defined in a precompiled assembly to an AssetBundle
+(1184918)
+Asset Import: Fixed assert errors of memory leak when EditorSceneManager.NewScene is called in OnPostprocessAllAssets.
+(1249386)
+Audio: Fixed editor crash on changing 'System Sample Rate' when Audio track preview is being played in Timeline window.
+(1232743)
+Bug Reporter: Fix a folder compression failure when path length is bigger than 260 symbols
+(1175262)
+DX12: make sure we dont create a rendertarget that has kSurfaceCreateNeverUsed flag set
+(1244224)
+Editor: Assembly References to package assemblies break IDE projects
+(1248962)
+Editor: Dont invalidate a serialized property if we resize an array to the same size in the context of single edition
+(1246524)
+Editor: Fix crash when Animator window is open. macOS
+(1242026)
+Editor: Fix Entering Playmode with Scene Reload disabled crashes when DestroyImmediate is used in OnDisable
+(1250550)
+Editor: Fixed issue where refresh timestamp in Package Manager/In Project view would not update correctly.
+(1254141)
+Editor: Fixed nondeterministic behavior when calling EditorApplication.isPlaying = true while scripts are compiling, so only one script reload happens. Before the fix either one or two script reloads would happen.
+(1233671)
+Editor: Fixing double consecutive OnDisable calls for inspectors while entering playmode or during assembly reload
+(1159201)
+Editor: Preset target has the Preset asset name in the Preset inspector instead of a blank name so custom inspector can always rely on the .target.name value to be the asset one.
+(1210891)
+Editor: prevents hang from calling capturescreenshotastexture() outside of playmode
+(1238552)
+Editor: Removed "macOS Color Picker" editor preference setting (that setting only ever partially worked anyway, e.g. it did not support HDR colors).
+(1231003)
+Editor: Stop sending gyro settings to Unity Remote if nothing's changed.
+(1206221)
+Graphics: Fix loads from RWTexture in OpenGL ES 3.1 compute shader
+(1224442)
+Graphics: Fix partial loads from RWTexture when using OpenGL ES, Metal, Vulkan
+(1227481)
+Graphics: Fix RWBuffer<uint> in OpenGL ES 3.1 compute shaders
+(1237688)
+Graphics: RenderDoc integration crash fixed.
+(1208237)
+Graphics: Setting MeshRenderer.additionalVertexStreams doesn't use the correct override Color when SRP Batcher is enabled
+(1250239)
+Graphics: VFX : Fix Shader.SetGlobalBuffer in dispatch execution using defaultCommandBuffer in VFXManager.
+(1253224)
+Graphics: VFX parameters are not set when the gameobject is immediately deactivated and is not selected in the Hierarchy
+(1230230)
+IL2CPP: Correct the implementation of ConcurrentBag so that it works with ETW managed code stripping.
+(1230447)
+iOS: Fix iPhone bluetooth controller buttons not registering input
+(1241180)
+iOS: Fixes an issue that prevents native windows from overlapping the Unity view.
+(1247256)
+iOS: Include GameController framework whenever Input class is used in code, this will ensure MFI controllers like Dualshock will be discovered on application start.
+(1211074)
+iOS: Properly detect Dualshock gamepad during application start when new input system is used on iOS, the issue was because GameController framework was not included in exported project. AppleTV didn't had this bug, since GameController is always included in AppleTV's Xcode project.
+(1244053)
+Linux: Fixed keyboard modifiers from being incorrectly munged while moving between editor windows.
+(1239227)
+macOS: Fixed Bundle Identifier from Player Settings not matching the generated Xcode project bundle identifier on macOS Standalone
+(1221132)
+Mobile: Fix CoreLocation framework being falsely shown as "default" in plugin importer (moved to "frequent" list).
+(1222455)
+Mobile: Fix horizontal axis input from MFI controllers on iOS 13.
+(1239980)
+Mobile: Fix iOS applicationIdentifier resetting during project upgrade.
+(1225872)
+Mobile: Fix iPad Spotlight icon name label in PlayerSettings.
+(1239020)
+Mobile: Prevent iOS/tvOS simulator builds from being appended with device builds
+(1216005)
+Package Manager: Fixed an issue in the UnityEngine.PackageManager.Client.Pack method did not properly use the contents of .gitignore when .npmignore was missing.
+Package Manager: Fixed an issue in the UnityEngine.PackageManager.Client.Pack method which could sometimes result in file permission issues.
+Package Manager: Fixed an issue where npm authentication configuration was ignored when there was an extraneous slash at the end of the configured registry URL.
+Package Manager: Fixed an issue where the Unity Package Manager could take more time to start up than the 10 seconds allotted by Unity.
+Package Manager: Fixed an issue where the Client.GetAllPackageInfo method would silence errors and return an empty list of packages when there were registry reachability issues.
+Particles: Fix opaque particle lighting in deferred rendering
+(1193339)
+Particles: Fixed sub-emitters using the wrong position when first emitting.
+(1247219)
+Physics: Fixed an issue where calling SetEnabledFading(false) for the first time would cause the cloth instance to immediately snap into place and not disable properly.
+(1170627)
+Physics: Fixed an issue where cloth constraints would reset when applying a mesh with the same number of vertices
+(1242446)
+Physics: Fixed an issue where painting constraints with the gradient tool would not apply a gradient values
+(1172171)
+Physics: Fixed an issue with tethers not being created
+(1238039)
+Prefabs: Fixed 50% of all object references appear as null within a scripts OnBeforeSerialize callback, during domain reloads.
+(1152124)
+Prefabs: Fixed ShowPrefabAssetRestructuringDialog crash when adding a RectTranform on an object
+(1243637)
+Scripting: Added support for the new il2cpp_set_default_thread_affinity IL2CPP API
+(1235709)
+Scripting: Changed behavior on debugger-agent, if we can't parse new behavior we now return invalid_argument instead of asserting.
+(1197204)
+Scripting: Fixed crash that occurred during domain reload that was caused by image set data being stored in the wrong image.
+(1224837)
+Scripting: Fixed issue where deserializing an abstract class containing a hierarchy of classes would fail and throw an unhelpful exception.
+(1204074)
+Scripting: Fixes Catalina OSX returning 0 for disk space on read only drives.
+(1221933)
+Scripting: Potential fix for random crash.
+(1232819)
+Shaders: Fixed regression in shader error state reporting with ShaderUtil.GetAllShaderInfo()
+(1248017)
+TextCore: - Updated FontEngine to improve performance as well as reduce memory allocations.
+
+Fixed Font Asset Creation process not using Multi-Threading in the Editor when using SDF8, SDF16 and SDF32 modes.
+Fixed memory allocation issue when retrieving glyph adjustment pairs.
+Fixed PairAdjustmentRecords returning a value of infinity with certain font files.
+Fixed incorrect PairAdjustmentValues when using SDF8, SDF16 and SDF32 modes.
+SDF, SDF8, SDF16 and SDF32 modes no longer use hinting to improve glyph sampling at low point size.
+
+TextCore: FontEngine.GetGlyphPairAdjustmentTable OutOfMemoryException
+(1249491)
+TextCore: Incorrect Vertical Alignment of Glyphs when using SDF8, SDF16 and SDF32 modes
+(1249493)
+TextCore: TMP - Kerning Values are incorrect when using SDF8, SDF16 and SDF32 Render modes
+(1249497)
+Version Control: Fix Temp/Package files getting added when installing a UPM
+(1250933)
+XR: Fixed latency increase caused by prediction fixes.
+
+API Changes
+
+Graphics: Added: Image conversion into a NativeArray is supported.
+ImageConversion.EncodeNativeArrayToTGA
+ImageConversion.EncodeNativeArrayToJPG
+ImageConversion.EncodeNativeArrayToPNG
+ImageConversion.EncodeNativeArrayToEXR
+Package Manager: Changed: The enableLockFile option is now enabled by default when absent from the project manifest
+
+Changes
+
+2D: Allowed users to set 0 for Offset Distance for a Composite Collider 2D.
+
+Improvements
+
+Package Manager: Dependency resolution now automatically resolves trivial conflicts.
+Package Manager: Improved performance of Package Manager metadata requests sent to the registry.
+Physics: Make the MeshCollider fast midphase work on all platforms.
+(1213433)
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

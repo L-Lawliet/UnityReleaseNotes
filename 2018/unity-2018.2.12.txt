@@ -1,0 +1,40 @@
+/unity/whatsnew/unity-2018.2.12
+Release notes
+Fixes
+
+Android: Allow Power VR devices rendering at custom resolution with BlitType:Auto. (1022974, 1063419)
+Animation: Fixed crash when using the GameObjectRecorder with an invalid EditorCurveBinding. (1076523)
+Asset Import: Fixed crash when re-importing assets for some global settings. (1079532, 1081911)
+Build Pipeline: Fixed crash in "il2cpp::utils::Debugger::InitializeTypeSourceFileMap()" at startup. (1051393)
+Editor: Fix colliding file ids in YAMLMerge not tracking already remapped keys. (1076698)
+Graphics: Fixed a race condition in the culling code that would free memory of a job that is still in-flight leading to a crash in the editor. (1062032)
+IL2CPP: Add support for building with Xcode 10 and the macOS 10.14 SDK.
+IL2CPP: Fixed memory mapped files with an offset not being handled correctly. (1082118)
+IL2CPP: Fixed proper C++ code not being generated for unsafe C# which accesses an array element via a pointer. (1081052)
+IL2CPP: Fixed the proper default p/invoke function name for Win32 API functions not being called. (1079850)
+IMGUI: Fixing issue with 16bit chars not displaying correctly. (1067159)
+iOS: Fixed "textures used in draw call" not using our hash_set instead of std::set. (1061553)
+iOS: Fixed Screen.safeArea not being reported correctly when orientation is changed. (1028312, 1037753)
+Physics: Fixed contact callback assertion errors when using multi-threaded 2D physics. (1042478)
+Physics: Fixed intermittent editor crash when using multi-threaded 2D physics. (1082697)
+Physics: FIxed Joint2D.breakForce and Joint2D.breakTorque not able to be set to infinity. (1065618)
+Physics: Fixed OnCollisionEnter2D occasionally returning zero normal/tangent impulse when using Continuous Collision Detection mode on a Rigidbody2D. (1080330)
+Physics: Fixed OnCollisionEnter2D occasionally returning zero relative-velocity when using Continuous Collision Detection mode on a Rigidbody2D. (1037965)
+Scripting: Fixed incorrect Transform.hierarchyCount and Transform.hierarchyCapacity properties. (1079998, 1082886)
+Scripting: Fixed TLS related crash. (1073395)
+Scripting Upgrade: Fixed crash when calling Application.Unload. (1060891)
+Scripting Upgrade: Fixed potential deadlock on OSX. (1077203)
+Scripting Upgrade: Fixed SslStream/UnityTlsContext not reporting gracefully closed Streams on read. (1076788)
+Shaders: Added two env vars to override the default shader compiler timeouts:
+UNITY_SHADER_COMPILER_TASK_TIMEOUT_MINUTES overrides the timeout for waiting a response from a compiler task (compile, preprocess, disassemble)
+UNITY_SHADER_COMPILER_CONNECT_TIMEOUT_SECONDS overrides the initial connection creation timeout. (1038278)
+Shaders: Added two env vars to override the default shader compiler timeouts:
+UNITY_SHADER_COMPILER_TASK_TIMEOUT_MINUTES overrides the timeout for waiting a response from a compiler task (compile, preprocess, disassemble)
+UNITY_SHADER_COMPILER_CONNECT_TIMEOUT_SECONDS overrides the initial connection creation timeout. (1072458)
+Shuriken: Fixed syncing transforms when acquiring the light prefab in particle systems. (1064232)
+Timeline: Fixed temporary game object being created for custom tracks by Timeline Editor. (1082600)
+Timeline: Fixed timeline scrubbing for subemitters with autorandomseed. (1076850)
+Timeline: Fixed tooltip typo in control tracks. (1083618)
+XR: Fixed incorrect device position when building ARCore apps targeting x86.
+
+Revision: 0a46ddfcfad4

@@ -1,0 +1,20 @@
+/unity/whats-new/2017.4.39
+Release notes
+Known Issues in 2017.4.39f1
+
+Asset Bundles: Loading.LockPersistentManager object lock impacts performance during AssetBundle.LoadAssetAsync operation
+(827299)
+iOS:  Apps with UIApplicationExitsOnSuspend in info.plist failing to pass Apple Store validation
+(1160614)
+uGUI: RectTransofrm resets it's coordinates to zero when selecting "Apply" on prefab even if no changes were made
+(964111)
+
+2017.4.39f1 Release Notes
+Fixes
+
+Android: Fixed on-screen keyboard being closed when focusing different InputField.
+(1180393)
+Asset Import: Fixed issue where setting EditorCurveBinding.type to a custom component binds to "MonoBehavior" instead of the derived class.
+(1201584)
+iOS: Fixed an iOS 8 player startup crash in CreateSystemRenderingSurfaceMTL.
+

@@ -1,0 +1,92 @@
+/unity/whats-new/2019.1.7
+Release notes
+Changes
+
+Android: Android Gradle plugin version updated up to 3.4
+Android: Gradle version updated up to 5.1.1
+
+Improvements
+
+Windows: Added a Player Setting for reverting to BltBlt swapchain model which was used before 2019.1. This enables several scenarios like transparent window to be used once again
+(1107463, 1152570)
+XR: Added GPU Profiler support for Oculus Quest and Oculus Go.
+
+Fixes
+
+Android: Fixed ASTC HDR textures in Mac Editor.
+(1142953, 1145498)
+Android: Fixed problem with Android manifest containing incorrect values for platformBuildVersionCode and platformBuildVersionName.
+(1118325, 1160630)
+Animation: Fixed a crash when animating optimized hierarchies with constant animated properties
+(1142636, 1151041)
+Asset Import: Fixes an issue where if a mesh asset has no vertex data, the import crashes in some cases.
+(1144169, 1150808)
+Asset Pipeline: Fixed sprite mask sorting layer resetting to default when asset is loaded from asset bundle.
+(1119829, 1153004)
+Editor: Fixed a case where a Version Controlled Project would not update ProjectSettings/ProjectVersion.txt on editor start.
+(1131599, 1146736)
+Editor: Fixed a crash while using TextRenderingPrivate::GetFormatString with specific string.
+(1150645, 1156737)
+Editor: Fixed host local address not validated on GET HTTP request.
+(1146895, 1152795)
+Editor: Fixed issue where SceneVis was not preventing picking of objects with gizmos and no renderers.
+(1141999, 1146284, 1157414, 1157416)
+Editor: Fixed the scale error by updating the scale once the platform is switched.
+(918311, 1153435)
+GI: Fixed a potential baking crash when objects HideFlags are configured.
+(1064691, 1156004)
+Graphics: Fixed excessive stripping of shaders without users keywords resulting in missing usage of vertex components and discarding them.
+(914736, 1149323)
+Graphics: Fixed Vulkan Editor on AMD GPUs.
+(1145367, 1149412)
+iOS: Fixed error/crash on startup when using DisplayP3 color gamut.
+(1136841, 1152114)
+Particles: Fixed an issue where the Particle System Inspector can become slow after editing its material but not saving the changes.
+(1154688, 1159216)
+Physics: Fixed crash that happened when destroying Colliders that had OnCollisionStay scripts attached.
+(1113545, 1161860)
+Physics: Fixed Rigidbodies not following their parent sometimes.
+(1140632, 1161857)
+Timeline: Fixed "Add Signal Emitter" commands should be listed first in a track's context menu.
+(1131166, 1133970)
+Universal Windows Platform: Fixed files in StreamingAssets directory not treated as generic data files so they won't get consumed by various VS tools like the XAML compiler.
+(1110262, 1152577)
+Version Control: Fixed prompting when attempting to check out ProjectSettings/XRSettings.asset.
+(1144407, 1151473)
+Windows: Fixed locked cursor getting placed slightly off center in the editor and the standalone player.
+(824304, 1152574)
+Windows: Fixed Standalone Player remains paused/inactive after using WIN+D shortcut to restore the app window (case 1117930).
+(1117930, 1147086)
+XR: Fixed a crash in the Lumin video player when open fails.
+(1150947, 1151175)
+XR: Fixed issue in HoloLens where we weren't using the correct anchor view for switching away from on screen keyboard in XAML.
+(1156224, 1156227)
+XR: Fixed SwitchAsync call to use correct anchor view id.
+(1156224, 1156227)
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 12.04+, SteamOS+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 9.0 or higher.
+Android: OS 4.1 or later; ARMv7 CPU with NEON support or Atom CPU; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+

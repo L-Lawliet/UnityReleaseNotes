@@ -1,0 +1,30 @@
+/unity/whatsnew/unity-2018.2.13
+Release notes
+Improvements
+
+XR: Linear color space now works on Oculus Go and Quest.  For Gear VR, driver issues may prevent linear from working with S7 Adreno phones on Android 7.0.
+XR: Updated Vuforia to version 7.5.20.
+XR: Updated Oculus to version 1.29.0.
+
+Fixes
+
+Android: Fixed crash when closing scene with active webcamTexture. (1059444)
+Asset Import: Fixed the Rig setup workflow in the Model Importer to enable setting up the avatar using scripts and presets. (1060952, 1066786)
+Editor: Fixed GradientEditor closing when selecting the color picker tool on OSX.
+Color picker tool is now cancelled when changing keyboard focus. (1059666)
+Editor: Fixed issue with .asmdef assemblies referencing player-only .asmdefs not getting properly compiled on startup in projects without a Library folder/clean import. Potentially leading to missing MonoBehaviour references in scenes until the next recompile of scripts. (1082746)
+Editor: Fixed issue with script compilation not triggering correctly when moving a script from one .asmdef folder to another .asmdef folder. (1082699)
+Editor: Fixed keypad period and delete for input fields (linux).
+Editor: Fixed Null reference exceptions while typing in project window search bar. (1077389)
+Editor: Fixed persistence of user-added items in Component menu. (1038153)
+Graphics: Fixed multi-threading crash where default property values have to be pulled from the Material when Graphics.DrawMeshInstanced is called. (1046126)
+Graphics: Metal: Fixed unity applications not correctly reported as "Requires High Perf GPU" in Activity Monitor.
+Vulkan/Metal/OpenGL: Compute shader compilation optimizations.
+IMGUI: Fixed Exception when calling EditorGUIUtility ObjectPicker methods from Custom Editor. (1061966, 1077369)
+Mobile: Updated iOS and Android editor game view resolutions and aspect ratios.
+Physics: Fixed issue where physics internal data wasn't being updated if the scene only contained static colliders, causing issues with shape casts. (1064897)
+Scripting Upgrade: Fixed crash callstacks on OSX. (1074280)
+Shuriken: Fixed transform not recached immediately whena  particle system play state is changed. (1027576)
+XR: Updated Google VR for iOS to v1.170. Should resolve issue with orientation changes in Cardboard on iOS. (1087865)
+
+Revision: 83fbdcd35118

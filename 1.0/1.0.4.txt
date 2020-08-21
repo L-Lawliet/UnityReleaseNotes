@@ -1,3 +1,0 @@
-Bug fixes
-
-    First-time installation of Unity Widgets is now more stable

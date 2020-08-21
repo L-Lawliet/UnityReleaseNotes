@@ -1,0 +1,103 @@
+/unity/whats-new/2018.4.11
+Release notes
+Known Issues in 2018.4.11f1
+
+AI: Performance of NavMeshBuilder.UpdateNavMeshData spike up to 10 times
+(1183826)
+Animation: Crash in AnimationBlendTreePlayable::PropagateStateMachineInfoToChildClips when unloading asset bundle
+(1114534)
+Audio: Audio is playing even when there is no Audio Listener in the scene.
+(1087981)
+Graphics - General: Editor crashes at MaterialScripting::Lerp when Renderer.material.Lerp() has a null material
+(1117775)
+Mobile: [Android] Crash in java.lang.UnsatisfiedLinkError when application location is changed to SD card on Android device
+(1181365)
+Profiling: "Other" category is not shown in the player Profiler graph if a sample is not selected
+(1165477)
+Scene Management: Enabled Prefab is disabled after upgrading to Improved Prefabs
+(1138224)
+Scene Management: Transform::GetWorldToLocalMatrix  crash during first import when accessing Components in Prefabs
+(1159905)
+Scripting: [IL2CPP] Development build fails with "il2cpp.exe didn't catch exception: System.IndexOutOfRangeException"
+(1131053)
+Serialization: Kaydara FBX Binary becomes a YAML file when Editor serializes changes
+(1169079)
+Themes: Merge conflict in ProjectVersion.txt causes 'Unable to parse file' error on any project opened
+(1002683)
+Windows: When the registry value for "TimeZoneKeyName" is empty, null or invalid, "TimeZoneNotFoundException" exceptions are thrown
+(1076679)
+iOS: [iOS 13] UnityWebRequest.SendWebRequest() crashes when opening local file with "file:///" prefix
+(1183600)
+
+2018.4.11f1 Release Notes
+Fixes
+
+AI: Fixed issue with NavMesh carving that prevents paths from passing in-between two obstacles placed at particular positions near tile borders.
+(1154946, 1185085)
+Android: Fixed Webrequest "Unknown error".
+(1153466, 1166838)
+Animation: Fixed users being able to add properties in the animation window when the game object's hierarchy does not match the Animator's human avatar.
+(1162335, 1174965)
+Asset Import: Fixed issue where read-only "FBX" file would be corrupted after changing one of its materials and undoing.
+(1120097, 1173380)
+Editor: Added right handed copy/paste shortcuts to Editor.
+(1132112, 1178900)
+Editor: Fixed an issue where marquee selection always selected Assets loaded from a bundle.
+(1158173, 1171892)
+Editor: Fixed an issue which was preventing users from setting the camera background colour for PreviewRenderUtility windows.
+(1176854, 1184030)
+Editor: Fixed crash when Editor has no previous projects.
+(1188617)
+Editor: Fixed inspector stuttering when scrolling through the large serialize list.
+(1131250, 1143717)
+Editor: Fixed VU meter display on custom audio filter behaviours with custom editors.
+(1117744, 1167706)
+Graphics: Fixed some Isometric Tiles are not Rendered on the Tilemap when using "Chunk" Mode on the Tilemap Renderer.
+(1127579, 1151158)
+Graphics: Removed 4G cap on Texture mip streaming budget.
+(1147394, 1150743)
+IL2CPP: Corrected the behavior of Marshal.OffsetOf for byval arrays of types with 4 byte alignment when they are not the first field in a struct.
+(1182074, 1183947)
+iOS: Fixed errors with building Xcode project with ENABLE_ON_DEMAND_RESOURCES enabled.
+(1140420, 1183997)
+Networking: Fixed disposing WWW object that has been yield returned from coroutine.
+(1117213, 1172824)
+Package Manager: Fixed package tests been only added when making a package testable and adding a dummy package.
+(1135941, 1178931)
+Particles: Fixed crash when using Graphics.ExecuteCommandBuffer with a disabled ParticleSystemRenderer component.
+(1176567, 1178873)
+Physics: Fixed crash that happened when an inactive child body was unparented and activated.
+(1123490, 1183718)
+Physics: Fixed incorrect use of initial rotation of Rigidbody2D connected via a HingeJoint2D.
+(1160213, 1185636)
+Profiler: Fixed metadata loading from the saved profiler data file.
+(1150495, 1178021)
+Scripting: Fixed assembly assets not having the correct icon in the editor.
+(1163732, 1164073)
+Scripting: Fixed custom editors not working when adding non-editor only assembly definition, unless the user reimports all assets.
+(1172669, 1183676)
+Scripting: Reduced memory fragmentation when using Profiler Window.
+(1168484, 1178120)
+Scripting: Trigger script compilation when define symbols or allow unsafe code are modified from a external tool.
+(1171967, 1178936)
+Scripting: When we was looking for execute mode, we called mscorlib GetCustomAttributes, this was reinitializing the ScriptableSingleton. Causing multiple instances of the singleton to be initialized. Mono would throw an error about this.
+(1113071, 1162629)
+Terrain: Fixed issue where the Terrain Brush Inspector was spamming undo events.
+(1170735, 1174721)
+Terrain: Fixed the Remove Light Probe Ringing setting not being serialized and undoable.
+(1093751, 1148730)
+Themes: Fixed generic menu issue related to incorrect grouping of child menu item's when parent menu item contains space (" ") as its last character.
+(1116792, 1130265)
+UI: Fixed the UnityEvent property drawer showing UnityEvents in private properties correctly.
+(1178687, 1186175)
+Universal Windows Platform: Fixes missing Pen input data with new Input System.
+(1168844, 1182996)
+Universal Windows Platform: Fixes Xbox DPad not working in new Input System.
+(1168836, 1183002)
+WebGL: Removed indexedDB access timeout for WebGL Loader.
+(1134367, 1186784)
+XR: Fixed instability in Depth based LSR for HoloLens V1 devices.
+(1174865, 1186976)
+XR: Fixed Render Viewport Scale Jitter when render viewport scale changes continuously.
+(1153261, 1154496)
+

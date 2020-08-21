@@ -1,0 +1,7 @@
+/unity/whats-new/2018.2.21
+Release notes
+Fixes
+
+Fixed security vulnerability. (CVE-2019-9197).
+
+Changeset: a122f5dc316d

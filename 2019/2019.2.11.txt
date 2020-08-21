@@ -1,0 +1,160 @@
+/unity/whats-new/2019.2.11
+Release notes
+Known Issues in 2019.2.11f1
+
+Asset Importers: Crash on Marshalling::OutMarshaller when TextureImporter.ReadTextureSettings argument is null
+(1187147)
+Graphics - General: Project crashes on opening in ShaderLab::IntShader::PostLoad(Shader*)
+(1184997)
+IMGUI:  Inspector doesn't reflect the information of selected GameObject in Hierarchy after applying changes to Sprite
+(1186194)
+Input: [Windows] IMGUI input doesn't work in builds when using preview InputSystem package
+(1183394)
+Mobile: Player Settings window becomes blank and starts spitting errors after going to Android Settings > Icon
+(1177292)
+Mobile: [Android] Crash in java.lang.UnsatisfiedLinkError when application location is changed to SD card on Android device
+(1181365)
+Physics: Crash in physics PhysicsManager::Simulate
+(1122684)
+Physics: Crash on block_remove when changing mesh to Plane in Skinned Mesh Renderer while cloth component attached
+(1162918)
+Profiling: "Other" category is not shown in the player Profiler graph if a sample is not selected
+(1165477)
+Scene Management: Duplicated child nested prefab is not created in the same position
+(1157320)
+Scripting: [Templates] Clamp BlendShapes are set to true by default when creating new projects
+(1148638)
+Shuriken: [LWRP][URP] GetTransformInfoExpectUpToDate, RendererUpdateManager.UpdateAll race condition error message
+(1191755)
+
+2019.2.11f1 Release Notes
+System Requirements Changes
+Nothing changed.
+Fixes
+
+Android: Allow to disable symbols.zip generation when building apk or aab
+Android: Fix AndroidJavaClass.GetStatic sometimes not returning correct field value.
+(1179268, 1187408)
+Android: Fix touch delta returning garbage in Input System.
+(1183985, 1188381)
+Android: Fixed an Android 10 video player bug when playing local, external files.
+(1168329, 1191176)
+Android: Fixed an Android rotating device from portrait to landscape multiple times creates visual distortions.
+(1168456, 1186339)
+Android: Fixed an internetReachability issue, which it now returns the actual value from the first frame.
+(1178696, 1183252)
+Android: Fixed an issue with Android bundle identifier not allowing underscore.
+(1156290, 1188962)
+Android: Fixed and issue where swap width and height on orientation changed when a custom resolution was previously set.
+(1169739, 1191616)
+Android: Fixed setting keystore from the script.
+(1158036, 1162258)
+Android: Use relative path for keystore in project location after a second key is added.
+(977673, 1191618)
+Animation: Fixed a crash in AnimationClip when classID parameter wasn't set for curve.
+(1176555, 1189724)
+Animation: Fixed an issue where a clip with no recorded data would cause a crash in GameObjectRecorder.SaveToClip
+(1166522, 1169821)
+Animation: Fixed an issue where custom animator property was appearing as missing in animation window.
+(1165368, 1170755)
+Apple TV: Fixed and issue where 'B' button ignored 'allowExitToHome' value on certain GamePads after the first suspend of the app.
+(1179727, 1181543)
+Asset Import: Handled corrupt prefabs without crashes.
+(1131957, 1154622)
+Audio: Fixed a crash when running DSPGraph output job in edit mode.
+(1189666, 1191824)
+Editor: Fixed ProjectSettings.asset company/product name in some cases being empty
+(1188233, 1190658)
+Graphics: CopyTexture_Slice_AllMips crash when copying a compressed Texture2D to a Texture2DArray with a non-null destination layer
+(1189889, 1190685)
+Graphics: Fixed an issue where compute shader compilation fails on importing.
+(1171627, 1175491)
+Graphics: Fixed an issue where Unity would draw the UVs of objects that were no longer in the lightmap.
+(1117696, 1173075)
+Graphics: Fixed an issue with reporting of available VRAM on Intel GPUs.
+(1127485, 1172229)
+Graphics: Fixed and issue to ensure correct topology is set before rendering HDR split.
+(1178259, 1186863)
+Graphics: Fixed legacy cubemaps from generating an error in the Console Window when dropping them in the Scene View.
+(1185651, 1190793)
+iOS: Fixed a crash on malformed file:// URI in UnityWebRequest.
+(1183600, 1189509)
+iOS: Fixed GL caps check in trampoline when using MT rendering.
+(1184510, 1186907)
+macOS: Window > Bring All to Front now places secondary windows in front of the main window in the Editor, as expected, on macOS.
+(1141001, 1174694)
+Physics: Fixed and issue with Rigidbody2D constraints that were incorrectly affecting contact masses.
+(1189951, 1190700)
+Prefabs: Fixed an issue to make sure FindObjectsOfType does not find prefab assets objects during prefab import.
+(1159905, 1179536)
+Prefabs: Fixed an issue with a properly handle file with .prefab extension even though they are not prefabs.
+(1164341, 1179538)
+Prefabs: Fixed an issuie with a really old prefabs that was not being correctly activated.
+(1138224, 1179537)
+SceneView/GameView: Fixed a return value of DistanceToPolyLineOnPlane when it can't get a proper raycast hit.
+(1174967, 1190419)
+Scripting: Fixed a crash that may happen when inspecting variables in Rider debugger.
+(1169306, 1187512)
+Scripting: Fixed an issue where editor would fail to load correctly when an invalid or missing timezone was set in the windows registry.
+(1169719, 1192015)
+Scripting: Fixed the plugin script extraction for package UnityEngine.UI types.
+(1160664, 1184014)
+Scripting: Optimized HandleUtility.DistanceToPolyLine(*) to run faster.
+(1165684, 1173785)
+Timeline: Fixed an issue where Animation Events were fired twice when the Playable Director Wrap mode is set to Loop.
+(1173281, 1185451)
+Timeline: Fixed an issue where Playable Director's "Playable" field was missing the prefab override contextual menu
+(1167365, 1170065)
+Timeline: Fixed issue when Timeline Window does not detect selected Timeline asset when double-clicking the asset
+(1182159, 1187216)
+Timeline: Fixed issue where Custom Clip fields where no longer responding to the AddKey command
+(1174416, 1190830)
+Timeline: Repaint is called every frame when Timeline window is opened and a Playable Director is added to a GameObject
+(1172707, 1181762)
+UI: Fixed Input Field not functioning after restoring app with Win+D shortcut.
+(1165961, 1190383)
+UI Elements: UIElements debuggers now persist in layouts.
+(1162587, 1187986)
+Universal Windows Platform: Fixed a key press issue that was being ignored when ALT key held down.
+(1174908, 1182982)
+Universal Windows Platform: Fixed TouchScreenKeyboard's SHIFT key duplicating last typed character on HoloLens.
+(1184623, 1191743)
+Video: VideoPlayer leaks memory when set to a Camera target
+(1164058, 1171875)
+Web: UnityWebRequest: Added additional logging in case of failure.
+(1101441, 1188383)
+WebGL: Fixed mouse position and delta coordinates in the new input system being inverted.
+(1169064, 1173039)
+XR: Added HoloLens 2 as a device name when running on HoloLens 2 devices.
+(1161756, 1188262)
+XR: Fixed an issue where depth buffer lagged one frame behind color buffer.
+(1191487, 1191495)
+XR: Fixed the crashes when entering the play mode on the HDRP template if there is a Terrain in the scene.
+(1175535, 1178669)
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 12.04+, SteamOS+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 9.0 or higher.
+Android: OS 4.1 or later; ARMv7 CPU with NEON support or Atom CPU; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+

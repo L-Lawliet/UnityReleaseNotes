@@ -1,0 +1,37 @@
+/unity/whats-new/2017.4.38
+Release notes
+Known Issues in 2017.4.38f1
+
+Asset Bundles: Loading.LockPersistentManager object lock impacts performance during AssetBundle.LoadAssetAsync operation
+(827299)
+iOS:  Apps with UIApplicationExitsOnSuspend in info.plist failing to pass Apple Store validation
+(1160614)
+uGUI: RectTransofrm resets it's coordinates to zero when selecting "Apply" on prefab even if no changes were made
+(964111)
+
+2017.4.38f1 Release Notes
+Fixes
+
+Android: Fixed an issue where a settings.gradle file in the Unity project folder could cause build errors.
+(1164013)
+Android: Fixed poor physics performance on ARM64 on certain devices with power mode disabled.
+(1186295)
+Android: Fixed problem with platformBuildVersionCode and platformBuildVersionName in manifest
+(1118325)
+Audio: Fixed TempJob allocation warnings when using Timeline with AudioSource.
+(1141919)
+Graphics: Fixed issue where  "GetGfxDevice() should only be called from main thread" errors are thrown and crashes in Play Mode later on.
+(1181825)
+iOS: Fixed an issue where a custom storyboard might not be found at runtime
+(1225171)
+iOS: Launch Screen storyboards are validated to ensure that they have the correct settings to be used as a launch screen.
+(1212014)
+iOS: No longer include code using AdSupport unless user explicitly uses api that needs it.
+(1219457)
+Player: Fixed a crash caused by unloading a GameObject whose transform has a persistent parent.
+(1169647)
+XR: Fixed crash due to missing WorldAnchor store managed class in non-UWP players.
+(1212118)
+XR: Recentered the Headset when Oculus' Reset View is called from the OS.
+(1159322)
+

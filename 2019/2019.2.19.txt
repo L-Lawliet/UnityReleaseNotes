@@ -1,0 +1,85 @@
+/unity/whats-new/2019.2.19
+Release notes
+Known Issues in 2019.2.19f1
+
+Asset Importers: FBX Importer crash
+(1211854)
+IMGUI: NullReferenceException is thrown when invoking EditorGUIUtility.ShowObjectPicker
+(1206893)
+Input: [Windows] IMGUI input doesn't work in builds when using preview InputSystem package
+(1183394)
+Inspector Framework: Cannot zoom out curve graph when the graph is in focus
+(1203332)
+Shuriken: Semaphore.WaitForSignal under Canvas.BuildBatch causes a slow editor in Play mode
+(1178300)
+
+2019.2.19f1 Release Notes
+System Requirements Changes
+Nothing changed.
+Fixes
+
+2D: Fixed an issue where Sprite Atlases were modified after Building.
+(1203619)
+iOS: Added support for iPad 7 generation.
+(1196002)
+iOS: Fixed a crash on CreateCppStringFromNSString when entering Emoji as max character.
+(1198204)
+iOS: Fixed an issue where the crash reporter would crash if Unity failed to initialize correctly.
+(1145982)
+Mobile: Added iPod Touch 7th Generation to the iOS.DeviceGeneration API.
+(1185468)
+Package Manager: Fixed crash caused by disposing of default-constructed TransformAccessArrays.
+(1148324)
+Particles: Fixed crash when using scripted simulation on nested hierarchies due to threading race condition.
+(1194538)
+Particles: Fixed particle crash due to uninitialized currentSize array.
+(1197761)
+Particles: Fixed particle rendering when using cmd.DrawRendered and context.ExecuteCommandBuffer.
+(1195214)
+Prefabs: Fixed an issue where removed components on nested prefabs\reappeared when applying subsequent modifications.
+(1185746)
+Scene Management: Fixed an issue to add prefabs to hierarchy in first position.
+(1197793)
+Scene Management: Fixed an issue with dragging Prefabs into scenes during Play Mode where they were incorrectly instantiating them as editor Prefab instances. This would incorrectly impose editor Prefab instance restructuring restrictions on runtime logic. They are now instead instantiated using the runtime Object.Instantiate method in these cases.
+(1166938)
+Scripting: Fixed a number of issue with single quote usage in namespace parse.
+(1188570)
+Scripting Upgrade: No longer patch assembly references to UnityEngine module assemblies to point to the single UnityEngine instead, as this was causing too much trouble.
+UI: Fixed an issue with nested canvases when using multiple display.
+(1199299)
+Version Control: Fixed an issue with RevertTask crashing Unity when reverting unchanged scene.
+(1202758)
+Version Control: Fixed an issue with RevertTask not reverting assets after rename while using PlasticSCM.
+Video: fixed an issue where Asset bundles which included VideoClip have different CRC values when built from a different directory.
+(1152507)
+WebGL: Disabled unnecessary default canvas event for "on drag" WebGL.
+(1190839)
+WebRequest: Fixed an issue with UploadHandlerFile properties contentType and progress.
+(1197177)
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 12.04+, SteamOS+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 9.0 or higher.
+Android: OS 4.1 or later; ARMv7 CPU with NEON support or Atom CPU; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+

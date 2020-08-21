@@ -1,0 +1,38 @@
+/unity/whats-new/2017.4.35
+Release notes
+Known Issues in 2017.4.35f1
+
+Asset Bundles: Loading.LockPersistentManager object lock impacts performance during AssetBundle.LoadAssetAsync operation
+(827299)
+iOS:  Apps with UIApplicationExitsOnSuspend in info.plist failing to pass Apple Store validation
+(1160614)
+uGUI: RectTransofrm resets it's coordinates to zero when selecting "Apply" on prefab even if no changes were made
+(964111)
+
+2017.4.35f1 Release Notes
+Fixes
+
+Analytics: Analytics found that the device screen size is always reported as the application render size on Android/iOS and cpu architecture is wrong for Android arm64 devices that are running 32 bit binaries.
+(1160171)
+Android: Fixed the Editor not updating the NDK directory before projects are built.
+(1188823)
+Graphics: Fixed issue where culling of multiple culling groups didn't worked and returnet results only from last of them.
+(1181967)
+iOS: Fixing an issue where the keyboard could not be dismissed and keyboard input stopped after device sleep.
+(1187333)
+Mobile: Fixed an issue that caused a black screen when enabling or disabling real-time light at runtime on Vulkan when using multiple render passes with MSAA.
+(1144830)
+UI: Fixed dragging when using multiple displays for Sliders, Scrollbars and InputField.
+(1146233)
+UI: PhysicsRaycaster and Physics2DRaycaster now support multiple-displays.
+(1027701)
+Windows: Multi-display: Fix non-primary display aspect ratio in windowed mode
+(1134231)
+Windows: Windows: Fix Multi-display always reverting to native resolution on primary display
+(1040726)
+
+
+Improvements
+
+XR: Updated to Oculus 1.38 plugin and added support for valid tracking poses even when devices aren't fully tracked.
+

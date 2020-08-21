@@ -1,0 +1,228 @@
+/unity/whats-new/2019.3.9
+Release notes
+Known Issues in 2019.3.9f1
+
+2D: Editor crashes during Sprite Atlas baking when not enough disk space is available
+(1228614)
+Ads:  Verified and default Ads package should be 3.3.x instead of 2.0.8
+(1206332)
+Animation: Crash on Animator::CreateInternalControllerPlayable when entering Play Mode
+(1227838)
+Animation: Crash on mecanim::CreateValueArray when setting Animator's Controller to Override Controller with no controller to override
+(1229421)
+Asset Import Pipeline: Editor crashes when importing prefab referencing scripts from precompiled libraries
+(1217707)
+Audio: Crash on StackAllocator::WalkAllocations when there's a memory leak in Play mode
+(1225987)
+Audio: [Windows] Editor uses one CPU Logical Processor at 100% while the game is in Pause Mode
+(1219619)
+Camera: Crash on Umbra::TileTraverseTree::init when entering Play mode or selecting Camera GameObject
+(1228835)
+Global Illumination: Unity crashing when baking lights and generating light UV
+(1118524)
+Global Illumination: [GPU PLM] GPU baking does not match CPU
+(1206157)
+Global Illumination: [OSX][GPUPLM]OS Kernel Panic crash with 'Thread may have been prematurely finalized' after baking the scene with AMD GPU
+(1160419)
+Global Illumination: [PLM] Baking stalls after disabling/enabling static gameobject
+(1144403)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - General:  'task.rasterData.vertexBuffer == NULL' errors when using a Particle System
+(1226357)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+MacOS: [Mac] Build support modules fail to install when downloading them using "Open Download Page" button in Builds Settings
+(1219284)
+MacOS: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+MacOS: macOS Native Plugins not detected or misplaced in Builds
+(1216171)
+Mobile: [Android] Loading assets from AssetBundles takes significantly more time when the project is built as an AAB
+(1153358)
+Mobile: [iOS] Debug .pdb files are added to iOS release builds
+(1232798)
+Package: Errors are Constantly thrown when Active Input Handling is set to Input System Package
+(1176974)
+Profiling: Editor crashes when loading profiler file with memcpy stacktrace
+(1131782)
+Profiling: Intermittant editor crash when using the profilercrash with deep profilign and call stacks enabled
+(1203222)
+Profiling: Missing Profiler.EndSample errors appear after switching profiling target
+(1181306)
+Profiling: Native object references for some object types are always 0 in the memory profiler
+(1234714)
+Profiling: [Profiler] Any dropdown list in Profiler Window doesn't expand the second time once collapsed until the mouse cursor is moved
+(1223087)
+Profiling: [Ubuntu]Unity hangs when Deep Profiling and Call Stacks are enabled.
+(918779)
+Project Browser: Parent and child nested Scriptable Object Assets switch places when parent Scriptable Object Asset is renamed
+(1189089)
+Scene Management: Editor crashes while assigning prefab variant to a reference on its base
+(1225758)
+Scene Management: Prefabs lose their values if scripts are removed then reintroduced
+(1216914)
+Scene Management: Unity Editor freezes/crashes when opening a specific Scene
+(1228147)
+Shuriken: Crash on CreateDirect3D11SurfaceFromDXGISurface when calling DrawRenderer with a Trail Renderer
+(1216216)
+Windows: Crash on GfxDeviceD3D11Base::SkinOnGPU when importing or reimporting a broken prefab
+(1230188)
+
+2019.3.9f1 Release Notes
+Fixes
+
+2D: Allow users to specify negative normal angles for ContactFilter2D.
+(1216208)
+2D: Colliders should also respect Pivot property of Edge Sprites in Sprite Shape
+2D: Ensure SpriteShape are not generated when not in view on Runtime.
+2D: Fix crash while quickly moving the mouse and deleting Tilemap Tiles on a Hexagonal Grid with a TilemapRenderer in Individual mode
+(1225253)
+2D: Fixed broken documentation links in inspectors for com.unity.2d.animation package
+2D: Fixed exception after reverting from creating new vertices and edges in Skinning MOdule
+2D: Fixed PSDImporter broken documentation links in inspectors
+2D: Fixed PSDImporter creates empty GameObject in certain cases
+2D: Fixed Sprite asset used by SpriteSkin in Scene is being deleted
+2D: Fixed Sprite deformation not updated when GameObject is being enabled with SpriteSkin component
+2D: Fixed SpriteSkin always deform even when culled by adding alwaysUpdate option to SpriteSkin to determine if SpriteSkin execution should occur even when the associated SpriteRenderer is culled
+2D: Fixed visual defect after undoing changes to Bone Transform properties in SpriteSkin's Inspector
+2D: SpriteShapeController leaks memory when zero control points are used
+Android: Cutout is calculated incorrectly when device is not in full screen mode.
+(1204141)
+Android: Fixed Linear to sRGB color conversion for IMGUI when rendering with Universal RP.
+(1155719)
+Android: Fixed Linear to sRGB color conversion for Screen Space - Overlay UI when rendering with Universal RP.
+(1219635)
+Android: Local fullscreen mode setting on Samsung devices is overriden by editor when render outside safe area setting is disabled.
+(1223467)
+Asset Import: Fixed AssetImportWorker taking autoconnect player connections.
+(1228966)
+Editor: Classes that depend on libMonoPosixHelper.so will now work in playmode in the Linux editor.
+(1218247)
+Editor: Do not resize Editor Windows when polling the mouse position inside of an Editor Window GUI call.
+(1196394)
+Editor: Fixed Console Window not receiving Logs from a built Player until the connection drop-down is clicked.
+(1224614)
+Editor: Fixed IME related APIs in Input class not working, even when using the new Input System package.
+(1178746)
+Editor: Fixed inconsistent Slider behavior when label width is not specified.
+(1206232)
+Editor: Fixed issue with the changing of the size of the input search field.
+(1230569)
+Editor: Fixed missing borders (i.e. inspector window and player settings)
+(1228726)
+Editor: Fixed the background color and border color of buttons in their various states for IMGUI and UIElements
+(1223122)
+Editor: Restores previous behavior
+(1224868)
+Editor: When setting Playmode be sure to not change state if already playing.
+(1221768)
+GI: Fixed crash in PVRTransmissionTextureData after loading another Scene while computing lighting.
+(1221209)
+Graphics: ComputeBuffer.SetData sub-updates combined with AsyncGPUReadback fixed in Vulkan.
+(1185630)
+Graphics: CopyTexture with element correctly copies 3D texture slices. Previously it only copied the first slice regardless of the specified element.
+(1208825)
+Graphics: Filter out SetWantsStructuredBufferBinding for no readable meshes
+(1226578)
+Graphics: Fix a bug where Unity did not bind IndirectArguments ComputeBuffers correctly on D3D12 if the stride was not equal to 4 (the size of a 32-bit integer).
+(1221931)
+Graphics: Fix slow compilation of vfx shaders in big project by not recreating all shaders in that case.
+(1224991)
+Graphics: Fixed error messages produced, when using -force-vulkan command line option, when the editor is started.
+(1180262)
+Physics: Fix an issue where a child Kinematic Rigidbody2D using Interpolation doesn't correctly follow a parent Dynamic Rigidbody2D also using Interpolation.
+(1233040)
+Physics: Fix an issue where CompositeCollider2D and PolygonCollider2D produce edges which cause unpredictable collision detection using collider cast queries.
+(1227909)
+Physics: Fix to ensure that previous linear/angular velocity/drag after a Rigidbody2D.MovePosition or Rigidbody2D.MoveRotation is restored.
+(1229319)
+Plugins: Failed P/Invokes due to plugin not being found are no longer logged to player log because the information is already conveyed through DllNotFoundException.
+(1221242)
+Prefabs: Fix null reference exception is thrown when applying modified Button UI component property to prefab.
+(1172835)
+Profiler: Fix PVRContextManager thread has no data and occupies important area in Profiler Timeline View.
+(1223636)
+Profiler: Fixed an issue whereby the CPU Profiler's 'Show Related Objects' panel could display incorrect names when profiling a build.
+(1214004)
+Profiler: Fixed Performance decrease in EditorOverhead using Deep Profile
+(1051094)
+Scripting: Check if scripting is shutting down to prevent an Internal_ApplicationWantsToQuit crash.
+(1145982)
+Scripting: Fix rare issue with player crashing on startup when having editor only serialized fields that use abstract classes.
+(1172691)
+Scripting Upgrade: Fixes a performance issue in UnsafeUtility.IsValidNativeContainerElementType() and fixes a bug where UnsafeUtility.IsUnmanaged() could return an incorrect result.
+Services: Fix crash in CrashReporting::LogBuffer::RecordLogMessage when called from multiple background threads simultaneously
+(1228264)
+Shaders: Surface shader writes into o.Emission channel were ignored in some cases.
+(1217823)
+UI Elements: Fix USS variable gets corrupted when psuedo state is changed
+(1218564)
+Universal Windows Platform: Fixed Cursor image getting visually corrupted when using ExecutableOnly builds.
+(1162612)
+Universal Windows Platform: Fixed the build failing for certain architecture if there is a native plugin in the project that only targets another CPU architecture (for instead, if your plugin only supports x64 and you're building for ARM64).
+(1141709)
+Video: Disabled VideoPlayer warning shows up when VideoClip field gets set to null in OnDestroy() method
+(1206210)
+Video: Editor Freezes when trying to import 10-bit video.
+(1202777)
+WebGL: Allow WebGL build run in background when canvas is not displayed.
+(1203503)
+Windows: Fixed cursor lock getting lost on Windows 7 when pressing Windows key, then clicking on the task bar and finally clicking back on the game window.
+(1213859)
+Windows: Native plugins are now put into correct CPU specific architecture folder.
+(1185926)
+Windows: Unity Crash Handler no longer opens the game process with PROCESS_ALL_ACCESS flag upon the game launch. Instead, it does it only if the game crashes.
+(1204191)
+XR: Fixed usage flag for foveation map ImageViews during Vulkan multiview framebuffer creation.
+XR: The builtin resources zip was not updated after the Font.shader code had been updated to properly handle VR.
+(1218550)
+
+API Changes
+
+2D: Added: Added API to access SpriteSkin deformed buffer
+Scripting: Added: Included possibility to add public headers to XCode project.
+
+Changes
+
+2D: Remove unused Reset Bounds button from SpriteSkinEditor
+Mobile: Removed Game SDK 3.1 initialization due to issues in GameSDK 3.1. Any other GameSDK version is still supported.
+Package Manager: Version conflicts involving a direct project dependency are now reported like any other version conflict instead of being silenced.
+
+Improvements
+
+2D: Added message to inform user on dependent packages when viewing certain sample Scenes in com.unity.2d.animation
+2D: Adjust length of popup and value fields for Weight Slider Window in Skinning Module
+2D: Improved SpriteSkinEditor UI
+Editor: Dragging material over the scene view might be slow: https://unity3d.atlassian.net/browse/EC-612
+Editor: Scene view custom camera FOV is now the actual FOV, makes it easier to make scene & game cameras match (default FOV changed to 60 degrees).
+(1213739)
+Editor: Scene view Frame Selected now properly takes custom FOV into account.
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

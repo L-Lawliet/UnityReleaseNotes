@@ -1,0 +1,103 @@
+/unity/whats-new/2018.4.10
+Release notes
+Known Issues in 2018.4.10f1
+
+Audio: Audio is playing even when there is no Audio Listener in the scene.
+(1087981)
+Graphics - General: Editor crashes at MaterialScripting::Lerp when Renderer.material.Lerp() has a null material
+(1117775)
+Mobile: [Android] Crash in java.lang.UnsatisfiedLinkError when application location is changed to SD card on Android device
+(1181365)
+Scene Management: Enabled Prefab is disabled after upgrading to Improved Prefabs
+(1138224)
+Scene Management: Transform::GetWorldToLocalMatrix  crash during first import when accessing Components in Prefabs
+(1159905)
+Scripting: [IL2CPP] Development build fails with "il2cpp.exe didn't catch exception: System.IndexOutOfRangeException"
+(1131053)
+Serialization: Kaydara FBX Binary becomes a YAML file when Editor serializes changes
+(1169079)
+
+2018.4.10f1 Release Notes
+Backwards Compatibility Breaking Changes
+
+Android: Improve error messages for cases where android application fails to load libmain.so. Previously it was printing "Unable to find main", now it will print "Failed to load 'libmain.so', the application will terminate.", additionally it will print exception from System.loadLibrary with detailed info, where the application was looking for libmain.so
+
+Improvements
+
+Graphics: Optimised Cluster Rendering networking.
+
+Fixes
+
+2D: Fixed crash on packing variant atlas after deleting sprite belonging to the master atlas.
+(1141327, 1176208)
+Android: Fixed AtlasPacker not respecting ETC2 fallback build settings on Android.
+(1170597, 1171485)
+Android: Fixed issue when detecting latest Android build tools SDK version.
+(1174507, 1181077)
+Android: Workaround Mali geometry working set memory limitation by splitting up render passes when needed.
+(1056056, 1184723)
+Asset Pipeline: Fixed race condition crash when loading asset bundles from managed streams.
+(1135251, 1157659)
+Editor: Added a mechanism for displaying an error message when any of the recent projects contain an invalid or missing ProjectSettings.txt file.
+(1002683, 1173320)
+Editor: Fixed an issue where clip edit mode clutch keys got stuck when holding multiple keys simultaneously.
+(1097216, 1162943)
+Editor: Improved the project building dialogue to provide more information for material/shader building.
+(1090892, 1154483)
+GI: Fixed UI issue that prevents user from selecting any probes in editing mode.
+(1167457, 1178286)
+Graphics: Fixed issue where Vulkan implementation of Texture2D.SetPixels may pipeline stall.
+(1141239, 1181736)
+Graphics: Fixed screen space shadow errors when using dynamic resolution.
+(1141225, 1156622)
+IMGUI: Fix IMGUI wordwrap flickering.
+(1089911, 1170538)
+iOS: Fixed Deprecated API Usage warning for using UIWebView when submitting Builds to the App Store Connect.
+(1180664, 1182273)
+iOS: Fixed UIApplicationExitsOnSuspend is deprecated in iOS 13.
+(1160614, 1165495)
+iOS: Fixed USYM_UPLOAD_AUTH_TOKEN thrown in Xcode when the Project is built in BatchMode with -runTests and Cloud Diagnostics.
+(1167025, 1178677)
+Linux: Fixed Input.GetAxis returning intensified values compared to Windows when running a built project.
+(1176709, 1184940)
+Particles: Ensured ParticleSystem.SetParticles applies new particle sizes immediately.
+(1179889, 1179892)
+Particles: Fixed animation bindings for the Orbital Velocity properties.
+(1173552, 1175489)
+Particles: Fixed assert message spam when using orthographic cameras and a Particle System with 0 scale along the Z axis.
+(1178477, 1180565)
+Particles: Fixed crash in WorldCollision function when spawning particles
+(1168859, 1175297)
+Particles: Fixed particle sprite batching.
+(1173610, 1175551)
+Particles: Fixed regression in internal math library causing some particle rotations to be represented incorrectly.
+(1163414, 1178392)
+Particles: Fixed regression when trying to use Material Proeprty Blocks with Particle Systems.
+(1174499, 1175556)
+Particles: Fixed Start Delay if system is paused and resumed before the Start Delay has expired.
+(1178403, 1179673)
+Particles: Support rendering lines/trails using orthographic cameras with negative near plane values.
+(1169997, 1185083)
+Profiler: Fixed lost custom samplers on some platforms, added runtime tests.
+(1160669, 1171186)
+Scripting Upgrade: Fixed sizes for System.Numerics types.
+(1118631, 1183613)
+Shaders: Added new surface shader pragma "nocolormask" to prevent auto-generating ColorMask. This way user can override the ColorMask with their own.
+(1174789, 1180404)
+UI: Fixed CanvasGroup Interactable field value not being applied on to the elements created as an in-direct child.
+(1030987, 1153162)
+Universal Windows Platform: Fixed Build & Run with Visual Studio 2019.
+(1158603, 1178951)
+Universal Windows Platform: Fixed occasional sharing violations on ".NETCore,Version=v5.0.AssemblyAttributes.cs" file when building player with .NET scripting backend.
+(1178466)
+Universal Windows Platform: Visual Studio solution generated when targeting Visual Studio 2019 will now correctly use v142 C++ toolset.
+(1166131, 1178920)
+Version Control: Asset Store package installation now tries to open Assets for edit in Version Control where they are being replaced..
+(1178410, 1179970)
+WebGL: Fixed modifier keys for simulated mouse events in WebGL.
+(1143387, 1175994)
+Windows: Fixed Screen.fullscreenMode returning garbage value on Windows Editor.
+(1178561, 1178909)
+Windows: Fixed TLS handshake Windows/UWP when root certificate is trusted by the system but not yet in it's certificate store.
+(1076758, 1175308)
+

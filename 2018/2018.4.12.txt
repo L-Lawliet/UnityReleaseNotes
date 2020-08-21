@@ -1,0 +1,67 @@
+/unity/whats-new/2018.4.12
+Release notes
+Known Issues in 2018.4.12f1
+
+AI: Performance of NavMeshBuilder.UpdateNavMeshData spike up to 10 times
+(1183826)
+Asset Importers: Crash on Marshalling::OutMarshaller when TextureImporter.ReadTextureSettings argument is null
+(1187147)
+Graphics - General: Editor crashes at MaterialScripting::Lerp when Renderer.material.Lerp() has a null material
+(1117775)
+Physics: Crash in physics PhysicsManager::Simulate
+(1122684)
+Profiling: "Other" category is not shown in the player Profiler graph if a sample is not selected
+(1165477)
+Scene Management: Duplicated child nested prefab is not created in the same position
+(1157320)
+Scene Management: Enabled Prefab is disabled after upgrading to Improved Prefabs
+(1138224)
+Scene Management: Transform::GetWorldToLocalMatrix  crash during first import when accessing Components in Prefabs
+(1159905)
+Scripting: [IL2CPP] Development build fails with "il2cpp.exe didn't catch exception: System.IndexOutOfRangeException"
+(1131053)
+Serialization: Kaydara FBX Binary becomes a YAML file when Editor serializes changes
+(1169079)
+iOS: [iOS 13] UnityWebRequest.SendWebRequest() crashes when opening local file with "file:///" prefix
+(1183600)
+
+2018.4.12f1 Release Notes
+Fixes
+
+Android: Fixed application crash when application is installed on SD card, and was built using app bundles, gradle.properties will contain new entry 'android.bundle.enableUncompressedNativeLibs=false'.
+(1181365, 1186613)
+Asset Import: Fixed issue where curves and metaballs are not imported from .blend files.
+(1173931, 1176203)
+Asset Import: Fixed Produce a warning and prevent warnings spamming when trying to insert menu item when the insertion limit is reached.
+(1181898, 1186710)
+Audio: Fixed audio playing even when there is no Audio Listener in the scene.
+(1087981, 1188163)
+Cache Server: Fixed video clip failing to upload to Cache Server when upgrading an old project to a newer version of Unity.
+(1087082, 1172067)
+Editor: Added a mechanism for displaying an error message when any of the recent projects contain an invalid or missing Project Version file.
+(1002683, 1173320)
+Graphics: Ensure correct topology is set before rendering HDR split.
+(1178259, 1186864)
+Graphics: Fixed shader compiler crash on some tessellation shaders without proper target pragma.
+(1162342, 1175187)
+IL2CPP: Support the latest Xcode version installed on the host computer when a Standalone OSX player is built.
+(1188330)
+Scripting: Fixed bug where editor would fail to load correctly when an invalid or missing timezone was set in the windows registry.
+(1169719, 1185237)
+Scripting: Fixed file handle/memory leak when loading Asset Bundles through UnityWebRequest.
+(1152567, 1186935)
+UI: Fixed dragging when using multiple displays for Sliders, Scrollbars and InputField.
+(1146233, 1183705)
+UI: Fixed Input Field not functioning after restoring app with Win+D shortcut.
+(1165961, 1189841)
+UTR: In PlayerConnection and EditionConnection added TrySend(...) and changed Send(...) so it always deliver data.
+(1160182, 1181134)
+WebGL: Fixed WebGL Brotli compression subdirectory "python" lacking permissions for Group and Other.
+(1042108, 1162668)
+XR: Added device name for HoloLens 2.
+(1161756, 1188263)
+XR: Fixed an issue that was causing the depth buffer to lag the color buffer in Windows MR.
+(1191487, 1191494)
+XR: Fixed SPI shader issue that was causing the right depth buffer to have the left depth buffer data.
+(1190927)
+

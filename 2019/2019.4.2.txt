@@ -1,0 +1,157 @@
+/unity/whats-new/2019.4.2
+Release notes
+Known Issues in 2019.4.2f1
+
+AI: Editor crashes on MemoryManager::GetAllocator when selecting NavMeshAgent Component in the Inspector window
+(1257220)
+Animation: Inspector not displaying state and transition properties once duplicated
+(1251586)
+Cloth: Cloth has graphical artifacts when an object moves out of the camera
+(1254174)
+CodeEditors: Crash with __pthread_kill + 10 when debugging with Rider
+(1241352)
+Global Illumination: [URP] Transparencies are ignored because URP uses _BaseMap as main texture identifier
+(1246262)
+Global Illumination: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - General: Crash on GetRenderPipelineScript when opening a specific project
+(1230177)
+Graphics - General: [Performance Regression] AssetBundleLoadAllAssets - Load_Prefabs_AllAssets is significantly slower than 18.4
+(1203512)
+Graphics - General: [Performance Regression] AssetBundleLoadSingleAssets : LoadAsync_Prefabs_SingleAssets is significantly slower than 18.4
+(1203511)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+IAP: Unity purchasing gives error on project upgrade due to failing to find UnityEngine.UI assembly
+(1193773)
+IMGUI: Editor crashes when using WebView_CUSTOM_AllowRightClickMenu
+(1249548)
+Linux:  Editor does not quit when pressing the X button
+(1175847)
+MacOS: [macOS] Crash in -[CocoaMainMenu validateMenuItem:] when using the Help menu search after building a player
+(1255419)
+Mono: Crash on buffer_add_value_full when debugging with code editor attached
+(1249172)
+Physics: Crash after "[Physics.PhysX] Foundation: Invalid registration detected" errors show up when using Physics.BakeMesh
+(1200588)
+Scene Management: EditorSceneManager: sceneClosing and sceneClosed callbacks are not called when switching between scenes
+(1003257)
+Scene/Game View: Line Renderer Edit Points in Scene View gizmo is not responsive in the Scene View
+(1244789)
+Scene/Game View: Range and direction of the Light component are not shown in the Game view when Gizmos are toggled on
+(1256471)
+Scripting: [SerializeReference] Polymorphic instances are always recreated when applying any inspector value change
+(1193322)
+Scripting: [SerializedField] fields produce "Field is never assigned to..." warning
+(1080427)
+Shadows/Lights: Skybox lighting is not rendered after creating gameobjects in the new scene until the lighting is rebaked
+(1250293)
+Terrain: Crash on Shader::GetLocalKeywordRemap or ShaderLab::Pass::ApplyPass when Trees are painted on a Terrain
+(1254964)
+Universal RP: Launching the Editor crashes on GetRenderPipelineScript when the project contains a Shader Variant Collection
+(1251734)
+Vulkan:  Crash on vk_optimusGetInstanceProcAddr when double clicking shader's Compiled Code drop down arrow
+(1248909)
+Window Management: ReloadAssembly -> EndReloadAssembly processing freezes Editor for minutes
+(1253165)
+Windows: Cannot activate license within a docker container
+(1193364)
+
+2019.4.2f1 Release Notes
+Fixes
+
+2D: Crash in ProcessVertices when applying texture type to Sprite for specific images
+(1249106)
+2D: Gameobjects with regular Sprites and Sprite Skin are not added to the same Batch
+(1248295)
+Asset Pipeline: Fix for a crash in script type hash generation that occurred in a certain type recursion scenario.
+(1253864)
+Editor: Fixed an issue with Screen Space and World Space Cameras not rendering when frame debugger is enabled for Standalone player
+(1222579)
+GI: Fixed crash that sometimes occur when loading scenes.
+(1248769)
+GI: Fixed fireflies artifacts in big outdoor scenes using area lights and directionnal lights in GPU lightmapper
+(1244336)
+GI: Release temp gpu memory used by progressive lightmapper just before denoising to improve denoisers stability.
+(1117995)
+Graphics: - DX11 backend no longer crashes if constantbuffer values are being changed with incompatible shader bound
+(1246991)
+Graphics: Fix crash in culling jobs when intermediate renderers have been deleted.
+(1241054)
+Graphics: Fix for using a ComputeBuffer as in input after calling SetCounter immediately before the next Dispatch.
+Graphics: Fixed various bugs when rendering into texture2darray slices as well as resolving texture2dmsarray into a non-multisampled texture on Nintendo Switch.
+Graphics: Speed up material property animation binding which occurs when creating GameObjects with animations or timelines.
+(1200148)
+iOS: fix for Social.localUser.ID returns GameCenterUsersID instead of the new GamePlayerID and TeamPlayerID
+(1176134)
+iOS: Fix iOS Achievements Callback GameCenter Crash
+(1087475)
+Linux: Sprite Editor menus function correctly
+(1252332)
+Package Manager: Fix Parts of the Asset Store login popup are pushed offscreen if the login fails
+(1202551)
+Physics: Don't declare PhysX as a separate middleware for the purposes of the Nintendo Switch game submission
+(1248691)
+Physics: Fixed an issue where Cloth components interacting with colliders would behave incorrectly
+(1219030)
+Physics: Fixed an issue where Cloth components would become bouncy/elastic at the start of the simulation
+(1253075)
+Physics: Fixed an issue where the Cloth component's particles would inherit residual forces at startup and cause the cloth to behave erratically
+(1251897)
+Physics: Fixed an issue with the Cloth component's virtual particles being set incorrectly at creation
+Windows: Fixed build icon's alpha value is not shown correctly
+(1209971)
+XR: Fix order of single-pass instancing shader variables for gles3
+(1187259)
+XR: Update XR Plug-in Management to 3.2.12.
+Update Windows MR Plug-in package to 2.2.0.
+(1253326)
+
+API Changes
+
+iOS: Deprecated: Deprecated
+
+UnityEngine.iOS.LocalNotification
+UnityEngine.iOS.RemoteNotification
+UnityEngine.iOS.NotificationServices
+
+iOS: Following Apple's obsoletion of GKPlayer.playerID, IUserProfile.id now returns GKPlayer.teamPlayerID for devices on >= iOS 12.4 (Apple's recommended replacement) , and GKPlayer.playerID for devices below that (that won't have teamPlayerID and gamePlayerID available until they upgrade). This will impact any data that is stored using the old ID. We are working on exposing the obsolete GKPlayer.playerID to ease migration.
+
+Changes
+
+Timeline: Updated Timeline package to version 1.2.15
+
+Improvements
+
+Android: Improve performance of constant buffer memory access on Adreno devices when using Vulkan
+(1248891)
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

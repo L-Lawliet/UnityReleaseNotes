@@ -1,0 +1,12 @@
+/unity/whats-new/2017.4.26
+Release notes
+2017.4.26f1 Release Notes
+Fixes
+
+Android: Fixed crash when AndroidJavaProxy is invoked while app is in background. (1126040, 1141478)
+Android: Fixed keyboard not opening when an InputField is touched in API Level 28. (1143344)
+Cache Server: Fixed duplicate downloads of assets from Cache Server. (1084628)
+Physics: Fixed Root Motion slowdown introduced in 2017.2. (984547, 1033423)
+SceneManager: Fixed a Race condition in TransformAccessArray. (1133800)
+Scripting: Fixed crash when a MonoBehaviour contains any serializable string attribute that contains malformed utf16. (1134364)
+

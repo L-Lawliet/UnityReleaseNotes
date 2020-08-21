@@ -1,0 +1,133 @@
+/unity/whats-new/2018.4.9
+Release notes
+Known Issues in 2018.4.9f1
+
+Animation:  Error is thrown when calling Animator.keepAnimatorControllerStateOnDisable on an inactive GameObject
+(1168475)
+Cloud Diagnostics: USYM_UPLOAD_AUTH_TOKEN is thrown in Xcode when the Project is built in BatchMode with -runTests and Cloud Diagnostics enabled
+(1167025)
+LW RP: Building project gets stuck on "Compiling shader variants" dialog when Lightweight Render Pipeline/Lit shader is compiling
+(1090892)
+Linux: [Android] Android SDK Build-Tools newest version location can fail
+(1174507)
+Scene Management: Enabled Prefab is disabled after upgrading to Improved Prefabs
+(1138224)
+Scene Management: Transform::GetWorldToLocalMatrix  crash during first import when accessing Components in Prefabs
+(1159905)
+Scripting: [IL2CPP] Development build fails with "il2cpp.exe didn't catch exception: System.IndexOutOfRangeException"
+(1131053)
+Serialization: Kaydara FBX Binary becomes a YAML file when Editor serializes changes
+(1169079)
+Shuriken: WorldCollision crashes when spawning particles with World Collision enabled
+(1168859)
+Themes: Merge conflict in ProjectVersion.txt causes 'Unable to parse file' error on any project opened
+(1002683)
+iOS:  Apple throws Deprecated API Usage warning for using UIWebView when submitting Builds to the App Store Connect
+(1180664)
+iOS:  Apps with UIApplicationExitsOnSuspend in info.plist failing to pass Apple Store validation
+(1160614)
+
+2018.4.9f1 Release Notes
+Improvements
+
+XR: Added a protected context option to the Oculus Android settings that should only be enabled when you know that you require a protected graphics context (typically for DRM video).
+(1180363)
+XR: Added a V2 signing option to the Oculus Android settings that should be used when building for Quest, and disabled when building for Go and GearVR.
+(1180363)
+
+Fixes
+
+2D: Fixed issue where TextureImporter's meta file might get changed when reimporting with no settings changed in the importer.
+(1092018, 1179240)
+2D: Fixed Sprite Atlas being checked out in Perforce after entering Play Mode and exiting Editor.
+(1164347, 1169629)
+Analytics: Analytics found that the device screen size is always reported as the application render size on Android/iOS and cpu architecture is wrong for Android arm64 devices that are running 32 bit binaries.
+(1160171, 1160174)
+Android: Fix floating point render target on Android 4.
+(1149616, 1177516)
+Android: Fixed right-clicks from Bluetooth mouse not being registered in Android.
+(1168711, 1171440)
+Android: Removed the use of all audio engine functions that will be grey-listed or black-listed in Android Q.
+(1176717, 1176718)
+Animation: Fixed Undo operation of "Add Motion" in the Blend Tree graph UI.
+(1134780, 1164019)
+Asset Bundle: Fixed for Loading dependent AssetBundles fails to deserialize some scripts on Standalone builds.
+(1154172, 1175281)
+Asset Import: Fixed a crash in the FBX Importer when calculating tangents on a blendshape that has infinite values in vertex positions.
+(1152354, 1161953)
+Asset Import: Fixed serialised body mask data to not append itself on each re-import.
+(1164193, 1164597)
+Asset Management: Fixed for New ScriptableObject variable references are not reloaded when changing branch in VCS until Editor is restarted.
+(1153117, 1173885)
+Build Pipeline: Fixed SBP out of memory crash.
+(1158643, 1160714)
+DX12: Fixes to avoid using slow scratch memory ( also reduces debug messages ).
+(1174364, 1174684)
+Editor: Fix editor window min-max size info propagation and mouse events outside the window
+(1169663, 1181709)
+Editor: Fix editor window min-max size info propagation and mouse events outside the window
+(1143721, 1181710)
+Editor: Fixed Layout save did not load correctly.
+(1122565, 1162020)
+Editor: Fixed the issue with NullReferenceException when previewing assets on Unity Package import.
+(1148966, 1159900)
+GI: Fixed broken bake in Editor with additive loaded scenes.
+(1138556, 1167606)
+Graphics: Fix CommandBuffer.SetShadowSamplingMode code typo.
+(1143760, 1156782)
+IL2CPP: Avoid exception related to loading libc on platforms that don't support it.
+(1022228, 1178372)
+IL2CPP: Correct the behavior of SendFile on Windows.
+(1171712, 1176954)
+IL2CPP: Correct the reference count behavior for SafeHandle marshaling with out parameters.
+(1175211, 1177746)
+IL2CPP: Prevent the creation of GC logs in non-development players.
+(1164367, 1178088)
+iOS: Fixed keyboard type not always changing when switching controls.
+(1154527, 1165457)
+iOS: Fixed simulator build on xcode11 beta (metal headers were added) - now we use headers if available instead of forcibly declaring symbols.
+(1163876, 1170513)
+Mobile: Fixed cases where displaying Standalone player on second display would cause developer console to display twice.
+(1064308, 1158709)
+Particles: Fixed ParticleSystem bounds calculations when using stretched particles and a negative velocity scale.
+(1160531, 1163756)
+Particles: Fixed ParticleSystem prewarm not locating WindZones, ForceFields and Colliders during Awake.
+(1122824, 1164547)
+Prefabs: It's now possible to edit the root GameObject of a Prefab directly from the Project browser without going into Prefab Mode. This supports multi-object editing as well.
+(1120805, 1160289)
+Profiler: Fixed "Requested frame does not exists" exception thrown on clearing data while looking at UI Module.
+(1160622, 1164655)
+Profiler: Fixed memory leak caused by the job debugger holding onto the scheduled fences.
+(1156327, 1180028)
+Scripting: Allow UnityLinker to run properly on FAT32 partitions on macOS.
+(1166108, 1168250)
+Scripting: Fixed crash when inspecting large collections in debugger.
+(1130912, 1171511)
+Scripting: Fixed issue where System.Data.Odbc library was not found correctly on Windows.
+(1156912, 1173921)
+Scripting: Fixed issue with "Assembly has duplicate references" error not listing the duplicate references correctly.
+(1132593, 1150069)
+Scripting: Fixed issue with "Multiple precompiled assemblies with the same name" error not listing the paths of the precompiled assemblies.
+(1138754, 1150062)
+Scripting: Fixed logging ETW events from the editor and players.
+(1084396, 1173497)
+Scripting: Fixed port numbers returned from GetActiveTcpConnections on Windows are not correct.
+(1165578, 1174668)
+Scripting: Remove "m_TypeName" from UnityEventBase class as this information can be recovered from the reflection system post-serialisation.
+(833543, 1171865)
+Terrain: Fixed issue where in case of creating from script terrain using instance rendering didn't stop shader stripping from removing instanced variant of terrain shader.
+(1139655, 1141811)
+Terrain: Re-instated Terrain shortcut keys.
+(1155153, 1167230)
+Timeline: Fixed duration mode not reverting from "Fixed Length" to "Based On Clips" properly.
+Timeline: Fixed playhead being moved when applying undo while recording.
+Timeline: Fixed warnings about localEulerAnglesRaw when using RectTransform.
+Version Control: Fixed logging when files/folders in the Unity project are excluded from the Perforce client workspace.
+(1143683, 1145764)
+Windows: Fixed logging ETW events from the editor and players.
+(1084396, 1173497)
+XR: Fixed incorrect ordering for TangoUpdate in early update for ARCore.
+(1175133, 1178430)
+XR: Fixed Surface Observer to correct memory handling and stop potential crashes on exit.
+(1176047, 1176064)
+

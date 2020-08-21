@@ -1,0 +1,61 @@
+/unity/whats-new/2018.4.15
+Release notes
+Known Issues in 2018.4.15f1
+
+Android:  64 bit Build with Physics.Processing runs at a very low FPS
+(1186295)
+Animation: Animator.Update CPU time spikes when multiple animations are playing
+(1184690)
+Profiling: Profiler stucks with Autoconnected Player option and can't be switched back to Editor when AndroidPlayer is selected
+(1193777)
+Scene Management: Duplicated child nested prefab is not created in the same position
+(1157320)
+Shuriken: Billboard Particle System rolls in the Game View with "Allow Roll" disabled when a Camera is rotating around it
+(1081596)
+Shuriken: ParticleSystem.SetParticles crashes the Editor when writing particle list to array and Particle System has a size module enabled
+(1197761)
+Shuriken: Semaphore.WaitForSignal causes a slow editor when entering Play mode
+(1178300)
+uGUI: Upgrading the project results in missing System.Serializable UnityEvent function
+(1196591)
+
+2018.4.15f1 Release Notes
+Fixes
+
+Android: Fixed application paths (dataPath, streamingAssetsPath) to point to base apk when App Bundle is used.
+(1183912)
+Android: Set opaque windows for unset translucency attribute.
+(1104092)
+Animation: Fixed editor crash with WalkTypeTree when enforcing T-Pose to avatar after clearing all bones mapping.
+(1092815)
+Deployment Management: Worker threads for Enlighten are not set up when launching a Server Build.
+(1131677)
+Editor: Fixec creating an empty array in EditorBuildSettings.scenes crashing the Editor.
+(1162941)
+Graphics: Fixed an issue where per-platform QualitySettings could be stripped on disk when entering Playmode.
+(1136244)
+Graphics: Fixed for GPU memory leak when deleting a texture while async upload in progress.
+(1174689)
+Graphics: Fixed performance regression in Editor when processing shaders with errors.
+(1193998)
+IL2CPP: Correctly convert certain large negative decimal values to integers on iOS.
+(1178651)
+IL2CPP: Fixed float and double to int conversion for some values.
+(1186125)
+IL2CPP: Fixed incorrect codegen when converting unsafe methods that use void* types.
+(1188101)
+IL2CPP: Prevented a possible crash in the debugger when many web requests are started at the same time.
+(1189520)
+iOS: Backported a method in trunk that fixed rotation issues for native popup windows.
+(1169189)
+iOS: Fixed AVCaptureSession initialized if permission to camera has been explicitly denied by the user.
+(1160639)
+iOS: Fixed crash when forcing Upside Down orientation on devices that don't support it.
+(1192949)
+macOS: Fixed a rare crash issue with the Editor build when creating or closing new windows.
+(1151695)
+Particles: Don't allow bounds to be dirtied during culling callbacks, because it's too late to apply such changes for the current frame.
+(1191755)
+Scripting: Keep built in assemblies after player builds when switching back to editor.
+(1199323)
+

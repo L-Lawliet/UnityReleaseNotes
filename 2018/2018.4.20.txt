@@ -1,0 +1,70 @@
+/unity/whats-new/2018.4.20
+Release notes
+Known Issues in 2018.4.20f1
+
+Animation: Animator.Update CPU time spikes when multiple animations are playing
+(1184690)
+MacOS: [Lighting]Errors in console on changing editor visualization mode to realtime GI if there is a particle system in scene.
+(1106901)
+Package Manager: Immutable packages altered by the API Updater are reverted to their original state when packages are resolved, which can lead to slower import performance in that context.
+Profiling: Editor crashes when loading profiler file with memcpy stacktrace
+(1131782)
+Profiling: Performance decrease in EditorOverhead using Deep Profile 
+(1051094)
+macOS: If the Android Tools are not installed through the Hub, macOS 10.15 (Catalina) default security settings will prevent the Android NDK binaries being executed. These settings have to be changed or a signed Android NDK (r16b) will be needed to build Android. More information here: https://developer.android.com/ndk/downloads/older_releases.
+
+2018.4.20f1 Release Notes
+Fixes
+
+AI: Fixed a path-finding bug in which floating point errors would cause agents to take potentially large, spurious detours.
+(977653)
+Android: Fixed a crash during shutdown when starting a Java thread with a C# thread.
+(1224810)
+Android: Fixed activity pause timeout warnings.
+(1223705)
+Asset Import: Added AssetDatabase.DisallowAutoRefresh and AssetDatabase.AllowAutoRefresh to the C# API.
+(1173031)
+Asset Pipeline: Fixed an issue where AssetBundle Recompression not verifying the CRC of bundle contents when requested.
+(1195075)
+Asset Pipeline: Optimised copying an asset, so that a refresh of the asset database is not triggered.
+(1179856)
+Editor: Fixed a crash when calling MonoImporter.GetExecutionOrder(null).
+(1181615)
+Graphics: Avoid rebinding the texture and polute state if the texture target is unknown.
+(1199990)
+Graphics: Fixed a crash in SkinnedMeshRenderer: make sure the cached mesh is valid before using it.
+(1183992)
+Graphics: Fixed an issue loading shaders from a 2017.4 authored asset bundle into more recent Unity versions.
+(1195317)
+Graphics: Fixed an issue that can cause increased draw call count when using static batching.
+(1098752)
+iOS: Fixed an issue with profiler support for iPhone XR/XS/XS Max and above.
+(1133479)
+iOS: Fixed Unity Remote errors when using iPhone XR/XS/XS Max and above.
+(1184243)
+macOS: IME works in both editor and player is the proper location.
+(1178930)
+Prefabs: Fixed an issue where editor entering infinite loop on certain bad prefabs. The bad prefabs are now patched during load.
+(1196082)
+Prefabs: Fixed an issue with applying prefab override from a scene where the MonoBehaviour lives in a namespace and has FormerlySerializeAs on the fields.
+(1114464)
+Profiler: Added message indicating that Profiler Modules need to be activated to profile.
+(1197721)
+Scripting: Fixed an issue that raised on iOS where the player would crash when shutting down.
+(1145982)
+UI: Fixed an issue with IME properly.
+(1178930)
+Version Control: Fixed an issues with Unity auto refresh and version control.
+(1191378)
+XR: Fixed a crash when you connect to a Hololens 2 using the HolographicRemoting scripting api and then enable Windows Mixed Reality.
+
+API Changes
+
+2D: Added: Added SortingGroup.UpdateAllSortingGroups to allow users to immediately update SortingGroups instead of waiting for LateUpdate.
+(1202432)
+
+Improvements
+
+Asset Import: Added AssetDatabase.DisallowAutoRefresh and AssetDatabase.AllowAutoRefresh to the C# API.
+(1173031)
+

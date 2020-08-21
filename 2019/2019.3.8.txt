@@ -1,0 +1,221 @@
+/unity/whats-new/2019.3.8
+Release notes
+Known Issues in 2019.3.8f1
+
+2D: Editor crashes during Sprite Atlas baking when not enough disk space is available
+(1228614)
+Ads:  Verified and default Ads package should be 3.3.x instead of 2.0.8
+(1206332)
+Animation: Crash on Animator::CreateInternalControllerPlayable when entering Play Mode
+(1227838)
+Animation: Crash on mecanim::CreateValueArray when setting Animator's Controller to Override Controller with no controller to override
+(1229421)
+Asset Import Pipeline: Editor crashes when importing prefab referencing scripts from precompiled libraries
+(1217707)
+Audio: Crash on StackAllocator::WalkAllocations when there's a memory leak in Play mode
+(1225987)
+Audio: [Windows] Editor uses one CPU Logical Processor at 100% while the game is in Pause Mode
+(1219619)
+Camera: Crash on Umbra::TileTraverseTree::init when entering Play mode or selecting Camera GameObject
+(1228835)
+Global Illumination: Unity crashing when baking lights and generating light UV
+(1118524)
+Global Illumination: [GPU PLM] GPU baking does not match CPU
+(1206157)
+Global Illumination: [OSX][GPUPLM]OS Kernel Panic crash with 'Thread may have been prematurely finalized' after baking the scene with AMD GPU
+(1160419)
+Global Illumination: [PLM] Baking stalls after disabling/enabling static gameobject
+(1144403)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - General:  'task.rasterData.vertexBuffer == NULL' errors when using a Particle System
+(1226357)
+Graphics - General: SkinnedMeshRenderer not being rendered in Build
+(1229548)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+Linux: [Android] ETC1 and ETC2 compression fails when importing textures
+(1222219)
+MacOS: [Mac] Build support modules fail to install when downloading them using "Open Download Page" button in Builds Settings
+(1219284)
+MacOS: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+Mobile: [Android] Loading assets from AssetBundles takes significantly more time when the project is built as an AAB
+(1153358)
+Mobile: [iOS] Debug .pdb files are added to iOS release builds
+(1232798)
+Package: Errors are Constantly thrown when Active Input Handling is set to Input System Package
+(1176974)
+Profiling: Editor crashes when loading profiler file with memcpy stacktrace
+(1131782)
+Profiling: Intermittant editor crash when using the profilercrash with deep profilign and call stacks enabled
+(1203222)
+Profiling: Missing Profiler.EndSample errors appear after switching profiling target
+(1181306)
+Profiling: [Profiler] Any dropdown list in Profiler Window doesn't expand the second time once collapsed until the mouse cursor is moved
+(1223087)
+Profiling: [Ubuntu]Unity hangs when Deep Profiling and Call Stacks are enabled.
+(918779)
+Project Browser: Parent and child nested Scriptable Object Assets switch places when parent Scriptable Object Asset is renamed
+(1189089)
+Scene Management: Editor crashes while assigning prefab variant to a reference on its base
+(1225758)
+Scene Management: Prefabs lose their values if scripts are removed then reintroduced
+(1216914)
+Scene Management: Unity Editor freezes/crashes when opening a specific Scene
+(1228147)
+Shuriken: Crash on CreateDirect3D11SurfaceFromDXGISurface when calling DrawRenderer with a Trail Renderer
+(1216216)
+Windows: Crash on GfxDeviceD3D11Base::SkinOnGPU when importing or reimporting a broken prefab
+(1230188)
+
+2019.3.8f1 Release Notes
+Fixes
+
+2D: Handle user exceptions properly from Tilemap.tilemapTileChanged callback
+(1215834)
+Android: Fix crash when using GraphicsJobs with Vulkan on Adreno 5xx
+(1167283)
+Android: Fix issue causing minimum and target API levels UI to get stuck at "Getting API levels..."
+(1214796)
+Android: Fix screen rotation when new input system is enabled and old one is disabled. Under the hood OrientationEventListener is used to determine which screen orientation to use for the application.
+(1224389)
+Android: Fixed the issue that 'Symlink Sources' doesn't work on Android with gradle.
+(1223012)
+Asset Pipeline: Fixing sorting problem that was causing indeterminism in Content Update Pipeline.
+(1197035)
+Asset Pipeline: Importer that is not allowed to cache results on cache server now can also not cache locally
+Build Pipeline: Fix bug preventing mesh compression on iphone when building with the scriptable build pipeline
+(1222846)
+Build Pipeline: Fixes an issue where upon BuildPipeline functions cause a re-execution of the last Async task when called in an Async function
+(1213602)
+Editor: Fixed an issue where leaving a game object in a scene with a DontSaveInEditor hideFlags would result in an error on cleanup.
+(1136883)
+Editor: Fixed an issue where running a test fixture would also run other fixtures with the same full name (namespace plus classname) in other assemblies.
+(1197385)
+Editor: Fixed an issue where the grid color does not change upon updating the grid color from preferences window.
+(1216918)
+Editor: Fixed performance regression with custom inspector property fields
+(1224555)
+Editor: Fixed Test execution timed out. No activity received from the player in 600 seconds error when player is not supposed to start.
+(1225147)
+Editor: Fixed the editor application main thread tick timer throttling causing unwanted spikes and delays.
+(1211383)
+Editor: Fixes custom property drawer layouting and height computation
+(1169149)
+Editor: Now ITestPlayerBuildModifier.ModifyOptions is called as expected when running tests on a device.
+(1213845)
+Editor: Orphaned Unity processes will now be cleaned up
+(1205394)
+Editor: Running a playmode tests with "Maximize on Play" will now correctly show the result of the tests in the test runner window.
+(1014908)
+Editor: Running tests with the same full name, with a domain reload in-between, will no longer fail to initialize the fixture of the second class.
+(1205240)
+Graphics: Fix crash when cleaning up intermediate renderers.
+(1176131)
+Graphics: Fix issue where game UI would not be visible in preview camera.
+(1215590)
+Graphics: Fix material.mainTextureOffset by adding [MainTexture] shader property attribute.
+(1210509)
+Graphics: Fix sporadic crash when using GraphicsJobs with Vulkan
+(1215661)
+Graphics: Fixed issue with DX11 blit operations crashing when shader recompilation is triggered
+(1221358)
+Graphics: Shaders matrix properties and colors are incorrect with SG + Hybrid v1
+(1227416)
+Graphics: This function goal is to access the texture target. Avoid rebinding the texture and polute state if the texture target is unknown.
+(1199990)
+IL2CPP: Fixes issue where the editor installer did not ensure we had a minimum of .Net 4.7.2 installed which we now require
+(1205210)
+IMGUI: PR fixes the size of the rect used to render Warning icon in the Import package window
+(1201891)
+Licenses: Backport fix for the issue when Editor cannot talk to the Licensing Client, if the username has Unicode/UTF-8 characters into Unity 2019.3.
+(1220634)
+Particles: Fixed crash when using disable stop action, with pause-and-catchup cull mode, and system is culled when it ends.
+(1221265)
+Particles: Fixed FPS mode when using sprites.
+(1222513)
+Physics: Ensure that a child Kinematic Rigidbody2D driven by a parent Rigidbody2D stays in-sync with the parent pose.
+(1213343)
+Physics: Ensure we don't report OnCollision/OnTrigger Exit for 2D colliders when they are disabled/inactive when the "Physics2D.callbacksOnDisable" is off.
+(1212896)
+Physics: Fix a crash in "PhysicsContacts2D::PreSolve" during 2D collision when hundreds of contacts are involved. This also lifts the limit of Collider2D/Collider2D contact count from 64 to an unlimited amount.
+(1219286)
+Physics: Fix rare console warning of "RigidBody2D has an invalid movement state index during removal".
+(1216772)
+Player: Fixed "Default Is Native Resolution" setting change being ignored in the Standalone player after changing default fullscreen mode to fullscreen from windowed when not changing any other setting.
+(1216508)
+Prefabs: Fixed issue where the Hierarchy window Create ([+]) dropdown menu item "Create Empty Child" would, in Prefab Mode, place the created child under the Prefab root rather than under the selected object.
+(1185434)
+Scripting: Renaming a type used by SerializeReference and renaming back to its original name will preserve the instance data.
+(1222851)
+Serialization: Ensure to fix errors about read size mismatching write size when entering Play mode in case there is an empty collection of a type containing a Serialized Reference object
+(1215642)
+Serialization: Fix for field marked as [SerializeReference] and having a static types of System.Object that were not being serialized.
+(1191992)
+Shaders: Fix Metal compute shaders stripping unused constant buffer vars, therefore messing up the data layout.
+(1210547)
+Shaders: Fixed shaders not always compiling properly on include changes
+(1215034)
+Shaders: Fixing missing local keywords, if shaders in asset bundle do not contains serialized shader snippets.
+(1209147)
+Shaders: Fixing missing shader keyword error.
+(1168898)
+Timeline: Updated default Timeline package version to 1.2.14.
+Version Control: Fixed Checkout inspector button not shown in some cases (1185127)
+(1183689)
+Video: Unity hangs on quit after failing to load large number of Video Clips from URL at once
+(1197716)
+WebGL: The main loop is never scheduled when build starts in background
+(1223062)
+Windows: CorsorLockMode.Confined now locks to window client area instead of the whole window rect on Windows Standalone player.
+(978868)
+Windows: Fixed Windows Standalone player executable name not matching Product Name player setting when using keyboard shortcut to Build & Run.
+(1208041)
+XR: Fixed a case where the camera does not respect near/far clipping plane settings
+(1212234)
+
+API Changes
+
+2D: Added: Add GridPaintingState.brushes to allow users to get a collection of all available Grid Brushes
+2D: Added: Add GridPaintingState.paletteChanged to allow users to add callbacks when the active palette has changed
+2D: Added: Add GridPaintingState.palettes to allow users to get a collection of all available Palettes
+
+Changes
+
+2D: Make Tilemap.tilemapTileChanged and Tilemap.SyncTile public
+Graphics: Changed default scripting backend of the Universal RP template to il2cpp
+
+Improvements
+
+Android: Update Android Logcat package version to 1.1.1
+Graphics: Updated embedded graphics packages to version 7.3.0.
+iOS: Backbuffer depth is discarded at frame end. In case of MSAA backbuffer color is simply resolved (instead of store+resolve)
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

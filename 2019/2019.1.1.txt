@@ -1,0 +1,68 @@
+/unity/whats-new/2019.1.1
+Release notes
+Fixes
+
+Android: Fixed Vulkan rendering when sRGB write control is enabled in PlayerSettings.
+(1107481, 1125474)
+Animation: Fixed crash when state has "too many" scripts attached.
+(1137055, 1150381)
+Asset Bundle: Fixed an issue where an "Inconsistent asset" error was logged during BuildPipeline.BuildAssetBundles.
+(1138140, 1139330)
+Asset Import: Fixed a regression where blender files import fails when the blender application installed is version 2.79
+(1144643, 1144766)
+Audio: Fixed user selection not being respected for dsp buffer size in the audio settings.
+(1129895, 1150380)
+Editor: Fixed a bug that disabled the availability of having rsp files inside Packages correctly.
+(1137372, 1138461)
+Editor: Fixed editor crashing while clicking on Overrides window for instance of name based replaced variant.
+(1137288, 1145518)
+Editor: Fixed hierarchy incorrect scenevis icon for scenes and toggling behavior
+(1126555, 1143155)
+Editor: Fixed hierarchy ping being slightly offset
+(1140214, 1143158)
+Editor: Fixed scene header context menu in hierararchy being slightly offset
+(1142146, 1143160)
+Editor: Fixed the issue with GameView Scale's minimum value being dependent on the windows display scaling factor.
+(1099270, 1126537)
+GI: Fixed a race condition in Enlighten data loading during additive scene loading that led to a crash in the standalone player.
+(1124660, 1132699)
+Graphics: Fixed missing draws when using an uninitialized RenderTexture with Vulkan.
+(1107219, 1123843)
+IL2CPP: Added support for the MethodImplOptions.NoOptimization C# attribute.
+(1124061, 1144679)
+IL2CPP: Fixed a build failure that would occur when targeting UWP w/ il2cpp while using a Managed Stripping Level of High.
+(1137227, 1146287)
+IL2CPP: Fixed an intermittent crash when a managed exception occurs on a back ground thread while the process is shutting down.
+IL2CPP: Fixed building generated player Visual Studio project when using IL2CPP scripting backend and building to a builder with unicode characters in the path on Windows Standalone and UWP players.
+(1129992, 1143205)
+IL2CPP: Fixed making RuntimeHelpers.IsReferenceOrContainsReferences call a generation-time intrinsic that will output a "false" or "true" boolean value to the C++ code. This greatly speeds up some .NET container classes that make use of this method.
+(1143169, 1145502)
+IL2CPP: Fixed overwriting a copy of a generic by ref argument that uses specifically crafted IL bytecode.
+(1140509, 1147441)
+IL2CPP: Fixed proper C++ code not being generated when Mathf.Infinity is used as the value for an attribute argument.
+(1139579, 1141559)
+IL2CPP: Fixed some assemblies missing symbol files after building with the Medium or High Managed Stripping Level.
+(1142732, 1144690)
+iOS: Fixed  SendMessage not working on iOS/tvOS simulator.
+(1138257, 1139346)
+Linux: Fixed Linux editor 'scrolling' when starting up in a maximized position.
+(1130242, 1141032)
+Mobile: Fixed [iOS] VR Shaders included in builds.
+(1123955, 1142461)
+Physics: Fixed any hit being returned by MeshCollider.Raycast instead of the closest one.
+(1136868, 1144347)
+Physics: Fixed crash that happened when passing a zero direction vector to batched physics queries.
+(1134317, 1144345)
+Physics: Fixed the physics debug window not being open/closed correctly.
+(1115985, 1127093)
+Scripting: Fixed issue with "Menu  can't be checked because it doesn't exist" warning being emitted when deleting a checked menu item script.
+(1136169, 1136820)
+Video: Fixed Spatial Blend in AudioSource not always impacted by distance when used by VideoPlayer.
+(1114277, 1139381)
+Windows: Fixed issue where high-poll-rate mice were causing performance degradation in the Editor on Windows.
+(1117360, 1144635)
+Windows: Fixed SystemInfo.deviceUniqueIdentifier not returnin the same values as Unity 2018.3 and earlier versions.
+(1146923, 1146971)
+XR: Updated OpenVR to 1.0.14. This fixes an issue on Linux where the player may crash if it is built for OpenVR, but SteamVR is not installed on the machine.
+(985931, 1144524)
+

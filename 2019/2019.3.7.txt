@@ -1,0 +1,212 @@
+/unity/whats-new/2019.3.7
+Release notes
+Known Issues in 2019.3.7f1
+
+Ads:  Verified and default Ads package for 2019.3 should be 3.3.x instead of 2.0.8
+(1206332)
+Animation: Crash on Animator::CreateInternalControllerPlayable when entering Play Mode
+(1227838)
+Animation: Crash on mecanim::CreateValueArray when setting Animator's Controller to Override Controller with no controller to override
+(1229421)
+Asset Import Pipeline: Editor crashes when importing prefab referencing scripts from precompiled libraries
+(1217707)
+Asset Import Pipeline: Same Asset generates different Dependency Hash on different machines
+(1190390)
+Asset Import Pipeline: [Asset Database V2] GameObjects and Prefabs lose references to Assets when Assets are moved to a different folder
+(1226928)
+Audio: Crash on StackAllocator::WalkAllocations when there's a memory leak in Play mode
+(1225987)
+Audio: [Windows] Editor uses one CPU Logical Processor at 100% while the game is in Pause Mode
+(1219619)
+Camera: Crash on Umbra::TileTraverseTree::init when entering Play mode or selecting Camera GameObject
+(1228835)
+Global Illumination: Crash in PVRTransmissionTextureData::PVRTransmissionTextureData when exiting Play Mode after loading another Scene
+(1221209)
+Global Illumination: Unity crashing when baking lights and generating light UV
+(1118524)
+Global Illumination: [GPU PLM] GPU baking does not match CPU
+(1206157)
+Global Illumination: [OSX][GPUPLM]OS Kernel Panic crash with 'Thread may have been prematurely finalized' after baking the scene with AMD GPU
+(1160419)
+Global Illumination: [PLM] Baking stalls after disabling/enabling static gameobject
+(1144403)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - General:  'task.rasterData.vertexBuffer == NULL' errors when using a Particle System
+(1226357)
+Graphics - General: SkinnedMeshRenderer not being rendered in Build
+(1229548)
+Graphics - General: Unloading an AssetBundle that contains a material causes a call to FindObjectsOfType
+(935529)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+IAP: Unity purchasing fails to load due to failing to find UnityEngine.UI assembly
+(1193773)
+Linux: [Android] ETC1 and ETC2 compression fails when importing textures
+(1222219)
+MacOS: [Mac] Build support modules fail to install when downloading them using "Open Download Page" button in Builds Settings
+(1219284)
+MacOS: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+Mobile: [Android] Loading assets from AssetBundles takes significantly more time when the project is built as an AAB
+(1153358)
+Mobile: [Android] [Gles3] [URP] Darker UI when using Gles3, Linear and URP
+(1219635)
+Package: Errors are Constantly thrown when Active Input Handling is set to Input System Package
+(1176974)
+Profiling: Editor crashes when loading profiler file with memcpy stacktrace
+(1131782)
+Profiling: Intermittant editor crash when using the profilercrash with deep profilign and call stacks enabled
+(1203222)
+Profiling: Missing Profiler.EndSample errors appear after switching profiling target
+(1181306)
+Profiling: PVRContextManager Thread has no data and occupies important area in Profiler Timeline View
+(1223636)
+Profiling: Performance decrease in EditorOverhead using Deep Profile 
+(1051094)
+Profiling: [Ubuntu]Unity hangs when Deep Profiling and Call Stacks are enabled.
+(918779)
+Project Browser: Parent and child nested Scriptable Object Assets switch places when parent Scriptable Object Asset is renamed
+(1189089)
+Scene Management: Editor crashes while assigning prefab variant to a reference on its base
+(1225758)
+Scene Management: Prefabs lose their values if scripts are removed then reintroduced
+(1216914)
+Scene Management: Unity Editor freezes/crashes when opening a specific Scene
+(1228147)
+Shaders:  Change in included hlsl file does not always trigger recompilation
+(1215034)
+Shuriken: Crash on CreateDirect3D11SurfaceFromDXGISurface when calling DrawRenderer with a Trail Renderer
+(1216216)
+Shuriken: Off Camera ParticleSystem crashes Editor when particles are disabled with Culling set to Pause
+(1221265)
+Terrain: [Performance Regression] GameObject.ActivateAwakeRecursively noticeably slower when rendering trees on terrain
+(1225501)
+Universal RP: [URP] "Render Object" asset does not create in project window when added in "Render Features" field in the Inspector
+(1214779)
+Windows: Crash on GfxDeviceD3D11Base::SkinOnGPU when importing or reimporting a broken prefab
+(1230188)
+
+2019.3.7f1 Release Notes
+Fixes
+
+2D: Fixed OnDrawGizmos to Get/Release RenderTexture through CommandBuffer.
+AI: Resolve an issue with SamplePathPosition failing due to raycasting very close to the domain boundary.
+(701922)
+Android: Allow to overwrite gradle.properties file, as well as main and launcher manifests, base, launcher and main gradle templates. Default templates can be added to project by enabling checkboxes in Player Settings > Publishing Settings.
+(1141877)
+Android: Fixed memoryless MSAA RenderTextures when using Vulkan.
+(1190449)
+Android: On Android, fixed 2 Vulkan video format bugs. These bugs were seen on the Google Pixel 3 and Motorola Moto G7 phones, but may affect other Android devices as well.
+(1193545, 1194922)
+Animation: Fixed PropertyStream handles not properly picked up in AnimationStream when outside of avatar definition.
+(1181529)
+Animation: [Backport] Crash on PreOrderPlayableTraverser::Traverse when entering Play mode in a scene where every GameObject calls OnValidation
+(1220788)
+Asset Import: Change an error to a warning in a situation where on re-importing the metafile contained information of removed items.
+(1182942)
+Asset Pipeline: Fixes editor crash after deleting a prefab using AssetDatabase.DeleteAsset in the OnPostprocessAllAssets
+(1204994)
+Build Pipeline: Added the missing build time information in the Editor.log after a build is completed.
+(1205788)
+Editor: Fix merging with WinMerge
+(1112495)
+Editor: Fixed Editor crash in Frame Debugger when Compute Shader is using uninitialized RenderTexture.
+(1221374)
+Editor: Fixed Frame Debugger to show Compute Shader dispatch information properly.
+Editor: Fixed the bold system fonts (verdana) used by prefab.
+(1215960)
+Editor: Fixes an issue where clicking an active tool in the Tile Palette window would return focus to the previously active Tilemap tool, not the global tool.
+(1174060)
+GI: Fixed a crash when clicking on Baked Lightmaps tab in the Lighting Setting window.
+(1212238)
+Graphics: Change Stream source create API to accept audio channels
+(1217852)
+Graphics: Corrected normals for Transform-aligned trails.
+(1203456)
+Graphics: Fix Crash when calling GgpGraphics.GgpStreamSourceCreate
+(1223559)
+Graphics: Fixed an issue with incorrect color values in lights after changing between gamma and linear when using URP
+(1136106)
+Graphics: Fixed issue loading shaders from a 2017.4 authored asset bundle into more recent Unity versions.
+(1195317)
+Graphics: Fixed skinned meshes crash when position data is of non-Float32 type.
+(1207844)
+Graphics: Sorting issue with multiple viewport
+(1225129)
+IL2CPP: Correct the stubbed GetEnumerator method on the System.Data.Linq.Table class
+(1210714)
+IL2CPP: Discover generic virtual methods on shared generic types properly.
+(1212189)
+IL2CPP: Prevent a race condition from causing a crash on shutdown when the script debugger is enabled.
+(1186518)
+Particles: Fix memory leak when using shadow casting lights in the Particle System Lights module.
+(1217809)
+Particles: Fixed situations where paused systems were having their Stop Actions executed. Paused systems should never have their Stop Actions executed.
+(1213288)
+Particles: Magnitude property was mapping to the wrong script binding.
+(1207764)
+Particles: Only allow Texture2D textures in the Shape Module.
+(1213985)
+Particles: Throw an exception if the offset to Set/GetParticles is invalid.
+(1209323)
+Physics: Fix the MeshCollider fast midphase not being enabled when upgrading from pre-2019.3, also a better check for a default set of flags that won't get confused when you pick the "Everything" option.
+(1215857)
+Playables: Fixed issue where Unity would crash when calling RebuildGraph() on a PlayableDirector and destroying it in PlayableBehaviour::OnPlayableDestroy.
+(1224184)
+Profiler: Added message indicating that Profiler Modules need to be activated to profile
+(1197721)
+Scripting: EditorSettings.lineEndingsForNewScripts property now defaults to OSNative, in the 3D Template
+(1146804)
+Scripting: Fix intermittent "TypeLoadException: Recursive type definition detected" that was being thrown on playmode start.
+(1191002)
+Scripting: Fixed locking in mono_get_seq_points (). This fixes a known hang while using the debugger and will eliminate an inconsistent crash in g_hash_table_lookup.
+(1190942)
+Scripting: [Debugger] Fix crash when there is a generic struct with a field that is an enumerator.
+(1210416)
+Serialization: Fix undo/prefab diff behavior with [SerializeReference] fields
+(1198546)
+UI Elements: Fixed invalid clipping of scaled elements when using content-box clipping mode.
+(1222517)
+UI Elements: Fixed logging of IMGUI exceptions that only displayed a partial callstack
+(1219746)
+UI Elements: The UIElements runtime showed lighter colors in the game view, in linear color space, when compared to the UI Builder.
+(1182374)
+XR: Fixed unstable video and texture buffer resources when using Windows Mixed Reality.
+(1209909)
+
+Improvements
+
+2D: Improved Memory Allocations.
+Android: Better performance with AA render targets in some cases on ARM Mali GPUs.
+Mobile: Update Adaptive Performance Samsung Android package to verified version 1.1.1.
+Scripting: Added locking around tls->frames usage/freeing in the mono debugger. This eliminates some crashes involving memory corruption while using the managed debugger as well as a known hang.
+XR: XRInputSubsystem now stops when app is paused, and starts when the app resumes.
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

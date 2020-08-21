@@ -1,0 +1,62 @@
+/unity/whats-new/2018.4.23
+Release notes
+Known Issues in 2018.4.23f1
+
+Animation: Animator.Update CPU time spikes when multiple animations are playing
+(1184690)
+Graphics - General:  'task.rasterData.vertexBuffer == NULL' errors when using a Particle System
+(1226357)
+OpenGL:  Crash on BufferManagerGLES::AcquireBuffer when in Play Mode
+(1230566)
+Package Manager: Immutable packages altered by the API Updater are reverted to their original state when packages are resolved, which can lead to slower import performance in that context.
+Scene Management: Prefab Variant Transform fileId changes
+(1238280)
+Shuriken: Crash on CreateDirect3D11SurfaceFromDXGISurface when calling DrawRenderer with a Trail Renderer
+(1216216)
+macOS: If the Android Tools are not installed through the Hub, macOS 10.15 (Catalina) default security settings will prevent the Android NDK binaries being executed. These settings have to be changed or a signed Android NDK (r16b) will be needed to build Android. More information here: https://developer.android.com/ndk/downloads/older_releases.
+
+2018.4.23f1 Release Notes
+Fixes
+
+Android: Fixed an issue where Android keyboard not reporting LostFocus state correctly.
+(1229827)
+Asset Import: Changed ProcessAssetBundleEntries() to batch load assets using PersistenceManager rather than loading individually using PPTRs.
+(1184551)
+Asset Import: Fixed an issue where shadows appear segmented at specific angles when using physical camera with a large difference between sensor aspect ratio and screen aspect ratio.
+(1211431)
+Asset Import: Fixed an issue where TextureImporter was dirtied when creating a preset.
+(1242249)
+Asset Import: Texture Importer builds all targets before first enable.
+(1231227)
+Asset Pipeline: Fixed a sorting issue that was causing indeterminism in Content Update Pipeline.
+(1197035)
+Editor: Fixed an issue where smart rounding was causing problems with large scale values with the Rect tool.
+(1225799)
+Editor: Fixed an issue where SyntaxTree namespace cannot be referenced.
+(1205800)
+Graphics: Fixed a memory leak when disabling texture mip streaming (after enabled).
+(1227997)
+Graphics: Fixed a race condition when using Dynamic Batching and Graphics Jobs together.
+(1221653)
+Graphics: Fixes an issue where graphics settings were written to boot.config incorrectly.
+(1236936)
+Physics: Fixed an issue where having a cloth as part of a prefab would endlessly attempt to update the prefab.
+(1195095)
+Physics: Fixed an issue with cloth where it would corrupt transform changed state.
+(1187252)
+Prefabs: Fixed a slow scene deserialization, when scene contains broken prefab instances with many duplicate overrides.
+(1228147)
+Prefabs: Fixed an issue where the Hierarchy window Create ([+]) dropdown menu item "Create Empty Child" would, in Prefab Mode, place the created child under the Prefab root rather than under the selected object.
+(1185434)
+Profiler: Fixed inability to select reoccurring samples in Raw Hierarchy.
+(1093368)
+Scripting: Fixed a batch mode issue, where a repeating or infinite loop coroutine does not resume execution after a period of time.
+(1201708)
+Security: Fixed UNET vulnerabilities. (CVE-2020-12630) (CVE-2020-12631)
+Video: Fixed an issue where video-heavy project does not get successfully imported when launching the project in batchmode.
+(1172957)
+
+Improvements
+
+Shaders: UNITY_OLD_PREPROCESSOR macro is now defined for all shader stages except for ray tracing.
+

@@ -1,0 +1,76 @@
+/unity/whats-new/2019.1.14
+Release notes
+2019.1.14f1 Release Notes
+Fixes
+
+2D: Fixed Material and Sorting Layer fields of Sprite Renderer Component not showing Prefab Overrides in Inspector.
+(1109376, 1169620)
+AI: Fixed issue with NavMeshAgent getting stuck when the NavMesh changes near its long path.
+(1144605, 1166151)
+Asset Import: Added ModelImporter.FileScale property.
+(1063711, 1169694)
+Asset Management: Fixed issue where fbx files are not re-imported when a AssetPostprocessor implementing OnPostprocessAnimation has its version updated.
+(1153110, 1161615)
+Build Pipeline: Fixed sprite sheets in asset bundles built by scriptable build pipeline crash on access.
+(1146568, 1167256)
+Deployment Management: Fixed an issue with throwing BuildFailedException from a build callback not failing the build.
+(1097286, 1159246)
+Editor: Fixed for an error message when calling AssetDatabase.ImportPackage on a package that contains scripts.
+(1158305, 1165963)
+Editor: Fixed the issue with NullReferenceException when previewing assets on Unity Package import.
+(1148966, 1159899)
+Editor: Fxed Delete, Duplicate, Find, Frame Selected and Copy/Paste options disabled for Game Objects that have "Not-Editable" flag enabled.
+(460449, 1161575)
+IL2CPP: Fixed a crash when accessing the LocalEndpoint property of a socket using an IPV6 connection.
+(1167971, 1170305)
+macOS: Fixed a crash when changing the graphics device in preferences.
+(1165004, 1166015)
+macOS: Fixed a rare crash issue with the Editor build when creating or closing new windows.
+(1151695, 1165409)
+Particles: Fixed ParticleSystem bounds calculations when using stretched particles and a negative velocity scale.
+(1160531, 1163758)
+Particles: Fixed ParticleSystem prewarm not locating WindZones, ForceFields and Colliders during Awake.
+(1122824, 1164546)
+Physics 2D: Fixed implicitly created static ground-body shown in the static body count in the profiler 2D physics area.
+(1143465, 1148738)
+Scripting: Fixed issue with "Assembly has duplicate references" error not listing the duplicate references correctly.
+(1132593, 1141762)
+Scripting: Fixed issue with "Multiple precompiled assemblies with the same name" error not listing the paths of the precompiled assemblies.
+(1138754, 1141767)
+Scripting: Fixed issue with Assembly Definition File inspector not showing if Name field is empty.
+(1153357, 1158575)
+Shaders: Improved generation of GLSL Tessellation shaders in more situations.
+(1134172, 1166875)
+Terrain: Fixed issue with terrain brush slider knob disappearing on sliding to extreme left.
+(1166317, 1167855)
+Version Control: Fixed logging when files/folders in the Unity project are excluded from the Perforce client workspace.
+(1143683, 1145763)
+XR: Fixed crash on devices using ARcore while multithreaded rendering is activated.
+(1158392, 1170674)
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 12.04+, SteamOS+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 9.0 or higher.
+Android: OS 4.1 or later; ARMv7 CPU with NEON support or Atom CPU; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+

@@ -1,0 +1,232 @@
+/unity/whats-new/2019.3.14
+Release notes
+Known Issues in 2019.3.14f1
+
+2D: Entering / leaving Play mode results in long wait times when a specific prefab with Grid / Tilemap components is in the scene
+(1240640)
+Animation: [macOS] Inconsistent crash in objc_msgSend/objc_retain when previewing Animations with Animator window open
+(1242026)
+Asset Import Pipeline: Importing project freezes on 'Initial Asset Database Refresh' when there's a meta file containing big amount of user data
+(1241933)
+Asset Import Pipeline: Unity YAML Upgrading project to 2019.3 Asset Database V2 makes the project crash on startup
+(1228192)
+Asset Importers: It is possible to select "None (Object)" from the Material list in Model Importer Material Editor and Apply it
+(1243020)
+Audio:  Editor crashes on changing 'System Sample Rate' when Audio track preview is being played in Timeline window
+(1232743)
+Audio: [Windows] Editor uses one CPU Logical Processor at 100% while the game is in Pause Mode
+(1219619)
+Global Illumination: Unity crashing when baking lights and generating light UV
+(1118524)
+Global Illumination: [OSX][GPUPLM]OS Kernel Panic crash with 'Thread may have been prematurely finalized' after baking the scene with AMD GPU
+(1160419)
+Global Illumination: [PLM] Baking stalls after disabling/enabling static gameobject
+(1144403)
+Global Illumination: [PLM] Progressive Lightmapper stuck in an infinite loop with Progressive Updates and Auto-Generate On
+(1245087)
+Global Illumination: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - General: Mesh API calls causes slowdown in Play Mode
+(1233944)
+Graphics - General: [Performance Regression] AssetBundleLoadAllAssets - Load_Prefabs_AllAssets is significantly slower than 18.4
+(1203512)
+Graphics - General: [Performance Regression] AssetBundleLoadSingleAssets : LoadAsync_Prefabs_SingleAssets is significantly slower than 18.4
+(1203511)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+IAP: Unity purchasing gives error on project upgrade due to failing to find UnityEngine.UI assembly
+(1193773)
+IL2CPP: CIL Linker fails when there are many Scenes in build
+(1240780)
+IMGUI: Editor crashes on StageUtility::IsGameObjectRenderedByCameraAndPartOfEditableScene when calling Undo.PerformUndo() method
+(1242926)
+Linux:  [Editor] Input.GetAxis("Mouse ScrollWheel") always returns 0 when Cursor.lockState is set to CursorLockMode.Locked
+(1219781)
+Linux: Editor freezes when capturing a Player snapshot through Memory Profiler
+(1244421)
+Linux: Selection frame drawn in Scene view when a GameObject is selected while Alt and left mouse buttons are pressed
+(1239227)
+MacOS:  Editor is leaking memory when Aura Camera component is attached to a GameObject in the scene and Aura preview is enabled
+(1229502)
+MacOS: Unity kernel crashes Mac with OpenGL when only Intel Graphics are present
+(1225380)
+MacOS: [HDRP][macOS] Unity crashes when changing Device to Use setting from Automatic to Intel GPU
+(1242057)
+MacOS: [Mac] Build support modules fail to install when downloading them using "Open Download Page" button in Builds Settings
+(1219284)
+MacOS: [macOS] Editor crashes when trying to access audio capture devices
+(1227607)
+MacOS: [macOS] Mac crashes when opening the project with m_APIs under WindowsStandaloneSupport with only integrated Iris GPU
+(1232673)
+Mono: Crash with various stack traces when exiting Play Mode after recompiling scripts
+(1238859)
+OpenGL:  Crash on BufferManagerGLES::AcquireBuffer when in Play Mode
+(1230566)
+Package: Errors are Constantly thrown when Active Input Handling is set to Input System Package
+(1176974)
+Profiling: Standalone profiler doesn't draw properly
+(1244345)
+Scene Management: Prefab Variant Transform fileId changes
+(1238280)
+Scene Management: Prefabs lose their values if scripts are removed then reintroduced
+(1216914)
+Scripting: [SerializeReference] non-serialized Initialized fields lose their values when entering and during play mode.
+(1193322)
+Scripting: [SerializedField] fields produce "Field is never assigned to..." warning
+(1080427)
+Shaders: ShaderUtil.GetAllShaderInfo() function doesn't return errors from Surface shader functions
+(1248017)
+Themes:  Components of a gameObject are not displayed in Inspector if its tag is deleted
+(1240105)
+WebGL:  Using XElement.Load(string uri) causes an uncaught abort exception when using dlopen() dynamic linking in Emscripten
+(1192963)
+WebGL:  VideoPlayer is not rendered in WebGL builds when the video is loaded via URL
+(1188316)
+Windows: Cannot activate license within a docker container
+(1193364)
+
+2019.3.14f1 Release Notes
+Fixes
+
+2D: (com.unity.2d.animation) Fixed bone name field in weight slider does not display bone name
+(1226249)
+2D: (com.unity.2d.animation) Fixed SpriteResolver's Inspector not updated when GameObject is disabled
+2D: (com.unity.2d.psdimporter) Fix crash on importing huge PSD files
+2D: (com.unity.2d.psdimporter) Fix error when importing PSB files with 32-bit color
+2D: (com.unity.2d.psdimporter) Fix metafile not updated when reimporting
+2D: (com.unity.2d.psdimporter) Fix PSD import issues with PSD file without unique layer id
+Asset Pipeline: Fixed issue where searching did find asset, when mono script class was renamed (either class name or namespace). Only fixed for asset database v2.
+(1068482)
+Asset Pipeline: Fixed issue with current revision removed in initial script refresh
+(1236166)
+Asset Pipeline: Fixes issue with sprite renaming and the UI not reloading to show the renaming
+(1215564)
+Asset Pipeline: Optimized Project Browser in Two Column mode when a change happens to the AssetDatabase (added/removed/updated assets).
+(1228345)
+Build Pipeline: Added support for baked collision mesh writing in the Scriptable Build Pipeline.
+(1234924)
+CodeEditor: Built-in attributes for JetBrains Annotations have been modernized and include all new annotations (minus ASP/Razor attributes which have no relevance to Unity).For more info on these attributes, see https://www.jetbrains.com/help/resharper/Code_Analysis__Code_Annotations.html.
+(1208183)
+Core: Graphics Reduced CPU spikes on mobile platforms in SkinMeshRenderer when GPU skinning is disabled
+Editor: Fixed rare crash when closing down the editor or player showing (StackAllocatorPool::ClearMainThreadFallback) in the stack trace.
+(1241885)
+Editor: Fixed the Dropdown null exception issue in Playmode.
+(1222714)
+Editor: Optimize usage of player connection when transfering test results.
+(1229200)
+Editor: Removed HideFlags.DontSaveInEditor or HideFlags.DontSaveInBuild restriction on Scene Visibility.
+(1217361)
+Editor: The dll and project level of the tree view should now correctly show the results when running tests in a player.
+(1197026)
+Graphics: Fixed 'task.rasterData.vertexBuffer == NULL' errors when using a Particle System
+(1226357)
+Graphics: Closing the dialogue box instead of pressing a button now no longer discards the changes restart the editor when switching graphics API.
+(1240813)
+Graphics: Fix a race condition when using Dynamic Batching and Graphics Jobs together.
+(1221653)
+Graphics: Fixed issue where a Canvas in Screen space camera mode has a 0 height when a non standard custom projection matrix is set.
+(1203097)
+Graphics: Fixed issue with Hash128.u64_1 returning an invalid value
+Graphics: Fixed issue with transparent backfaces rendered in HDRP even when not requested.
+(1234662)
+Graphics: Fixes an issue where graphics settings were written to boot.config incorrectly.
+(1236936)
+Graphics: For StreamConnect, do not allow stream creation with Primary stream
+(1235981)
+Graphics: Higher precision compressed normals for GPU lightmapper.
+(1205301)
+iOS: Launch Images are no longer supported, as per new Apple guidelines
+(1194762)
+iOS: Stop .pdb files being added to non development XCode builds.
+(1232798)
+macOS: Fixed DllNotFoundException: libMonoPosixHelper.dylib in Mac Standalone build
+(1219335)
+Package Manager: Fixed an issue where npm authentication configuration was ignored when there was an extraneous slash at the end of the configured registry URL
+(1240995)
+Physics: Ensure that passing NULL to "Physics2D.GetIgnoreCollision()" issues an ArgumentNullException and not crash.
+(1239208)
+Physics: Fix an issue where using huge numbers of vertex or paths in a PolygonCollider2D, EdgeCollider2D or CompositeCollider2D would cause a stack overflow.
+(1212015)
+Profiler: Corrects errors when switching between connected player and editor due to unfinished profiler frame being processed.
+(1181306)
+Profiler: Fixed 'Current Frame' button looking interactable when it's not.
+(1225682)
+Profiler: Fixed alignment of sorting arrow being different on Overview vs Show Calls.
+(1226605)
+Profiler: Fixed GPU Profiler Module Warning icon tool-tip not appearing.
+(1225376)
+Profiler: Fixed inability to select reoccurring samples in Raw Hierarchy.
+(1093368)
+Profiler: Fixed networking charts drawing out of bounds.
+(1058920)
+Profiler: Fixed View Type Dropdown of the CPU Module disappearing when switching to Hierarchy View without data to display.
+(1223740)
+Scripting: Remove overwritten ReferenceOutputAssembly from project reference for Visual Studio project generation
+(1243277)
+Security: Fixed UNET vulnerabilities. (CVE-2020-12630, CVE-2020-12631)
+Serialization: Fix complex values in map when writing json
+(1224760)
+Serialization: Fix error message when error is found during load of serialized asset
+(1228574)
+UI: Fix issue with Scrollbar::ClickRepeat that was using the same PointEventData over multiple frames.
+(1193571)
+Version Control: Fix Checkout() APIs for non-asset-database-aware files
+(1241289)
+Version Control: Fix context menu for Assets folder in Project window.
+(1233595)
+Version Control: Fixed EditorSceneManager.SaveScene API in some cases overwriting files that are read-only (e.g. remote exclusive checkout in Perforce).
+Video: Reorganized looping logic to avoid frame reordering that was leading to confusion when deciding what frame is closest to current player clock time.
+(1198586)
+XR: Fix bug where XR will stop functioning after any new packages are installed or scripts are modified.
+(1223574)
+XR: Fixes a perf issue when using vulkan and xr sdk. results in a perf gain of ~4 ms on the GPU.
+(1206999)
+XR: Update XR Management verified package to 3.2.10.
+(1239046)
+
+Changes
+
+Mobile: Adaptive Performance - Fix Analytics system error with unloaded subsystem.
+Mobile: Adaptive Performance Samsung Provider - GameSDK 3.2 has a different behaviour when setting frequency levels and warning level 2 (throttling) is reached and you are always in control of the CPU/GPU level.
+Mobile: Adaptive Performance Samsung Provider - GameSDK 3.2 uses a wider range of temperature levels and maximum temperature level is changed to level 10.
+
+Improvements
+
+2D: ((com.unity.2d.animation) Allow reordering of bone order in Bone Influence window. This is to allow fine tuning of bone order when shown in SpriteSkin's Inspector
+2D: (com.unity.2d.animation) Improved deformation performance when Collection and Burst package is installed
+2D: (com.unity.2d.psdimporter) Improve PSD file import performance
+2D: (com.unity.2d.spriteshape) Added warning when a valid SpriteShape profile is not set.
+Editor: Allow Hash128 parsing to be done in a managed thread.
+Mobile: Update verified package Adaptive Performance and Samsung provider to 1.1.6
+Profiler: Hierarchy and Timeline view no longer display frame data while profiling unless "Live" toggle is pressed, reducing the Editor Overhead while profiling Edit or Play Mode.
+Shaders: UNITY_OLD_PREPROCESSOR macro is now defined for all shader stages except for ray tracing.
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

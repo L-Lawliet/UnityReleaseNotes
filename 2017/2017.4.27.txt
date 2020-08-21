@@ -1,0 +1,32 @@
+/unity/whats-new/2017.4.27
+Release notes
+2017.4.27f1 Release Notes
+Fixes
+
+2D: Fixed an issue where sprites could disappear while moving in the tile palette.
+(1133841, 1140232)
+Android: Fixed an issue on Mali GPUs where font textures would occupy 4 times more memory than on other GPUs.
+(1132219, 1134228)
+Android: Fixed an issue with ASTC compression on mobile.
+(1059665, 1141311)
+Android: Fixed issue where Unity logo in splash screen was shown as a black rectangle on Android 4.4 devices.
+(1100390, 1129749)
+Android: Fixing problem with detecting latest installed build tools version.
+(1094262, 1132183)
+GI: Fixed generating UV2 with UnityEditor.Unwrapping.GenerateSecondaryUVS failing when generating for models with more than 64k vertices.
+(1131979, 1134708)
+Graphics: Fixed Skybox field in Lighting Window not showing the correct value when working with multiple scenes.
+(916245, 1140744)
+Particles: Fixed newly emitted particle sizes not being updated when using Simulate and the restart flag is true.
+(1104199, 1123852)
+Particles: Fixed Simulate not updating sub-emitters particles when restart flag was false.
+(1104199, 1123852)
+Player: Libpng library upgraded to version 1.6.36.
+(1141755, 1148312)
+Unity Test Runner: Fixed filtering in the TestRunner while running tests from the batch mode.
+(1008728, 1051195)
+Web: Fixed WebViewTests causing editor to crash on exit.
+(1038514, 1056726)
+XR: Fixed a CPU core configuration issue on Oculus Quest that resulted in too many job threads spinning up.
+(1141670, 1141677)
+

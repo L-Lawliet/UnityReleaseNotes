@@ -1,0 +1,163 @@
+/unity/whats-new/2018.4.24
+Release notes
+Known Issues in 2018.4.24f1
+
+Animation: Animator.Update CPU time spikes when multiple animations are playing
+(1184690)
+Asset Importers: Crash on VertexDeclarationD3D11::GetInputLayout when importing a broken FBX file
+(1239074)
+Cloth: Cloth has graphical artifacts when an object moves out of the camera
+(1254174)
+Mono: Crash on buffer_add_value_full when debugging with code editor attached
+(1249172)
+Package Manager: Immutable packages altered by the API Updater are reverted to their original state when packages are resolved, which can lead to slower import performance in that context.
+Shuriken: Crash on CreateDirect3D11SurfaceFromDXGISurface when calling DrawRenderer with a Trail Renderer
+(1216216)
+macOS: If the Android Tools are not installed through the Hub, macOS 10.15 (Catalina) default security settings will prevent the Android NDK binaries being executed. These settings have to be changed or a signed Android NDK (r16b) will be needed to build Android. More information here: https://developer.android.com/ndk/downloads/older_releases.
+
+2018.4.24f1 Release Notes
+Fixes
+
+2D: [Windows] Unity crashes when packing big amount of atlases.
+(1219643)
+Android: Fix occasional crash when aborting UnityWebRequest.
+(1240281)
+Android: Fix the issue that DIR_UNITYPROJECT/DIR_GRADLEPROJECT are using the wrong '\' director separator on windows.
+(1088160)
+Android: Fixed an issue where master sprite atlases did not use the specified ETC2 fallback format.
+(1175291)
+Android: Fixed freeze on Galaxy S20 when using OpenGL ES GPU skinning with blend shapes.
+(1236183)
+Android: Fixes Screen.currentResolution reporting incorrect values after change in orientation.
+(1246822)
+Android: Unity analytics does not get advertising ID anymore.
+Animation: Fixed a crash when disconnecting an animation playable and reconnecting it later in a playable graph.
+(1223570)
+Asset Import: Fixed SpriteAtlas packing issue when texture importers having been badly migrated from old version of Unity and have a compression quality of -1 in their settings.
+(1222441)
+Asset Import: Significantly reduces import time of FBX models, particularly for those containing large meshes.
+(1219764)
+Build Pipeline: Added support for baked collision mesh writing in the Scriptable Build Pipeline.
+(1234924)
+Build Pipeline: Fixed cache miss due to non-deterministic hash generation for BuildReferenceMap and BuildUsageTagSet classes.
+(1227574)
+Build Pipeline: Fixed rare race condition causes error message when calling AssetBundle.LoadAsset and then immediately unloading the bundle.
+(1181323)
+Build Pipeline: Fixed the incorrect file header size outputted in the Editor.log after a build.
+(1209767)
+CodeEditor: Built-in attributes for JetBrains Annotations have been modernized and include all new annotations (minus ASP/Razor attributes which have no relevance to Unity).For more info on these attributes, see https://www.jetbrains.com/help/resharper/Code_Analysis__Code_Annotations.html.
+(1208183)
+Editor: Fixed an issue where a console error is thrown when holding the control/command key and dragging objects in the hierarchy window.
+(1222971)
+Editor: Fixed an issue with Screen Space and World Space Cameras not rendering when frame debugger is enabled for Standalone player.
+(1222579)
+Editor: Fixed issue where you could have invalid characters in your bundle id.
+(1140627)
+Editor: Stop sending gyro settings to Unity Remote if nothing's changed.
+(1206221)
+Graphics: Fixed issue where a Canvas in Screen space camera mode has a 0 height when a non standard custom projection matrix is set.
+(1203097)
+Graphics: Fixed memory leak when using -batchmode command line argument and particles, lines or trails.
+(1224501)
+Graphics: Fixed necessary memory barriers generated when UAVs are bound as read-only on Nintendo Switch.
+IL2CPP: Correct the implementation of ConcurrentBag so that it works with ETW managed code stripping.
+(1230447)
+iOS: Check for Application.RequestAdvertisingIdentifierAsync too when determining if ads api is used.
+(1242276)
+iOS: Deleted LaunchImage folder when doing iOS build.
+(1240800)
+iOS: Fixed an issue that prevents native windows from overlapping the Unity view.
+(1247256)
+iOS: Fixed iOS Achievements Callback GameCenter Crash.
+(1087475)
+iOS: fixed ReplayKit.APIAvailable returning false on the first call.
+(1233569)
+iOS: Fixed showing Broadcasting ViewController on phones in landscape orientation.
+(1232967)
+iOS: Fixed UnauthorizedAccessException: Access to the path '/Applications/2019.1/Unity 2019.1.0a12/PlaybackEngines/iOSSupport/Trampoline/build/SharedPrecompiledHeaders' is denied.
+(1108549)
+iOS: Launch Images are no longer supported, as per new Apple guidelines.
+(1194762)
+macOS: Fixed issue where a system dialog pops up in batch mode after a previous crash.
+(1183783)
+macOS: Fixed unreadable text in macOS installer in dark mode.
+(1210046)
+Mobile: Fixed CoreLocation framework being falsely shown as "default" in plugin importer (moved to "frequent" list).
+(1222455)
+Mobile: Fixed horizontal axis input from MFI controllers on iOS 13.
+(1239980)
+Mobile: Fixed iPad Spotlight icon name label in PlayerSettings.
+(1239020)
+Package Manager: Fixed a security issue.
+Particles: Fix crash/visual corruption when using GPU Instanced mesh particles.
+(1230566)
+Particles: Fixed applying a preset in the MinMaxCurve pop-out editor window.
+(1237306)
+Physics: Fixed an issue where calling SetEnabledFading(false) for the first time would cause the cloth instance to immediately snap into place and not disable properly.
+(1170627)
+Physics: Fixed an issue where cloth constraints would reset when applying a mesh with the same number of vertices.
+(1242446)
+Prefabs: Fixed references could be lost if a prefab was edited and saved after a player build.
+(1238280)
+Prefabs: References following an array of a class that only contains a single boolean is now correctly remapped when the prefab is instantiated.
+(1199466)
+Prefabs: Self-reference to variant via property overrride is now correctly mapped to an internal reference.
+(1233462)
+Scripting: Changed behavior on debugger-agent, if we can't parse new behavior we now return invalid_argument instead of asserting.
+(1197204)
+Scripting: Fixed - Added support for dialects of Chinese language in Application.systemLanguage.
+(1206732)
+Scripting: Fixed an issue where FileSystemWatcher was not working on Windows when targeting .NET Standard 2.0 API Compatibility Level.
+(1066732)
+Scripting: Fixed Catalina OSX returning 0 for disk space on read only drives.
+(1221933)
+Scripting: Fixed crash in debugger during enter playmode.
+(1013579)
+Scripting: Fixed crash that occurred during domain reload that was caused by image set data being stored in the wrong image.
+(1224837)
+Scripting: Fixed intermittent "TypeLoadException: Recursive type definition detected" that was being thrown on playmode start.
+(1191002)
+Scripting: Fixed race condition that would cause a hang when using threaded C# sockets.
+(1028819)
+Scripting: Fixed unnecessary allocation in Enum.HasFlags.
+(1211643)
+Scripting: [Debugger] Fixed crash when there is a generic struct with a field that is an enumerator.
+(1210416)
+Services: Fix crash in CrashReporting::LogBuffer::RecordLogMessage when called from multiple background threads simultaneously.
+(1228264)
+TextCore: Added Multi-Threading to Font Asset Creation process in the Editor.
+TextCore: Fixed incorrect Vertical Alignment of Glyphs when using SDF8, SDF16 and SDF32 modes.
+(1249493)
+TextCore: Fixed kerning values incorrect when using SDF8, SDF16 and SDF32 Render modes.
+(1249497)
+TextCore: Fixed memory allocation issue when retrieving glyph pair adjustment records.
+(1249491)
+TextCore: FontEngine.GetGlyphPairAdjustmentTable OutOfMemoryException.
+(1249491)
+TextCore: Incorrect Vertical Alignment of Glyphs when using SDF8, SDF16 and SDF32 modes.
+(1249493)
+TextMeshPro: - Updated FontEngine to improve performance as well as reduce memory allocations.
+
+Fixed Font Asset Creation process not using Multi-Threading in the Editor when using SDF8, SDF16 and SDF32 modes.
+Fixed memory allocation issue when retrieving glyph adjustment pairs.
+Fixed PairAdjustmentRecords returning a value of infinity with certain font files.
+Fixed incorrect PairAdjustmentValues when using SDF8, SDF16 and SDF32 modes.
+SDF, SDF8, SDF16 and SDF32 modes no longer use hinting to improve glyph sampling at low point size.
+
+Video: Reorganized looping logic to avoid frame reordering that was leading to confusion when deciding what frame is closest to current player clock time.
+(1198586)
+XR: Fixed a crash during shutdown on Android apps using Google's ARCore SDK for Unity.
+(1197049)
+XR: Fixed latency increase caused by prediction fixes.
+(1254226)
+XR: Linux Editor no longer attempts to load Resonance Audio library when running on machines that don't support SSE 4.1 instructions.
+(1207680)
+
+Improvements
+
+Android: Documentation clarified for Application.targetFrameRate behavior on mobile devices.
+
+Features
+
+Android: Allow to use a custom Gradle version.
+

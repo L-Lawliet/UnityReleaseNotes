@@ -1,0 +1,141 @@
+/unity/whats-new/2019.2.14
+Release notes
+Known Issues in 2019.2.14f1
+
+Animation: Crash on mono_field_get_type when Add Property in the Animation window has to display a script with Vector2Int type variable
+(1198661)
+Graphics - General: Native Graphics Jobs Memory Leak
+(1199895)
+Graphics - General: Shader is rendered incorrectly when loaded from an Asset Bundle made in Unity 2017.4 in a newer version 
+(1195750)
+Input: [Windows] IMGUI input doesn't work in builds when using preview InputSystem package
+(1183394)
+Mobile: Player Settings window becomes blank and starts spitting errors after going to Android Settings > Icon
+(1177292)
+Physics: Crash on PhysicsScene::ProcessTriggerEnterExits when splitting meshes that also exit a Trigger with OnTriggerExit
+(1155827)
+Physics: Crash on block_remove when changing mesh to Plane in Skinned Mesh Renderer while cloth component attached
+(1162918)
+Shuriken: Semaphore.WaitForSignal causes a slow editor when entering Play mode
+(1178300)
+Windows: Player freezes when Alt + Tabing if Player is running in the background and is in Exclusive Fullscreen mode
+(1196536)
+iOS: [OpenGLES2] Getting "Internal error, unrecognized message" when building
+(1185078)
+uGUI: Upgrading the project results in missing System.Serializable UnityEvent function
+(1196591)
+
+2019.2.14f1 Release Notes
+System Requirements Changes
+Nothing changed.
+Fixes
+
+2D: Creating a project with the 2D template includes the 2D Sprite and 2D Tilemap Editor packages again.
+(1183894, 1198225)
+AI: Performance of NavMeshBuilder.UpdateNavMeshData spikes up to 10 times.
+(1183826, 1197992)
+Android: Fixed an issue where Input.GetKey returns false when S-Pen was  being used on Samsung device.
+(1185531, 1194710)
+Android: Fixed an issue with Android cutout in non fullscreen mode and split view.
+(1183674, 1193209)
+Animation: Added flag kTypeIsEditorOnly trait to allow items to be pulled into build data depending on the situation.
+(1190029, 1193003)
+Audio: DSPGraph: Fixed a shutdown crash when trying to execute audio output hook dispose jobs.
+Audio: DSPGraph: Fixed and issue with mixing when multiple audio output jobs are attached to the default output.
+Audio: DSPGraph: Fixed and issue with native connection disposal in audio output jobs again.
+Audio: DSPGraph: Reduced the number of routput hook callbacks after job reflection data has been destroyed.
+(1189666, 1191824)
+Editor: Added MinDrawer to ensure MinAttribute is respected by Inspector script code.
+(1183703, 1196573)
+Editor: Fixed a crash when calling TextureImporter.ReadTextureSettings with a null argument.
+(1187147, 1192449)
+Editor: Fixed an Editor freeze if Profiler is unable to connect to Player.
+(1008321, 1195814)
+Editor: Fixed an issue where"Default is Native Resolution" checkbox is ignored if custom resolution was previously set.
+(1183011, 1191847)
+Graphics: Fixed a crash in dynamic batching when mesh still has indices but misses vertex data.
+(1158179, 1196560)
+Graphics: Fixed a rare crash when upgrading a project with shaders that fail to parse.
+(1184997, 1188584)
+iOS: Use NSProcessInfo.physicalMemory to retrieve total memory size.
+(1155192, 1171686)
+Linux: Fixed and issue where Source code ails build on Linux OS
+(1146695, 1187417)
+Mobile: Added DecimalPad type for TouchScreenKeyboardType for Android and iOS platforms.
+(1170071, 1188931)
+Mobile: Fixed an issue where the aspect ratio was not respected properly on devices running Android 7.0 and below as well as 8.0 and above.
+(1154440, 1196270)
+Physics: Fixed a crash that happened during simulation right after destroying a hierarchy of GOs that had nested Rigidbody components attached.
+(1122684, 1167209)
+Physics: Fixed an issue with the detection of degenerate 2D Physics Collider polygons with near-collinear vertices.
+(1190643, 1194654)
+Physics: Physics2D.BoxCast now correctly detects the contacts with start/end vertex of an EdgeCollider2D when exactly contacting a box vertex.
+(1190905, 1194605)
+Prefabs: Fixed an issue where a duplicated child nested prefab was not created in the same position.
+(1157320, 1191799)
+Prefabs: Fixed and issue where Re-serialization made changes to Nested Prefabs.
+(1162736, 1193806)
+Profiler: Fixed an issue with vertical scrollbar not working for Timeline view from Profiler window.
+(1196588, 1198066)
+SceneView/GameView: [MacOS] Fixed an issue where the user could not switch to Windowed mode via a script when Allow FullScreen option was disabled,
+(1080571, 1191844)
+Scripting: Editor: Fixed an issue with "stackTraceLogType" command line argument.
+(1181994, 1193461)
+Scripting: Fixed a crash on shutdown in debugger thread.
+(1180399, 1195124)
+Scripting: Fixed a crash on shutdown in mono_profiler_raise_thread_stopped.
+(1189077, 1196201)
+Scripting: Fixed a crash when calling System.Diagnostics.Process APIs after domain reload.
+(1194176, 1195519)
+Scripting: Fixed an issue where FileSystemWatcher was not working on Windows when targeting .NET Standard 2.0 API Compatibility Level.
+(1066732, 1194583)
+Scripting: Fixed an issue where plugins having dot in their name apart from before the extension name, or if they do not have extension at all, are not loaded properly.
+(1174403, 1174674)
+Scripting: Fixed an issue where Process.Start() would throw an exception when Windows path contains '.'.
+(1160455, 1196203)
+Scripting: Fixed and issue where Player project generation did not include defines and references.
+(1199376, 1199377)
+Scripting: Improved startup time if the user has a previous player build, thus no beed to recompile all again.
+(1188509, 1193167)
+Shaders: Fixed an issue where having preloaded shaders caused shaders compiling to fail for some platforms.
+(1185032, 1188789)
+UI Elements: Fixed and issue where OnInspectorGUI did not called with customEditor of type DefaultAsset.
+(1175246, 1195514)
+Universal Windows Platform: Fixed an unresponsive UI when Resolution is higher than native display.
+(1191482, 1196190)
+Universal Windows Platform: Fixed and issue where native plugins were not loading if module filename contains '.' character.
+(1190295, 1198159)
+Version Control: Fixed an issue where ignored or unmapped files in Perforce workspaces would cause logspam to appear when selected.
+(1148796, 1194991)
+
+Backwards Compatibility Breaking Changes
+
+XR: Updated to Oculus 1.38 plugin and added support for valid tracking poses even when devices aren't fully tracked.
+(1197386, 1197390)
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 12.04+, SteamOS+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 9.0 or higher.
+Android: OS 4.1 or later; ARMv7 CPU with NEON support or Atom CPU; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+

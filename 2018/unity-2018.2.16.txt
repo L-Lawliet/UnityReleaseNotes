@@ -1,0 +1,24 @@
+/unity/whatsnew/unity-2018.2.16
+Release notes
+Fixes
+
+AI: Fixed an issue with NavMeshObstacle carving that could create an unexpected boundary where one of the hull's corners or edges sits precisely on a NavMesh polygon edge. (1078553, 1097930)
+AI: Fixed RemoveAllNavMeshData() not waiting for NavMeshObstacles to finish carving, causing a crash. (1075239)
+Android: Fixed wrong path returned by IPostGenerateGradleAndroidProject.OnPostGenerateGradleAndroidProject during project export.
+Android: Increased JVM heap size from 2gb to 4gb. (969563)
+Asset Import: Fixed scripts that are in special folders like Assets/Plugins/Android/ not being ignored during compilation. (1092532)
+Asset Import: Fixed the import of the root node rotation for assets with a shared avatar. (1077942, 1095518)
+Audio: Fixed FMOD shutdown to avoid a deadlock, which could causes freezes on Android. (1046752, 1087597)
+Cache Server: Fixed duplicate downloads of assets from Cache Server. (1084628)
+IL2CPP: Add support for CultureInfo in WebGL when exceptions are disabled. (1083520)
+IL2CPP: COM Callable Wrappers for managed arrays now implement IReferenceArray interface. This fixes cases where Windows Runtime APIs expected objects to implement this interface, and if they don't, they report errors such as "Data of this type is not supported." and "Error trying to serialize the value to be written to the application data store". (1054327)
+IL2CPP: Fixed a call to GetGenericArguments on a MethodInfo not working for an inflated generic type. (1087317)
+IL2CPP: Fixed COM Objects representing Windows.Foundation.IAsyncAction and Windows.Foundation.IAsyncOperation getting destroyed after converting them to System.Threading.Tasks.Task via "AsTask" extension method. (1086209)
+IL2CPP: Fixed Debug.WriteLine() not implemented. (1088770)
+IL2CPP: Fixed Marshal.SizeOf not supported for types with a generic base class when the base class does not use the generic type in any field. (1083239)
+iOS: Added iPhone XR/XS/XS Max resolutions to Game View.
+iOS: Fixed wrong Screen.safeArea on iPhone on Start(). (1085662)
+PS4: Fixed render target clear with solid color wasn't cleared properly under Scriptable render pipeline. (1096478)
+Shaders: Fixed loading shaders from AssetBundles that were created in 2017.2 not being allowed.. (1096787)
+
+Revision: 39a4ac3d51f6

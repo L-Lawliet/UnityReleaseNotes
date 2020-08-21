@@ -1,0 +1,16 @@
+/unity/whatsnew/unity-2017.4.17
+Release notes
+Fixes
+
+AI: Fixed NavMesh baking issue that appears when an Obstacle is at a certain proximity to another mesh (1044247, 1098887)
+Android: Fixed a crash for Android 9 (Pie) where ServiceConnection.onNullBinding() does not exist. (1091766)
+Android: Fixed case of white flash when starting a Unity android app. (929955, 1087299)
+Audio: Fixed FMOD shutdown to avoid a deadlock (1046752, 1086869)
+Build Pipeline: Fixed an issue where Scene Asset Bundles could not influence managed and native code stripping. (1052180)
+Editor: Fixed Null reference Exceptions occurring while typing in the project window search bar (1077389, 1092366)
+Editor: Unity Editor will no longer automatically unlock assembly reload (960397)
+IL2CPP: Fixed calls to native functions from delegates using stdcall calling convention, even if explicitly marked as cdecl. Caused problems on windows x86 (and UWP x86), leading to rare crashes in code using SSLStream (1044485)
+IL2CPP: Fixed IL2CPP build failing if Visual Studio 2019 is installed on the machine.
+Licenses: Fixed an issue where licence activation didn't work when using the -nographics command line flag (1043511, 1088048)
+Physics: Fixed RaycastHit.textureCoord performance issue, was internally copying whole mesh index buffer for no good reason (1065218)
+

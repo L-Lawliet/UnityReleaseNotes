@@ -1,0 +1,120 @@
+/unity/whats-new/2019.2.3
+Release notes
+Known Issues in 2019.2.3f1
+
+Cloud Diagnostics: USYM_UPLOAD_AUTH_TOKEN is thrown in Xcode when the Project is built in BatchMode with -runTests and Cloud Diagnostics enabled
+(1167025)
+IL2CPP:  Build fails when compiling a struct with a long array inside it
+(1173310)
+Mobile: [Android][IL2CPP] App crashes on 2019.1.0a12 and up on launch if old IL2CPP files from 2019.1.0a11 and below are backuped
+(1170543)
+Package Manager: The Package Manager UI does not refresh when you install or remove packages.
+(1148329, 1152868)
+Physics: Crash on block_remove when changing mesh to Plane in Skinned Mesh Renderer while cloth component attached
+(1162918)
+Physics: Plane with Cloth component is affected by high external force when in Play mode
+(1173813)
+Scene Management: 2019.3 and 2019.1 Unity versions are significantly slower when entering the play mode
+(1161373)
+Scene Management: Enabled Prefab is disabled after upgrading to Improved Prefabs
+(1138224)
+Scene Management: Transform::GetWorldToLocalMatrix  crash during first import when accessing Components in Prefabs
+(1159905)
+Scripting: Handles.Disc function performance is very slow in Scene View
+(1165684)
+Scripting: [Android][Mono][IL2CPP] "Unable to find libc" error thrown when executing certain SslStream constructor 
+(1022228)
+Scripting: [Templates] Clamp BlendShapes are set to true by default when creating new projects
+(1148638)
+Shuriken: WorldCollision crashes when spawning particles with World Collision enabled
+(1168859)
+Windows: Editor stuck on import when importing "GameAnalytics Unity SDK" package
+(1167747)
+XR: Cardboard projects default to 30 frames per second unless targetFrameRate is set to 60.
+(1143799, 1144492)
+
+2019.2.3f1 Release Notes
+Fixes
+
+Android: Changed the message to be more clearer for the end user when local storage is full.
+(1171893, 1174690)
+Android: Changed the message to be more clearer for the end user when local storage is full.
+(1171893, 1174690)
+Android: Resolved issues with fetching the list of Android SDKs in the Player Settings window when Java 9 or higher is installed.
+(1136069, 1169783)
+Android: Resolved issues with fetching the list of Android SDKs in the Player Settings window when Java 9 or higher is installed.
+(1136069, 1169783)
+Animation: Fixed fetching of AnimationClip in override controller for Asset Bundles when AnimationClip is not yet loaded.
+(1165817, 1169828)
+Animation: Fixed Initialized flag not set during object construction leading to potential errors when setting.
+(1168475, 1169799)
+Asset Bundles: Fix for Loading dependent AssetBundles fails to deserialize some scripts on Standalone builds
+(1154172, 1173948)
+Editor: Fix issue with worldspace canvases not rendering to displays other than main display
+(1173805, 1178803)
+Editor: Fixed a crash when running tests in batch mode
+(1169988, 1171925)
+Editor: Fixed in issue where selecting a shader and viewing it in the inspector would cause materials to be kept around longer than required.
+(1162855, 1174896)
+Editor: Unable to drag assets from the 'Packages' subfolders in the Project window when using One Column Layout
+(1169200, 1178384)
+GI: Fixed issue where the Occlusion label in the Preview window gets cut off on Windows.
+(1171680, 1174984)
+GI: Fixes loading of auto generated Lighting data in LoadSceneAsyncInPlayMode.
+(1156685, 1156767)
+Graphics: Fixed random crash in GraphicsJobs when using SRP API DrawRenderers with RenderStateBlock
+(1159200, 1170257)
+Graphics: Fixed case 1157730 - DX11 Draw Quad will no longer crash on windows 7.
+(1157730, 1170260)
+Graphics: Optimized shader build times during player build, especially when another player build was already done before. Saves 10-20 seconds of typical player build time.
+(1174727, 1178804)
+iOS: Fixed simulator build on xcode11 beta (metal headers were added) - now we use headers if available instead of forcibly declaring symbols
+(1163876, 1170516)
+macOS: Fixed codesign errors for Mono framework
+(1170134, 1178802)
+Profiler: Fixed a memory leak that happened when the job debugger held onto the scheduled fences.
+(1156327, 1173996)
+Scripting: Allow UnityLinker to run properly on FAT32 partitions on macOS.
+(1166108, 1168248)
+Scripting: Ensure only script assets are opened with default external editor.
+(1177543, 1177598)
+Scripting: Fix crash when inspecting large collections in debugger.
+(1130912, 1171512)
+Scripting: Fix logging ETW events from the editor and players
+(1084396, 1173495)
+Scripting: Fixed issue where System.Data.Odbc library was not found correctly on Windows.
+(1156912, 1173920)
+Scripting: Opening any file will open in VS Code instead of in the Editor
+(1174491, 1175202)
+Scripting: Port numbers returned from GetActiveTcpConnections on Windows are now correct.
+(1165578, 1174669)
+XR: Fix for Render Viewport Scale Jitter when render viewport scale changes continuously
+(1062297, 1174500)
+XR: Prevent Hololens app pause when switching focus to a 2D view within a running application.
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 12.04+, SteamOS+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 9.0 or higher.
+Android: OS 4.1 or later; ARMv7 CPU with NEON support or Atom CPU; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+

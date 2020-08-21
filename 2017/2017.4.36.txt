@@ -1,0 +1,31 @@
+/unity/whats-new/2017.4.36
+Release notes
+Known Issues in 2017.4.36f1
+
+Android:  64 bit Build with Physics.Processing runs at a very low FPS
+(1186295)
+Asset Bundles: Loading.LockPersistentManager object lock impacts performance during AssetBundle.LoadAssetAsync operation
+(827299)
+Mobile: [Android] Input.GetKey returns false when S-Pen is being used on Samsung device
+(1185531)
+iOS:  Apps with UIApplicationExitsOnSuspend in info.plist failing to pass Apple Store validation
+(1160614)
+uGUI: RectTransofrm resets it's coordinates to zero when selecting "Apply" on prefab even if no changes were made
+(964111)
+
+2017.4.36f1 Release Notes
+Fixes
+
+Android: Fixed Android 10 video player bug when playing local, external files.
+(1168329)
+Build Pipeline: Fixed an issue with throwing BuildFailedException from a build callback not failing the build
+(1097286)
+iOS: Gave proxy drawable textures names and made them not be backed by memory if they're not in use.
+(1167629)
+macOS: Fixed a rare crash issue with the Editor build when creating or closing new windows
+(1151695)
+Windows: Multi-display: Fix non-primary display aspect ratio in windowed mode
+(1134231)
+Windows: Windows: Fix Multi-display always reverting to native resolution on primary display
+(1040726)
+

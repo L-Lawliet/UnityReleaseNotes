@@ -1,0 +1,26 @@
+/unity/whatsnew/unity-2017.4.13
+Release notes
+Fixes
+
+2D: Fixed Unity crashing on MonoStringNew when entering Play Mode after reopening the project and loading resources. (1066715)
+Android: Allow Power VR devices to render at custom resolution with BlitType:Auto. (1022974, 1066224)
+Android: Increased JVM heap size from 2gb to 4gb. (969563)
+Asset Import: Fixed crash when re-importing assets for some global settings. (1079532, 1081907)
+Asset Pipeline: Fixed crash when re-importing assets for some global settings. (1079532, 1081907)
+Editor: Fixed colliding file ids in YAMLMerge not tracking already remapped keys. (1076700)
+Editor: Fixed UnityConnectSettings initialization. (1058840)
+IL2CPP: Fixing an issue with certain unprintable characters in C# source code causing failed compilations when they are copied to the C++ code as comments. (1049221)
+iOS: Fixed CoreLocation framework being included even if the location API is not used. (1076345)
+iOS: Fixed standard shader artifacts on mobiles. (1087277)
+iOS: Fixed unassigned icon warning in Xcode when locale is not using "." as the decimal separator. (1058928)
+iOS: Fixed unassigned icon warning in Xcode when locale is not using "." as the decimal separator. (1058928)
+Kernel: Fixed ParticleSystemGeometryJob::ScheduleJobs crash when deleting GameObject. (1051704, 1081788)
+Particles: Fixed temp memory not being cleaned up even when simulation doesn't need advancing. (1028462)
+Physics: Fixed an issue where physics internal data wasn't being updated if the scene only contained static colliders, causing issues with shape casts. (1064897)
+Physics: Fixed issue where physics internal query data may not be updated if there are only static colliders in scene, causing shape cast issue. (1064897)
+SceneManager: Fixed crashes caused by incorrectly activated children of inactive parents. (1051704, 1081788)
+Shaders: Fixed Android + Vulkan shader compilation failure. (1080403)
+Shuriken: Added handling of NaN coming from PhysX due to internal bug. (943649, 1063373)
+XR: Fixed issue of error spam when depth buffer sharing was enabled during Holographic Remoting or Simulation. (1047269)
+
+Revision: 6902ad48015d

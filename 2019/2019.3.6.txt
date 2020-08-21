@@ -1,0 +1,256 @@
+/unity/whats-new/2019.3.6
+Release notes
+Known Issues in 2019.3.6f1
+
+Ads:  Verified and default Ads package for 2019.3 should be 3.3.x instead of 2.0.8
+(1206332)
+Animation: Crash on Animator::CreateInternalControllerPlayable when entering Play Mode
+(1227838)
+Animation: Crash on PreOrderPlayableTraverser::Traverse when entering Play mode in a scene where every GameObject calls OnValidate method
+(1220788)
+Asset Import Pipeline: Crash on mdb_cursor_put when a project in a Google Drive File Stream is upgraded using Asset Import Pipeline V2
+(1220517)
+Asset Import Pipeline: Editor crashes when importing prefab referencing scripts from precompiled libraries
+(1217707)
+Asset Import Pipeline: [Asset Database V2] GameObjects and Prefabs lose references to Assets when Assets are moved to a different folder
+(1226928)
+Audio: Crash on StackAllocator::WalkAllocations when there's a memory leak in Play mode
+(1225987)
+Audio: [Windows] Editor uses one CPU Logical Processor at 100% while the game is in Pause Mode
+(1219619)
+Global Illumination: Crash in PVRTransmissionTextureData::PVRTransmissionTextureData when exiting Play Mode after loading another Scene
+(1221209)
+Global Illumination: Unity crashing when baking lights and generating light UV
+(1118524)
+Global Illumination: [GPU PLM] GPU baking does not match CPU
+(1206157)
+Global Illumination: [OSX][GPUPLM]OS Kernel Panic crash with 'Thread may have been prematurely finalized' after baking the scene with AMD GPU
+(1160419)
+Global Illumination: [PLM] Baking stalls after disabling/enabling static gameobject
+(1144403)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - General: Editor crashes on ComputeShader::GatherProperties when enabling Frame Debugger
+(1221374)
+Graphics - General: Memory is not deallocated immediately after Texture2D object was deleted
+(1217907)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+IAP: Unity purchasing fails to load due to failing to find UnityEngine.UI assembly
+(1193773)
+Linux: [Android] ETC1 and ETC2 compression fails when importing textures
+(1222219)
+MacOS: [Mac] Build support modules fail to install when downloading them using "Open Download Page" button in Builds Settings
+(1219284)
+MacOS: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+Mobile: [Android] Loading assets from AssetBundles takes significantly more time when the project is built as an AAB
+(1153358)
+Mobile: [Android] [Gles3] [URP] Darker UI when using Gles3, Linear and URP
+(1219635)
+Package: Errors are Constantly thrown when Active Input Handling is set to Input System Package
+(1176974)
+Profiling: Editor crashes when loading profiler file with memcpy stacktrace
+(1131782)
+Profiling: Intermittant editor crash when using the profilercrash with deep profilign and call stacks enabled
+(1203222)
+Profiling: Missing Profiler.EndSample errors appear after switching profiling target
+(1181306)
+Profiling: PVRContextManager Thread has no data and occupies important area in Profiler Timeline View
+(1223636)
+Profiling: Performance decrease in EditorOverhead using Deep Profile 
+(1051094)
+Profiling: [Ubuntu]Unity hangs when Deep Profiling and Call Stacks are enabled.
+(918779)
+Project Browser: Parent and child nested Scriptable Object Assets switch places when parent Scriptable Object Asset is renamed
+(1189089)
+Scene Management: Editor crashes while assigning prefab variant to a reference on its base
+(1225758)
+Scene Management: Prefabs lose their values if scripts are removed then reintroduced
+(1216914)
+Scene Management: Unity Editor freezes/crashes when opening a specific Scene
+(1228147)
+Shaders:  Change in included hlsl file does not always trigger recompilation
+(1215034)
+Shuriken: Crash on CreateDirect3D11SurfaceFromDXGISurface when calling DrawRenderer with a Trail Renderer
+(1216216)
+Shuriken: Off Camera ParticleSystem crashes Editor when particles are disabled with Culling set to Pause
+(1221265)
+Shuriken: Particle System that has a Stop Action gets cleared after being paused for a while
+(1213288)
+Terrain: [Performance Regression] GameObject.ActivateAwakeRecursively noticeably slower when rendering trees on terrain
+(1225501)
+Timeline: Crash on ScriptingGetComponentsOfTypeFromGameObjectFastPath when overriding prefab with Playable Director
+(1224184)
+Universal RP: [URP] "Render Object" asset does not create in project window when added in "Render Features" field in the Inspector
+(1214779)
+Visual Effects: [UIR] Lots of small visual regressions within the VFX Graph UI.
+(1222517)
+
+2019.3.6f1 Release Notes
+Fixes
+
+AI: Fixed path-finding bug in which floating point errors would cause agents to take potentially large, spurious detours.
+(977653)
+Android: On screen keyboard is closed when focusing different InputField
+(1180393)
+Animation: Fix for Go to Previous keyframe  button/shortcut does not work in the Animation Window.
+(1220385)
+Asset Import: BumpMap check window does not flag textures as possible NormalMap when they are not used in the Material.
+(1213579)
+Asset Pipeline: Fixes AssetBundle Recompression not verifying the CRC of bundle contents when requested
+(1195075)
+Audio: Fix applying lowpass filter custom cutoff curve from scripts
+(1202437)
+Audio: Fix hang after failing to load audio assets from asset bundles.
+(1184883)
+Audio: Fix SpatialBlend application when AudioSource and Rigidbody are attached to the same game object.
+(1206115)
+Audio: Fixed an issue where audio sources failed to play when there are more than 250 sources playing or previously playing sources in the scene.
+Audio: Fixed an issue where the audio clip UI prevented the compression quality slider to be set to to certain values.
+(1186565)
+Audio: Fixed errors during project import when the project contains around 10000 audio assets.
+(1194658)
+Audio: Fixed incorrect mix levels in audio mixer with adjacent effects that both use wet-mixing.
+(1185470)
+DX12: Fix memory leaks caused by RayTracingAccelerationStructures when Mesh objects that were used to build the acceleration structure are deleted.
+(1214846)
+Editor: Fix the search location of the CA store for CentOS
+(1188530)
+Editor: Fixed crash when setting invalid Game resolution in the Editor
+(1221822)
+Editor: Fixed Humanoid Configuration editor not drawing bone scene handles when Gizmos are disabled.
+(1194850)
+Editor: Fixed New InputSystem not handling absolute mouse positions including those sent over RDP.
+(1224897)
+Editor: Fixed the issue foldout icon under the Mesh renderer preset editor
+(1206125)
+Editor: Fixing console search when closing and reopening the console window.
+(1180379)
+Editor: Fixing console search when going in a maximized playmode
+(1197494)
+Graphics: Add back immediate present mode to Stadia
+(1223800)
+Graphics: Fix crash on VFXTextureGenerator::ComputeSignalCurve
+(1220947)
+Graphics: Fix issue where motion vector texture would contain incorrect values for object that stopped moving.
+(1178468)
+Graphics: Fix issue where skinned mesh renderers with custom bone weights and that contained unreferenced vertices would crash when optimizing the mesh and reordering the vertices.
+(1218598)
+Graphics: Fixed AsyncGPUReadback on Vulkan
+(1197375)
+Graphics: Fixed global texture properties to handle multisampling textures properly.
+(1154519)
+Graphics: Fixed Metal editor text corruption issue that happened on some hardware but not all
+(1156105)
+Graphics: Fixes incorrect gamma decoding at import of LDR textures that target a HDR graphics format in a gamma colorspace project
+(1195264)
+Graphics: Fixes two issues related to counterbuffers in Vulkan
+
+If one only uses the counter the buffer is now correctly bound
+Updating the data on the buffer does not invalidate the counter
+(1215932)
+
+Graphics: Metal: Disable Graphics Jobs support for Nvidia GPUs
+(1215105)
+IL2CPP: Correct the behavior of the InitMessage icall.
+(1208473)
+IL2CPP: Use the proper timeout unit for calls to Socket.Select.
+(1206057)
+iOS: Fixes an issue that stopped emojis appearing on textfields with no limit
+(1214754)
+macOS: IME works in both editor and player in the proper location
+Package Manager: Fixed an issue where the package version would not get updated when the version was changed in the package.json file.
+(1191723)
+Particles: - Fixed Mesh that contains blend shapes sometimes not being marked as read/write enabled when it is used by a ParticleSystems ShapeModule.
+
+Fixed crash when assigning a Mesh with blend shapes to a ParticleSystems ShapeModule through a script in a Player build. A warning will now be thrown to report that the Mesh must be read/write enabled.
+(1215645)
+
+Particles: Fixed Sub Emitter fields having too much vertical separation and the Object Field selector button being too large.
+(1213457)
+Physics: Rigidbody2D MovePosition/MoveRotation now result in the correct target position/rotation when using manual simulation with time-step that isn't Time.fixedDeltaTime.
+(1213003)
+Playables: Fixed out of order evaluation of Control Tracks in Timeline when using multiple nested timelines.
+(1220657)
+Profiler: Profiler: Fixed -profiler-maxusedmemory cmdline parameter for standalone players.
+Profiler: Increased maximum memory that can be used by profiler to 128MB.
+(1210322)
+Scripting: Fixed editor freeze/crash when interacting with Native Audio Plugin SDK's Audio Mixers
+(1217898)
+Shaders: Fixed Editor crash when calling ShaderUtil.ClearCachedData() while still async compiling shader variants.
+(1184636)
+Timeline: Fix issues related to recursive control tracks.
+(1178423)
+Timeline: Fixed adjacent recording clips highlighting the wrong clip.
+(1210312)
+Timeline: Fixed avatar mask reassignment not causing immediate re-evaluation.
+(1219326)
+Timeline: Fixed issue where changes to a Signal Receiver component in a prefab were reverted.
+(1210883)
+Timeline: Fixed issue where using the HideInMenu attribute in combination with a class inheriting from Marker would not hide the marker from the Timeline context menus.
+(1221054)
+Timeline: Fixed Performance issue where Control Tracks would resimulate during the tail of a non-looping particle clip.
+(1216702)
+Timeline: Fixed SignalReceiver.ChangeSignalAtIndex incorrectly throwing exception when multiple entries are set to null.
+(1210877)
+Timeline: Fixed timescale drawing to only draw visible lines which avoids a hang with very large clips.
+(1213189)
+UI: IME properly works and is in the correct location
+(1178930)
+UI Elements: Fixed bug making docked EditorWindow hard to resize if their content near the borders react to MouseDownEvent.
+(1209863)
+UnityLinker: Prevent engine code stripping from removing the legacy input system module when any input magic methods are defined on MonoBehaviours.
+(1189110)
+Video: [Mac] Video-heavy project does not get successfully imported when launching the project in batchmode
+(1172957)
+Windows: Fix race condition in plugin loading code when P/Invoking into libraries from multiple threads at once.
+(1192915)
+Windows: Fix VSync breaking when changing it from OnApplicationFocus handler.
+(1132488)
+Windows: Fixes incorrect parsing of Application name from command-line arguments
+(1215557)
+Windows: GPU Performance Markers are no longer absent in the Nvidia NSight range profiler view when launching the Unity editor, using DX12, from Nsight.
+(1203035)
+XR: Fix crash when you connect to a Hololens 2 using the HolographicRemoting scripting api and then enable Windows Mixed Reality.
+
+API Changes
+
+Particles: Added: Added NativeArray overloads to SetParticles and GetParticles
+XR: Added: Exposed XRSDK znear, zfar, srgb to script.
+
+Changes
+
+XR: Temporarily disabling runtime MSAA level changes if running with Vulkan and XR Management.
+
+Improvements
+
+2D: Update 2D Template to include 2D verified packages
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

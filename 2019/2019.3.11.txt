@@ -1,0 +1,162 @@
+/unity/whats-new/2019.3.11
+Release notes
+Known Issues in 2019.3.11f1
+
+2D: Editor crashes/freezes on a broken project when editing a Scene using Tilemap
+(1221127)
+Asset Import Pipeline: Editor is stuck compiling or crashes when importing prefab referencing scripts from precompiled libraries
+(1217707)
+Audio:  Editor crashes on changing 'System Sample Rate' when Audio track preview is being played in Timeline window
+(1232743)
+Audio: [Windows] Editor uses one CPU Logical Processor at 100% while the game is in Pause Mode
+(1219619)
+Global Illumination: Unity crashing when baking lights and generating light UV
+(1118524)
+Global Illumination: [OSX][GPUPLM]OS Kernel Panic crash with 'Thread may have been prematurely finalized' after baking the scene with AMD GPU
+(1160419)
+Global Illumination: [PLM] Baking stalls after disabling/enabling static gameobject
+(1144403)
+Global Illumination: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - General:  'task.rasterData.vertexBuffer == NULL' errors when using a Particle System
+(1226357)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+IAP: Unity purchasing gives error on project upgrade due to failing to find UnityEngine.UI assembly
+(1193773)
+MacOS:  Editor is leaking memory when Aura Camera component is attached to a GameObject in the scene and Aura preview is enabled
+(1229502)
+MacOS: [Mac] Build support modules fail to install when downloading them using "Open Download Page" button in Builds Settings
+(1219284)
+MacOS: [macOS] Editor crashes when trying to access audio capture devices
+(1227607)
+Mobile: [Android][IL2CPP] App crashes after executing Application.Quit
+(1233578)
+Mobile: [iOS] Debug .pdb files are added to iOS release builds
+(1232798)
+Package: Errors are Constantly thrown when Active Input Handling is set to Input System Package
+(1176974)
+Profiling: Missing Profiler.EndSample errors appear after switching profiling target
+(1181306)
+Profiling: Native object references for some object types are always 0 in the memory profiler
+(1234714)
+Profiling: [Profiler] Any dropdown list in Profiler Window doesn't expand the second time once collapsed until the mouse cursor is moved
+(1223087)
+Scene Management: Prefab Variant Transform fileId changes
+(1238280)
+Scene Management: Prefabs lose their values if scripts are removed then reintroduced
+(1216914)
+Scene Management: Unity Editor freezes/crashes when opening a specific Scene
+(1228147)
+Scripting: ManagedJobIndexPool runs out of indices when using a processor with a large amount of cores, crashes on exit
+(1204885)
+Shuriken: Crash on CreateDirect3D11SurfaceFromDXGISurface when calling DrawRenderer with a Trail Renderer
+(1216216)
+Themes:  Components of a gameObject are not displayed in Inspector if its tag is deleted
+(1240105)
+WebGL:  Built project causes an uncaught abort exception when using dlopen() dynamic linking in Emscripten
+(1192963)
+WebGL:  VideoPlayer is not rendered in WebGL builds when the video is loaded via URL
+(1188316)
+Windows: TDR Crash when opening a project with Image Sharpening enabled
+(1238022)
+
+2019.3.11f1 Release Notes
+Fixes
+
+2D: Editor crashes during Sprite Atlas baking when not enough disk space is available
+(1228614)
+2D: Fixed a crash that might happen when a Sprite Renderer in Sliced/Tiled Draw Mode was rendered with the Universal Render Pipeline.
+(1217696)
+2D: Fixed unable to select second created Sprite after the first created Sprite has been renamed.
+(1223096)
+Animation: Fixing a crash when assigning an invalid AnimatorOverrideController to the Animator field.
+(1229421)
+Asset Import: Fixed issue where selecting a Material from the list in Model Importer Material Editor locks choice and ignore other selected Materials
+(1238878)
+Asset Import: Fixed issue where shadows appear segmented at specific angles when using physical camera with a large difference between sensor aspect ratio and screen aspect ratio.
+(1211431)
+Audio: Fixed unassigned AudioSource game object from causing a memory leak which would eventually result in a crash.
+(1225987)
+Build Pipeline: Fix cache miss due to non-deterministic hash generation for BuildReferenceMap and BuildUsageTagSet classes.
+(1227574)
+Editor: Layer settings are set and saved per project in the project Library folder instead of being set globally.
+(1191057)
+Editor: Raise a warning when exporting a .unitypackage, including dependencies, when some dependencies are in Package Manager packages and cannot be included
+(1218448)
+GI: Added API for StitchLightmapSeams and ScaleInLightmap on Mesh Renderer.
+(1228109)
+GI: Fixed incorrect handling of HDR values for the gradient sky environment while baking.
+(1222747)
+Graphics: Errors appear when modifying a directional light with a reflection probe when HDRMode is R11G11B10
+(1217364)
+Graphics: Resolved graphics tiers HDR format not taken into account within the editor.
+(1205975)
+Graphics: Tree Billboard textures now only update when they are used in the scene.
+(1198821)
+IL2CPP: Add support for SendTo and RecvFrom socket calls on Windows with IPv6.
+(1208806)
+iOS: Fixed an issue where a custom storyboard might not be found at runtime
+(1225171)
+iOS: [iOS] Swift Language Version is not set in Xcode Build Settings when a .swift source plugin is added to an Unity Project
+(1176139)
+Kernel: AlignOf<T> returns C# required structure alignment, instead of 4.
+(1214853)
+Linux: Read /etc/os-release instead of running lsb_release to be more platform agnostic and resolve issue with Stadia certification.
+(1231988)
+macOS: Fixed issue where plugins were not being placed and loaded from the correct location
+(1216171)
+macOS: Fixes a bug that prevented the Game Center UI from showing on macOS
+(1215479)
+Package Manager: Fix nullreference exception (backport)
+(1218765)
+Profiler: Fix Editor crashes when loading corrupted profiler data
+(1131782)
+Scripting: Fixed batch mode issue, where a repeating or infinite loop coroutine does not resume execution after a period of time.
+(1201708)
+XR: Fix a crash when executing Application.Quit on Oculus device
+(1222826)
+XR: Fix for lack of vulkan support for additional graphics queue in graphics device.
+(1221658)
+XR: Fixed Vulkan multiview renderpass mismatch
+
+Improvements
+
+Android: Update Screen.currentResolution.refreshRate in case the display refresh rate changes
+Kernel: Fix crash when empty filename is passed to AsyncReadManager.Read API
+UI: Add the ability to toggle maskable option from the inspector (property has always been there for API only)
+(1227645)
+
+Features
+
+iOS: Make it possible to tweak xcode frame-capture and metal-validation option from editor scripts
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

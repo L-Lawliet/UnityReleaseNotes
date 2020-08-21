@@ -1,0 +1,18 @@
+/unity/whats-new/2017.4.24
+Release notes
+2017.4.24f1 Release Notes
+Fixes
+
+Android: Fixed an issue loading assets from OBBs when a Unity generated AndroidManifest.xml is reused in a project. (1061304, 1069217)
+Android: Fixed an issue where using AndroidJavaProxy multiple times per frame could cause a global reference table overflow. (1044728)
+Android: Fixed Environment.TickCount returning negative value on Android 8.0+. (1108927)
+Android: Updated JNI Bridge to correctly handle VideoPlayer buffers after SDK version upgrade. (1121718)
+Build Pipeline: Prevented crash when invoking the build pipeline from a build pipeline user callback. (1129944)
+Camera: Fixed case where editor would crash when rendering with an invalid occlusion camera. (1089008)
+Graphics: Fixed deletion of external texture not clearing internal texture binding caches. (1094803)
+Graphics: Optimised cluster rendering by reducing network packet send latency. (965251, 1131275)
+iOS: Fixed an issue where visual artifacts could appear when using the Deferred Rendering Path on Metal. (996086, 1129492)
+Mobile: Fixed Android development build keyboard display over the locked screen. (946796, 1076660)
+Scripting: Added support for events in Script Updater. (1069340)
+WebGL: Fixed audio not working in Safari after Apple added auto-play restrictions (requires clicking on content to enable audio). (1089060)
+

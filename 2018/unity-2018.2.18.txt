@@ -1,0 +1,23 @@
+/unity/whatsnew/unity-2018.2.18
+Release notes
+Fixes
+
+Android: Fixed crash on Android 9. (1102065)
+Editor: Fixed function keys incorrectly producing characters within input fields. (1057122)
+Editor: Fixed issue with precompiled managed assemblies (.dlls) in the Assets folder getting loaded twice on startup, causing two InitializeOnLoad calls where Unity API calls such as AssetDatabase.LoadAssetAtPath would fail in the first InitializeOnLoad. Now there is only one first InitializeOnLoad call and Unity APIs work as expected. (1060352)
+GI: Fixed Reflection Probe cubemaps being reimported if the user selects the same Lightmap Encoding quality setting. (1067156)
+GI: Fixed rendering artifacts when GPU instancing and real-time GI are used together. (1053521)
+Graphics: Fixed crash when loading asset bundle built from an older unity version. (1078602)
+Graphics: Fixed RGBA4444 texture support when using OpenGL ES. (1077689, 1079024)
+IL2CPP: Fixed the marshalling of char arrays to be two byte characters when CharSet.Unicode is used. This corrects the behavior of some Windows Registry assemblies. (1086670)
+IMGUI: Fixed script recompilation not happening on OSX.
+IMGUI: Fixed Unity Editor no longer automatically unlocking assembly reload. (960397)
+iOS: Fixed VideoPlayer.isPlaying returning true when the video is paused. (1086705)
+Package Manager: Fixed a "Failed to fetch versions information" error being displayed in Package Manager window for all unknown packages.
+Shuriken: Fixed Trails using the old position when a Move and Clear is performed. (1061683)
+Shuriken: Fixed Renderer.bounds returning the wrong bounds when multiple renderers were on the same GameObject. (1088716, 1090058)
+Timeline: Fixed issue when instantiating PlayableDirectors loaded from AssetBundles losing ExposedReference names. (1082467)
+VR: Fixed tracking issues with PSVR HMD.
+Vulkan: Fixed editor crash when entering playmode from paused mode with profiler window open. (1082921)
+
+Revision: 4550892b6062

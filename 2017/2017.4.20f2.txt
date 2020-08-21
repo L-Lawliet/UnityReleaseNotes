@@ -1,0 +1,7 @@
+/unity/whats-new/2017.4.20f2
+Release notes
+Fixes
+
+Fixed a console support module issue.
+
+Changeset: 413dbd19b6dc

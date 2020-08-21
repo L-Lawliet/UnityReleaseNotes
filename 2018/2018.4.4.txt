@@ -1,0 +1,83 @@
+/unity/whats-new/2018.4.4
+Release notes
+2018.4.4f1 Release Notes
+Changes
+
+Android: Android Gradle plugin version updated up to 3.4.
+Android: Gradle version updated up to 5.1.1.
+
+Fixes
+
+Animation: Fixed argument exception being thrown when legacy clip is used with AnimationClipPlayable.
+(1100643, 1164704)
+Animation: Fixed out of bounds index in mecanim value array causing crash.
+(1144501, 1155340)
+Animation: Fixed prefab import of animator with dangling references.
+(1154048, 1160256)
+Asset Import: Fixed an issue where AssetPostprocessor::GetVersion() did not affect AssetDependencyHash on first import.
+(1146482, 1152920)
+Asset Import: Fixed an issue where if a mesh asset has no vertex data, the import crashes in some cases.
+(1144169, 1150809)
+Asset Import: Fixed texture import setting alpha is transparency value not resetting to default when switching to Default texture type.
+(1117308, 1150835)
+Editor: Fixed crash on quit in UNITY_FT_Done_Face when using large prefab with TextMesh.
+(1075972, 1140677)
+Editor: Fixed crash when idling in editor related to hash calculation.
+(1108314, 1147408)
+Editor: Fixed game view scale in play mode for mobile platforms.
+(1140742, 1151176)
+Editor: Fixed project settings not focusing when menu item is selected and window is already docked.
+(1150481)
+Editor: Fixed stop button in audio clip preview panel.
+(1154598, 1166936)
+Editor: Fixed the scale error by updating the scale once the platform is switched.
+(918311, 1153434)
+GI: Fixed a potential baking crash when objects HideFlags are configured.
+(1064691, 1155173)
+Graphics: Fixed crash that can occur when accessing the MeshFilter.mesh property when the mesh is loaded via the async upload manager.
+(1124524, 1158404)
+Graphics: Fixed rare crash with GPU skinning and blendshapes.
+(1097227, 1138459)
+Graphics: Fixed RenderTexture RenderTextureMemoryless.MSAA when using OpenGL ES.
+(1154687, 1160507)
+IL2CPP: Added support for NamedPipeClientStream on Windows platforms.
+(1159863, 1160512)
+OSX: Fixed scrolling sensitivity being too high in game.
+(1162791, 1163888)
+Particles: Fixed editor crashes with WorldCollision when Spawning Particles.
+(1155477, 1162837)
+Particles: Fixed Particle System sorting unstable when Sort Mode is set to By Distance.
+(1154497, 1162834)
+Particles: Fixed Particle System trails changing their size randomly when there is a Realtime Reflection Probe in the Scene.
+(1117520, 1162817)
+Particles: Fixed Particle Systems being scaled incorrectly when using Velocity render alignment.
+(1149730, 1162831)
+Particles: Fixed some ParticleSystems using the wrong texture when several of them are being rendered with different Textures.
+(1148610, 1162828)
+Prefabs: Fixed skybox and lighting for Prefab Mode environment scenes not working correctly. This requires the lighting settings of the environment scene to have Auto Bake disabled.
+(1112978, 1146201)
+SceneManager: Documentation of SaveAsPrefab now has a note about namebased replace.
+(1152708, 1153977)
+SceneManager: Fixed drag and drop replacing of prefab when dragging variant to project folder.
+(1152704, 1153980)
+SceneManager: Fixed Scene view skybox toggle not working in Prefab Mode if no Prefab editing environment scene is specified.
+(1153083, 1154311)
+Scripting Upgrade: Fixed crash during Asset GC with large managed collections.
+(1137077, 1165939)
+Scripting Upgrade: Fixed crash during async debugging.
+(1153078, 1165511)
+Shaders: Fixed surface shader include dependency handling on shader errors.
+(1002833, 1141229)
+Universal Windows Platform: Fixed InvalidOperationException is being thrown in Master build.
+(1137193, 1137193)
+Universal Windows Platform: Fixed reference rewriter complaining about managed code referencing fields from winmd files when those fields are of types that project to CLR from Windows Runtime.
+(1146307, 1159989)
+Universal Windows Platform: Fixed UnityEngine.WSA.Application.windowActivated and UnityEngine.WSA.Application.windowSizeChanged events not firing.
+(1146982, 1159984)
+Version Control: Fixed Prefab Editor overwriting files which are exclusively checked out in Version Control.
+(1027165, 1150747)
+Windows: Fixed builds that use IL2CPP scripting backend not starting on Windows 7.
+(1166764, 1167009)
+XR: Fixed an issued with Android app bundles which could cause XR Subsystems to fail to register. This would cause, for example, pose tracking to fail in ARFoundation.
+(1162654, 1162655)
+

@@ -1,0 +1,114 @@
+/unity/whats-new/2019.2.4
+Release notes
+Known Issues in 2019.2.4f1
+
+Cloud Diagnostics: USYM_UPLOAD_AUTH_TOKEN is thrown in Xcode when the Project is built in BatchMode with -runTests and Cloud Diagnostics enabled
+(1167025)
+Facebook Gameroom: [Facebook] Editor throw errors related to SDK after Facebook support installation
+(1142442)
+Graphics - General: Editor is lagging when modifying material properties
+(1094991)
+IL2CPP:  Build fails when compiling a struct with a long array inside it
+(1173310)
+Linux:  Bugreporter is collecting Editor.log from wrong location for 2019.2.0a7+
+(1176211)
+Mobile: [Android][IL2CPP] App crashes on 2019.1.0a12 and up on launch if old IL2CPP files from 2019.1.0a11 and below are backuped
+(1170543)
+Package Manager: The Package Manager UI does not refresh when you install or remove packages.
+(1148329, 1152868)
+Physics: Crash on block_remove when changing mesh to Plane in Skinned Mesh Renderer while cloth component attached
+(1162918)
+Physics: Plane with Cloth component is affected by high external force when in Play mode
+(1173813)
+Scene Management: 2019.3 and 2019.1 Unity versions are significantly slower when entering the play mode
+(1161373)
+Scene Management: Enabled Prefab is disabled after upgrading to Improved Prefabs
+(1138224)
+Scene Management: Transform::GetWorldToLocalMatrix  crash during first import when accessing Components in Prefabs
+(1159905)
+Scripting: Handles.Disc function performance is very slow in Scene View
+(1165684)
+Scripting: [Android][Mono][IL2CPP] "Unable to find libc" error thrown when executing certain SslStream constructor 
+(1022228)
+Scripting: [Templates] Clamp BlendShapes are set to true by default when creating new projects
+(1148638)
+Shuriken: WorldCollision crashes when spawning particles with World Collision enabled
+(1168859)
+XR: Cardboard projects default to 30 frames per second unless targetFrameRate is set to 60.
+(1143799, 1144492)
+
+2019.2.4f1 Release Notes
+System Requirements Changes
+Nothing changed.
+Fixes
+
+Android: Fixed the floating point render target on Android 4.
+(1149616, 1177515)
+Animation: Fixed a crash that was introduced due to a missing null check.
+(1168299, 1173429)
+Asset Import: Fixed UI refresh issue after clicking 'search and remap' in materials tab of ModelImporter.
+(1151346, 1175883)
+Build Pipeline: Storing the list of Resources that are meant for the player only.
+(1174623, 1174624)
+Graphics: Fixed an issue  with the debug rendering happening out of BeginFrame/EndFrame on Dx12.
+(1162859, 1163518)
+Timeline: Fixed a precision error on the duration of infinite tracks.
+(1156723, 1180458)
+Timeline: Fixed an exception that was thrown when calling TrackAsset.CreateMarker() with a marker that implements INotification if the track does not support notifications.
+(1150248, 1180467)
+Timeline: Fixed an issue where copying clips without ExposedReferences causing the scene to dirty.
+(1144469, 1179709)
+Timeline: Fixed an issue where playhead was being moved when applying undo while recording.
+(1154802, 1180463)
+Timeline: Fixed an issue where the context menu for inline curves keys would not open on MacOS.
+(1158584, 1179711)
+Timeline: Fixed an issue where the duration mode was not reverting from "Fixed Length" to "Based On Clips" properly.
+(1154034, 1180456)
+Timeline: Fixed an issue where two GatherProperties call were made when switching between two PlayableDirectors.
+(1159036, 1160428)
+Timeline: Fixed an issue with minimum clip duration not being frame aligned.
+(1156602, 1180464)
+Timeline: Fixed the preview mode being reenabled when warnings change on tracks.
+(1151381, 1180466)
+Timeline: Fixed warnings about localEulerAnglesRaw when using RectTransform.
+(1151100, 1180462)
+UI Elements: Fixed an issue where Calling BindProperty on a PropertyField doesn't work as intended.
+(1174517, 1179375)
+UI Elements: Fixed an issue with the url() function in USS not working with paths containing space.
+Video: Fixed an issue where a seek to a non-zero frame and then immediately a seek to 0 would Video freezes for a while.
+(1162426, 1171140)
+Video: Fixed an issue where seeking forward and backwards in a video causes sound delays on Android.
+(1167452, 1171130)
+Windows: Fixes UnityWebRequest so it'll honor the network Proxy 'bypass list' from Windows configuration
+(1165762, 1177679)
+XR: Fixed a memory issue in HoloLens SurfaceObserver.
+(1176047, 1176063)
+XR: Fixed an incorrect early update ordering for Tango platforms (ARCore).
+(1175133, 1178432)
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 12.04+, SteamOS+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 9.0 or higher.
+Android: OS 4.1 or later; ARMv7 CPU with NEON support or Atom CPU; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+

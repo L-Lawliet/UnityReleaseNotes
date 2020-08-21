@@ -1,0 +1,185 @@
+/unity/whats-new/2019.3.10
+Release notes
+Known Issues in 2019.3.10f1
+
+2D: Editor crashes during Sprite Atlas baking when not enough disk space is available
+(1228614)
+2D: Editor freezes on a broken project when editing a Scene using Tilemap
+(1221127)
+Animation: Crash on Animator::CreateInternalControllerPlayable when entering Play Mode
+(1227838)
+Animation: Crash on mecanim::CreateValueArray when setting Animator's Controller to Override Controller with no controller to override
+(1229421)
+Asset Import Pipeline: Editor crashes when importing prefab referencing scripts from precompiled libraries
+(1217707)
+Audio:  Editor crashes on changing 'System Sample Rate' when Audio track preview is being played in Timeline window
+(1232743)
+Audio: Crash on StackAllocator::WalkAllocations when there's a memory leak in Play mode
+(1225987)
+Audio: [Windows] Editor uses one CPU Logical Processor at 100% while the game is in Pause Mode
+(1219619)
+Global Illumination: Unity crashing when baking lights and generating light UV
+(1118524)
+Global Illumination: [OSX][GPUPLM]OS Kernel Panic crash with 'Thread may have been prematurely finalized' after baking the scene with AMD GPU
+(1160419)
+Global Illumination: [PLM] Baking stalls after disabling/enabling static gameobject
+(1144403)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - General:  'task.rasterData.vertexBuffer == NULL' errors when using a Particle System
+(1226357)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+MacOS: [Mac] Build support modules fail to install when downloading them using "Open Download Page" button in Builds Settings
+(1219284)
+MacOS: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+MacOS: macOS Native Plugins not detected or misplaced in Builds
+(1216171)
+Mobile: [iOS] Debug .pdb files are added to iOS release builds
+(1232798)
+Package: Errors are Constantly thrown when Active Input Handling is set to Input System Package
+(1176974)
+Profiling: Editor crashes when loading profiler file with memcpy stacktrace
+(1131782)
+Profiling: Missing Profiler.EndSample errors appear after switching profiling target
+(1181306)
+Profiling: Native object references for some object types are always 0 in the memory profiler
+(1234714)
+Profiling: [Profiler] Any dropdown list in Profiler Window doesn't expand the second time once collapsed until the mouse cursor is moved
+(1223087)
+Profiling: [Ubuntu]Unity hangs when Deep Profiling and Call Stacks are enabled.
+(918779)
+Project Browser: Parent and child nested Scriptable Object Assets switch places when parent Scriptable Object Asset is renamed
+(1189089)
+Scene Management: Editor crashes while assigning prefab variant to a reference on its base
+(1225758)
+Scene Management: Prefabs lose their values if scripts are removed then reintroduced
+(1216914)
+Scene Management: Unity Editor freezes/crashes when opening a specific Scene
+(1228147)
+Scripting: ManagedJobIndexPool runs out of indices when using a processor with a large amount of cores, crashes on exit
+(1204885)
+Shuriken: Crash on CreateDirect3D11SurfaceFromDXGISurface when calling DrawRenderer with a Trail Renderer
+(1216216)
+WebGL:  VideoPlayer is not rendered in WebGL builds when the video is loaded via URL
+(1188316)
+Windows: TDR Crash when opening a project with Image Sharpening enabled
+(1238022)
+Windows: Undocked windows does not run copy, cut, paste actions when they are executed from top menu
+(1191649)
+
+2019.3.10f1 Release Notes
+Fixes
+
+Animation: Fixed-Multiple warnings are thrown when loading a Scene with PlayableGraph playing
+(1210830)
+Asset Import: Changed ProcessAssetBundleEntries() to batch load assets using PersistenceManager rather than loading individually using PPTRs
+(1184551)
+Asset Import: FBX importer address issue where an object animated visibility was turning to invisible if parent of object was animated only for a sub-section of the child animation range.
+(1227394)
+Asset Import: Fix for case 1232463 - NullReferenceException thrown when selecting multiple model assets and having the animation tab open
+(1231164)
+Asset Import: Model importer was preventing the user from re-extracting textures
+(1172619)
+Asset Import: Significantly reduces import time of FBX models, particularly for those containing large meshes.
+(1219764)
+Asset Pipeline: Corrupted assets are cached and causes cache poisoning
+(1206193)
+Editor: Apply changes in Inspector correctly
+(1225161)
+Editor: Fix OnPreviewGUI method's background image is rendered grey instead of white when background image is set to white texture
+(1212892)
+Editor: Fixed EditorApplication.isPlaying is true in the first OnDisable() when entering Play mode with Play Mode Options enabled
+(1222935)
+Editor: Fixed potential graphics device resource leak when triggering long synchronous build tasks
+(1232294)
+Editor: Fixed the background image of popup windows in active state
+(1214816)
+Editor: fixes an issue where smart rounding was causing problems with large scale values with the Rect tool
+(1225799)
+Editor: Modal windows don't allow interaction with other windows until they are closed(affects EditorWindow.ShowModal() and EditorWindow.ShowModalUtility())
+Editor: Removed Entering Playmode with Reload Domain disabled message from a console window
+(1222922)
+GI: Fixed an issue with normals during bounce calculations in the GPU lightmapper, leading to large differences in brightness between the CPU and the incorrect GPU lightmapper.
+(1206157)
+GI: Fixed issue where clamp method was used wrongly.
+(1231877)
+Graphics: Correctly clear a render target before a compute pass
+(1226392)
+Graphics: Fixed memory leak when disabling texture mip streaming (after enabled)
+(1227997)
+Graphics: Fixed PS4 error, thrown when SkinWeight is set to more than 4 bones per vertex.
+(1202598)
+Graphics: Further fixes for loading 17.4 asset bundles in to later versions of Unity
+(1194120)
+Graphics: Mesh Yaml content could no longer be parsed properly leading to unitialized VertexBuffers causing crash.
+(1230188)
+Graphics: Removed some unnecessary warnings
+(1193536)
+Graphics: Shader.WarmupAllShaders() no longer submits a shader that uses VK_EXT_shader_viewport_index_layer without enabling it in context creation.
+(1215855)
+iOS: Copy across referenced images from the launch screen storyboard during build times.
+(1187103)
+iOS: Fixed crash when trying to use metal on simulator (this is supported starting with unity 2020.1)
+(1227049)
+iOS: Screen.SafeArea should be reported correctly after the app is paused and it's orientation is changed.
+(1190735)
+iOS: Screen.SafeArea should no longer reset to zeros after custom view is presented on iOS 13.
+(1190454)
+macOS: Fixed crash when running macOS editor in batchmode with no display attached
+(1219751)
+Particles: Fixed particle lights being re-rendered over multiple frames
+(1233190)
+Physics: Fix an issue where a BoxCollider2D with an EdgeRadius > 0 resulted in "Physics2D.queriesStartInColliders" being ignored.
+(1219837)
+Physics: Fix Physics.BakeMesh() not being able to reuse the same Mesh again
+(1197040)
+Prefabs: Fix: Error is thrown when moving components up/down in Prefab variant after pressing "Open Prefab"
+(1167440)
+Profiler: Reduced memory usage and optimized Timeline View generation in Profiler Window.
+(1203222)
+Scripting: Avoid allocation in Enum.HasFlags
+(1211643)
+Scripting: Fixed possible crash caused by race condition during startup when the script debugger and profiler systems are enabled.
+Scripting: Handle accessing unloading domains inside the debugger.
+(1013579)
+Serialization: Fix error where OcclusionData yaml file parsing was no longer working.
+(1228835)
+XR: CPU affinity detection was incorrect on 64-bit mobile Oculus builds.  This affected how many worker threads were created.
+(1232907)
+XR: Fix for excessive XR Shader Build times when buliding Player on Android
+(1228826)
+XR: Fix remoting return codes when connecting fails.
+
+Improvements
+
+Editor: When a compile error is emitted for an assembly, clear all compile errors for all assemblies that reference it directly or directly. This improves workflows when dealing with compile errors, as fixing an assembly's compile errors might also fix compile errors in any assemblies that reference the assembly directly or indirectly.
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

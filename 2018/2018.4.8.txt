@@ -1,0 +1,110 @@
+/unity/whats-new/2018.4.8
+Release notes
+2018.4.8f1 Release Notes
+Fixes
+
+2D: Sprite packing improvements for certain sprite arrangements.
+(1002004, 1174641)
+Android: Changed the message to be more clear for the end user when local storage is full.
+(1171893, 1174692)
+Android: Fixed performance penalty when using Vulkan on Android Q preview 5.
+(1169046, 1174595)
+Animation: Expose keyframe reduction options on GameObjectRecorder.SaveToClip().
+(1166522, 1169816)
+Animation: Fixed fetching of AnimationClip in override controller for Asset Bundles when AnimationClip is not yet loaded.
+(1165817, 1169827)
+Asset Import: Fixed assets saved from Excel, Word and similar applications failing to import correctly.
+(1037669, 1158652)
+Asset Import: Updated file opening to use FILE_SHARE_READ | FILE_SHARE_WRITE | FILE_SHARE_DELETE share mode when opening file for read on Windows.
+Build Pipeline: Fixed a crash on Standalone Player when assets with Editor only serialized properties.
+(1144591, 1165737)
+Build Pipeline: Fixed sprite sheets in asset bundles built by scriptable build pipeline crash on access.
+(1146568, 1167255)
+Deployment Management: Fixed an issue with throwing BuildFailedException from a build callback not failing the build.
+(1097286, 1159247)
+Editor: "Unsupported image when converting for NSImage" log is now a DebugAssert, which will prevent the assert from being logged on build machines.
+(1171194, 1172201)
+Editor: Fixed an error message when calling AssetDatabase.ImportPackage on a package that contains scripts.
+(1158305, 1165964)
+Editor: Fixed gradient editor window closing automatically when clicking on color picker.
+(1059666, 1161112)
+Editor: Fixed in issue where selecting a shader and viewing it in the inspector would cause materials to be kept around longer than required.
+(1162855, 1174895)
+Editor: Fixed incorrect colorspace for IMGUI in GameView.
+(1168191, 1173824)
+Editor: Fixed occasional crash when importing Compute Shaders for Metal
+(1171627, 1175330)
+Editor: Optimized the search for removed components for nested prefab.
+(1137064, 1159019)
+Graphics: Fixed an issue generating small mipmap levels for some DXTn/BCn formats.
+(1153511, 1169239)
+Graphics: Fixed excessive stripping of shaders without users keywords resulting in missing usage of vertex components and discarding them.
+(914736, 1149321)
+Graphics: Fixed issue which would cause the bounding box of a cloth component to be miscalculated.
+(879696, 1153167)
+Graphics: Fixed rare deadlock in CreateGpuProgram when multithreaded rendering is enabled on mobile devices.
+(1164492, 1174041)
+IL2CPP: Fixed an issue with IL2CPP not returning null when calling Activator.CreateInstance() with a nullable type, which is the expected behavior when compared to Mono and .NET.
+(1172280, 1173453)
+IL2CPP: Fixed an issue with IL2CPP where casting a negative float to an unsigned integer type would produce different results between x86 and ARM platforms.
+(1166109, 1173699)
+Kernel: Fixed player crash due to stack overflow in Loading.PreloadManager thread.
+(1162496, 1176882)
+Licenses: Added the ability to configure Licensing Client connection timeout values.
+(1171494, 1171498)
+Mobile: Fixed Android resolution changing in split-screen mode.
+(1145325, 1160383)
+Package Manager: Fixed an issue where updating a package in a project could fail with a permission error.
+(1174911, 1175427)
+Particles: Fixed a case where particle trails could flicker if their owning system used ParticleSystem.SetParticles in script during LateUpdate.
+(1155826, 1171471)
+Particles: Fixed a crash if using a non-read-write mesh from an Asset Bundle in the Particle System Shape Module.
+(1167081, 1171474)
+Particles: Fixed case where Auto Random Seed was ignored for the Emission Rate property.
+(1166733, 1171469)
+Particles: Fixed case where trails sometiems did not disappear.
+(1162394, 1171478)
+Particles: Fixed erroneous GetTransformInfoExpectUpToDate message.
+(1098990, 1171480)
+Physics: Fixed bodies not following their parent sometimes.
+(1140632, 1155357)
+Physics: Fixed crash that happened during simulation right after destroying a hierarchy of GOs that had nested Rigidbody components attached.
+(1122684, 1158547)
+Physics2D: Fixed implicitly created static ground-body beign shown in the static body count in the profiler 2D physics area.
+(1143465, 1148739)
+Prefabs: Fixed GameObjects and components with a DontSave flag (specifically DontSaveInEditor) showing up in the Prefab overrides dropdown since they don't get applied or reverted anyway.
+(1173465, 1175220)
+ps4: Fixed redirected webrequests.
+(1174833, 1176142)
+Scripting: Fixed issue with Assembly Definition File inspector not showing if Name field is empty.
+(1153357, 1158576)
+Scripting: Fixed issue with SerializedProperty.objectReferenceInstanceIDValue emitting asserts to the console.
+(1169801, 1171722)
+Scripting: Fixed serializedProperty.objectReferenceInstanceIDValue returns 0 for missing asset references.
+(1151910, 1157283)
+UI: Fixed issue with null TransformHierarchy while Updating RectTransform.
+(1102234, 1158045)
+UI: Fixed UI scaling incorrectly when using Constant Physical Size mode on android device.
+(1136224, 1161879)
+Vulkan: Fixed memory leak when using Vulkan.
+(1137290, 1148725)
+WebGL: Fixed Xbox One Gamepad triggers are not working in WebGL builds.
+(873218, 1173466)
+Windows: Fixed an animation bug in the PlayerSettings editor when it is included in the Universal Settings window.
+(1152070, 1158002)
+Windows: Fixed UnityWebRequest so it'll honor the network Proxy 'bypass list' from Windows configuration.
+(1165762, 1172900)
+XR: Fixed being unable to save world anchors to the store using holographic simulate in editor.
+(1156868, 1163556)
+XR: Fixed device apis coming back with incorrect values in Simulation.
+(1158726, 1163550)
+XR: Fixed editor crash when using holographic emulator with hololens.
+(1141385, 1163561)
+XR: Fixed hands selection no longer being controllable from script.
+(1152960, 1163553)
+XR: Fixed null dereference when accessing to vr eye texture manager instance.
+(1115371, 1171506)
+XR: Fixed WMR devices asserting when playing in editor.
+(1159961, 1159962)
+XR: Prevented Hololens application pausing when switching focus to a 2D view within a running application.
+

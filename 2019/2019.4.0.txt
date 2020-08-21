@@ -1,0 +1,96 @@
+/unity/whats-new/2019.4.0
+Release notes
+Known Issues in 2019.4.0f1
+
+Animation: [macOS] Inconsistent crash in objc_msgSend/objc_retain when previewing Animations with Animator window open
+(1242026)
+Global Illumination: [URP] Transparencies are ignored because URP uses _BaseMap as main texture identifier
+(1246262)
+Global Illumination: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+IAP: Unity purchasing gives error on project upgrade due to failing to find UnityEngine.UI assembly
+(1193773)
+Mono: Crash with various stack traces when exiting Play Mode after recompiling scripts
+(1238859)
+Physics: Crash after "[Physics.PhysX] Foundation: Invalid registration detected" errors show up when using Physics.BakeMesh
+(1200588)
+Scene/Game View: Line Renderer Edit Points in Scene View gizmo is not responsive in the Scene View
+(1244789)
+Scripting: Entering Playmode with Scene Reload disabled crashes when DestroyImmediate is used in OnDisable
+(1250550)
+Scripting: [SerializeReference] non-serialized Initialized fields lose their values when entering and during play mode.
+(1193322)
+Scripting: [SerializedField] fields produce "Field is never assigned to..." warning
+(1080427)
+Version Control: Temp/Package files are added to VCS after installing any package and having Automatic Add on
+(1250933)
+Vulkan: Crash on vk_optimusGetInstanceProcAddr when double clicking shader's Compiled Code drop down arrow
+(1248909)
+Windows: Cannot activate license within a docker container
+(1193364)
+
+2019.4.0f1 Release Notes (since 2019.3.15f1)
+Fixes
+
+2D: Use correct starting Z depth for IsometricZAsY Grids when calculating camera bounds for TilemapRenderer
+(1237963)
+2D: [Windows] Unity crashes when packing big amount of atlases
+(1219643)
+Android: Fixed an issue where master sprite atlases did not use the specified ETC2 fallback format
+(1175291)
+Animation: Fixed a bug where selected GameObjects are deleted when entering Play Mode and "Failed to unpersist" error is thrown
+(1222757)
+Asset Import: Adding multiple MonoBehaviour scripts on the same GameObject using OnPostprocessModel during a ModelImporter import does not log uniqueness warning on new assets. It still does log the message on already imported assets because all references to it would be lost otherwise.
+(1176912)
+Asset Import: Fixed an issue where files authored in earlier versions, which reference objects imported by scripted importers, might lose the link to those files
+(1189088)
+Asset Import: Fixed an issue where upgrading a project to Asset Database v2 could throw 'unknown script' errors
+Editor: Fixed an Editor issue on Windows where while in playmode and paused one or more CPUs would be utilized at 100%.
+(1219619)
+Editor: Fixed an issue where Editor crashes when Undo is performed.
+(1242926)
+GI: Fixed GI baking in batchmode when using Scriptable Render Pipelines.
+(1211448)
+GI: Fixed the lightmapper sometimes getting stuck, especially on undo after moving instances or changing resolutions.
+(1144403)
+Graphics: Fixed crash on VFXParticleSystem::RenderQuadIndirectCommand right before playing a Particle Quad in Play mode
+(1232862)
+Graphics: Fixed crash when trying to load RenderDoc while using OpenGL / DirectX12 Graphics API Backend.
+(1149494)
+Graphics: Fixed Graphics.DrawProcedural crash on old (pre-SSE4.2) CPUs, when using DX11 or DX12.
+(1241288)
+Graphics: Fixes a crash when requesting read back into NativeArray multiple times, or using a very small NativeArray.
+(1194440)
+IL2CPP: Fix JSON exception when building project with large number of scenes
+(1240780)
+IL2CPP: GetIPProperties().GatewayAddresses now properly runs on MacOS
+(1226597)
+iOS: Delete LaunchImage folder when doing iOS build.
+(1240800)
+Linux: Fixed Linux Editor's main window incorrectly scrolling the main window's contents when the mouse scrollwheel is used.
+(1130242)
+Linux: Fixed scroll mouse events not being parsed in the editor when the mouse cursor lock mode is set to locked.
+(1219781)
+macOS: Resolved crash that would happen when baking lighting using the GPU progressive lightmapper.
+(1160419)
+Scripting: Fix issue with AnimatorController not included when strip engine code is enabled
+(1156093)
+Scripting: Prevent statistics logging errors from impacting customers
+(1241238)
+Serialization: Make sure that we create managed instances that have empty classes when deserializing YAML data
+(1183547)
+Shaders: Fixed an issue with local keywords when using fallback shaders.
+(1238838)
+Shaders: Fixed broken shader variant tracking in the editor.
+(1169786)
+XR: Set the appropriate Vulkan usage flag for the fragment density map.
+
+Changes
+
+Multiplayer: Updated com.unity.multiplayer-hlapi package version from 1.0.4 to 1.0.6, automatically added when upgrading older projects
+(1152421, 1243934)
+XR: XRDevice.isPresent has been flagged as Obsolete and will be removed in the future.
+(1215467)
+

@@ -1,0 +1,28 @@
+/unity/whatsnew/unity-2017.4.16
+Release notes
+2017.4.16f1 Release Notes
+Improvements
+
+Android: Added experimental arm64 support
+Animation: Improved performance for Animators that don't use Animation Events or don't use State Machine Bhehaviours
+Package Manager: Loading the same service config as the Unity Editor and the Hub.
+
+Fixes
+
+2D: Fixed Collider2D only regenerates when Auto Tiling is enabled in Collider2D (1083871)
+Android: Fixed a crash when creating Texture2DArray in ETC format on Adreno 3xx on devices with Android 4.4 (1077349)
+Editor: Clarified size values presented by the Build Report. (1006704)
+Editor: Fixed an issue where the Unity credits in the About window may have appeared incomplete (978584, 1100122)
+Editor: Improved performance for EditorCompilation.CheckCyclicAssemblyReference, which would be very slow for projects with a large number of .asmdefs and many dependencies between them. (1095709)
+Graphics: Fixes a memory leak which can occur during job based rendering (1090901)
+Graphics: Fixes a race condition in the culling code that would free memory of a job that is still in-flight leading to a crash in the editor (1062032)
+Graphics: Fixes a synchronization issue that was exposed by fixing a race condition in the shadow culling code (1074200)
+iOS: Fixed wrong Screen.safeArea on iPhone on Start() (1085662)
+Package Manager: Fixed a vulnerability where a malicious attacker could access the local server from a script served on the internet by using DNS rebinding. This is fixed by validating the host header of all http requests.
+Physics: Improved performance when baking meshes offline. (1075709, 1091814)
+Shuriken: Fixed prewarm bug causing particles to emit incorrectly (1064065, 1081809)
+Timeline: Fixed crash happened when Timeline was outputting sound to a disabled Audio Source. (930758)
+UI: Add permanent interests to RectTransform hierarchy in order to catch changes inthe hierarchy.
+Windows: Fixed standalone player crashing on startup on machines where Citrix Workstation is installed. (1082241)
+
+Revision: 7f7bdd1ef0

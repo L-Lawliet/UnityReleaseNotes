@@ -1,0 +1,99 @@
+/unity/whats-new/2019.1.6
+Release notes
+2019.1.6f1 Release Notes
+System Requirements Changes
+Nothing changed.
+Improvements
+
+XR: Updated Vuforia to version 8.1.11.
+
+Fixes
+
+Animation: Fixed Bezier curve segments conversion to Hermite when evaluating Animation Curves with weighted tangents.
+(1124522, 1143423)
+Asset Import: Fixed alpha transparency enabling itself in import settings.
+(1117308, 1150834)
+Asset Import: Fixed assetBundle.LoadAsset returning null when the .asset bundle file is in the same folder as all its assets.
+(1140186, 1156153)
+Editor: Fixed calling FrameTimingManager.GetVSyncsPerSecond() crashing the Editor.
+(1148335, 1152183)
+Editor: Fixed several Inspector window layouting issues.
+(1134112, 1155406)
+Editor: Fixed Sorting Groups were not properly displayed in the Inspector Window.
+(1148706, 1155408)
+Editor: Fixed XR SDK list custom options collapsing when selected without pressing the drop down arrow.
+(1142001, 1147078)
+Graphics: Fixed hang during shutdown which could happen when running C# Jobs within a ScriptableRenderPipeline.
+(1142765, 1152343)
+IL2CPP: Corrected handling of exceptions in some try/finally situations.
+(1136256, 1152171)
+IL2CPP: Fixed a performance issue with lumped builds.
+IL2CPP: Fixed AppleTlsProvider error on iOS when Strip Engine Code is enabled caused by incorrectly falling back to AppleTlsProvider.
+(1134343, 1154766)
+IL2CPP: Handled the this reference passed to a method via an in parameter.
+(1143749, 1148116)
+Input: Fixed a button on knuckles controller not reporting.
+(1143824, 1143825)
+OpenGL: Fixed Video Player Leaks GfxDriver Memory.
+(1136233, 1148734)
+Package Manager: Fixed issues with samples display overlaps.
+(1140326, 1142540)
+Particles: Added error when calling Gradient.Evalute with a NaN.
+(1147106, 1154410)
+Particles: Ensure Force Fields belonging to disabled Game Objects do not affect any Particle Systems.
+(1149364, 1154411)
+Particles: Ensure particle trails start from exact particle spawning position.
+(1147999, 1154408)
+Particles: Ensured curve previews are updated when pasting component values.
+(972302, 1154414)
+Particles: Fixed a crash when a Particle System destroys itself with stop action "Destroy".
+(1147642, 1154409)
+Particles: Fixed an assert in debug builds due to invalid sampling of an Animation Curve in a rare edge case.
+(1111257, 1154412)
+Particles: Fixed flickering sub-emitter trails if sub-emitter particles are cleared before Particle System finishes playing.
+(1146677, 1154407)
+Particles: Fixed the  jitter when updating position in LateUpdate and using Custom Simulation Space.
+(1149016, 1154406)
+Particles: Fixed the glitches when rendering trails and using Custom Simulation Space together.
+(1092072, 1154413)
+SceneManager: Fixed Scene view skybox toggle not working in Prefab Mode if no Prefab editing environment scene is specified.
+(1153083, 1154310)
+SceneManager: Fixed Skybox and lighting for Prefab Mode environment scenes not working correctly. This requires the lighting settings of the environment scene to have Auto Bake disabled.
+(1112978, 1146200)
+Scripting: Fixed an issue where references to UnityEditor.iOS.Xcode might not be added to Visual Studio project files
+(1129177, 1153081)
+Scripting Upgrade: Fixed AssemblyUpdater.exe failing silently if Unity is installed to a path with spaces
+(1154131, 1154969)
+Timeline: Fixed copying a Control Clip during play mode throwing exceptions.
+(1141581, 1150614)
+Timeline: Fixed director controls being disabled in subtimelines.
+(1133836, 1151217)
+Timeline: Fixed invalid assets in the Timeline Clipboard not being cleared when going into or out of PlayMode.
+(1144473, 1150593)
+Timeline: Fixed issue where a Signal Emitter placed at the start of a timeline would be fired twice.
+(1149653, 1150586)
+Timeline: Fixed issue where an exception was thrown when clicking on a SignalEmitter with the Timeline window in asset mode.
+(1146261, 1150595)
+Timeline: Fixed issue where the Emit Signal property on a Signal Emitter would not get saved correctly.
+(1148709, 1150600)
+Timeline: Fixed playhead being drawn above bottom scrollbar.
+(1134016, 1150608)
+Timeline: Fixed resizing timeline window affecting its zoom value.
+(1147150, 1150589)
+Timeline: Fixed Signal Asset creation dialog throwing exceptions when canceled on macOS.
+(1141959, 1150602)
+Timeline: Fixed snap relaxing not responding to Command on Mac, instead of Control.
+(1149144, 1150611)
+Timeline: Fixed timeline not being played correctly when building a player with Mono and Managed Stripping Level set higher than Low.
+(1133182, 1150583)
+UI: Fixed performance issue with CanvasGroup getting notifications all the time.
+(1149387, 1153402)
+UI Elements: Fixed PropertyField layouting issue with vector data types.
+(1145908, 1155409)
+UI Elements: Fixed UIElements not rendering on OpenGL Core 4.3 and 4.4.
+(1146281, 1146291)
+Version Control: Fixed Script Execution Order inspector "Apply" button in some cases throwing errors under Perforce.
+(1153207, 1153406)
+XR: Fixed source state assert if there are no source states to get in Windows MR Gesture Recognizer.
+(1152462, 1156185)
+

@@ -1,0 +1,18 @@
+/unity/whatsnew/unity-2018.2.14
+Release notes
+Fixes
+
+Asset Pipeline: Fixed crash when importing FBX containing a CameraSwitcher node. (1083284, 1086520)
+Build Pipeline: Clarified size values presented by the Build Report. (1006704)
+Editor: Fixed shift+delete project asset deletion not working. (1057094, 1062584)
+GI: Fixed an issue where, in forward rendering, no shadow casting light using LPPVs would use baked occlusion even if they should not.
+Graphics: Fixed dynamic batching with tangents and unused normals. (1069184)
+iOS: Fixed TLS error using WebSockets when certificate chain includes root certificate. (1082184, 1091206)
+Mobile: Fixed a crash when creating Texture2DArray in ETC format on Adreno 3xx on devices with Android 4.4. (1077349)
+Particles: Fixed some confusing behaviour and messages regarding non-read/write meshes on the shape module and renderer. (1084398, 1084858)
+Scripting: Fixed error in CSharpNameParser when parsing conditional directives. (1077417)
+Video: Fixed Video build error on headless server. (1053877)
+VR: Fixed issue of error spam when depth buffer sharing was enabled during Holographic Remoting or Simulation. (1047269)
+Vulkan: Fixed [iOS] Crash in Animator Controller destructor with DeallocateResources. (1046701)
+
+Revision: 3262fb3b0716

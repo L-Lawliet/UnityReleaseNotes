@@ -1,0 +1,21 @@
+/unity/whats-new/2017.4.34
+Release notes
+Known Issues in 2017.4.34f1
+
+Asset Bundles: Loading.LockPersistentManager object lock impacts performance during AssetBundle.LoadAssetAsync operation
+(827299)
+iOS:  Apps with UIApplicationExitsOnSuspend in info.plist failing to pass Apple Store validation
+(1160614)
+uGUI: RectTransofrm resets it's coordinates to zero when selecting "Apply" on prefab even if no changes were made
+(964111)
+
+2017.4.34f1 Release Notes
+Fixes
+
+Android: Fixed an out of memory issue happening on Adreno devices on GLES.
+(1111097, 1118824)
+IL2CPP: Prevented a possible crash on iOS 12.0 on certain devices when a managed exception occurs.
+(1185656)
+Scripting: Fixed Produce a warning and prevent warnings spamming when trying to insert menu item when the insertion limit is reached.
+(1181898, 1187861)
+

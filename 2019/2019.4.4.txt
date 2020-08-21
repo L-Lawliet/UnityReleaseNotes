@@ -1,0 +1,123 @@
+/unity/whats-new/2019.4.4
+Release notes
+Known Issues in 2019.4.4f1
+
+AI: Editor crashes on MemoryManager::GetAllocator when selecting NavMeshAgent Component in the Inspector window
+(1257220)
+Animation: Inspector not displaying state and transition properties once duplicated
+(1251586)
+Asset Bundles: [Performance Regression] AssetBundleLoadAllAssets - Load_Prefabs_AllAssets is significantly slower than 18.4
+(1203512)
+Asset Bundles: [Performance Regression] AssetBundleLoadSingleAssets : LoadAsync_Prefabs_SingleAssets is significantly slower than 18.4
+(1203511)
+Cloth: Cloth has graphical artifacts when an object moves out of the camera
+(1254174)
+CodeEditors: Crash with __pthread_kill + 10 when debugging with Rider
+(1241352)
+Global Illumination: [URP] Transparencies are ignored because URP uses _BaseMap as main texture identifier
+(1246262)
+Global Illumination: [macOS] BugReporter doesn't get invoked when the project crashes
+(1219458)
+Global Illumination: gi::InitializeManagers() takes 0.6s during Editor startup
+(1162775)
+Graphics - General: Crash on GetRenderPipelineScript when opening a specific project
+(1230177)
+IAP: Disabling and re-enabling IAP in services window throws multiple errors about failing to find assemblies
+(1193774)
+IAP: Unity purchasing gives error on project upgrade due to failing to find UnityEngine.UI assembly
+(1193773)
+IMGUI: Crash on __pthread_kill when trying to open SteamVR Input window
+(1211288)
+IMGUI: Editor crashes when using WebView_CUSTOM_AllowRightClickMenu
+(1249548)
+Linux:  Having same case-insensitive named assets causes infinite import looping
+(1194431)
+MacOS: [Mac] Many artifacts can be seen in Scene View when Scene Light is enabled and HDR is on with Metal API and Mac OS X 10.15.4
+(1240265)
+Packman: Asset Store 'Complete Projects' overwriting Project Settings with no warning
+(1255256)
+Scripting: [SerializeReference] Polymorphic instances are always recreated when applying any inspector value change
+(1193322)
+Scripting: [SerializedField] fields produce "Field is never assigned to..." warning
+(1080427)
+Shadows/Lights: Skybox lighting is not rendered after creating gameobjects in the new scene until the lighting is rebaked
+(1250293)
+Vulkan:  Crash on vk_optimusGetInstanceProcAddr when double clicking shader's Compiled Code drop down arrow
+(1248909)
+Window Management: ReloadAssembly -> EndReloadAssembly processing freezes Editor for minutes
+(1253165)
+Windows: Cannot activate license within a docker container
+(1193364)
+
+2019.4.4f1 Release Notes
+Fixes
+
+2D: Fix error thrown when SRP is used with a TilemapRenderer in Individual mode whose chunk culling bounds are changed.
+(1251456)
+2D: Fix generation of collider shapes for TilemapCollider2D with AnimatedTiles while tile is animated
+Asset Import: Fixed an issue where clips did not fill the entire timeline in the Animation Inspector.
+(1202394)
+Asset Import: Fixed AssetDatabase:ImportAsset instability sometimes fails LiveLink and package CI runs.
+(1248364)
+Asset Pipeline: Fixed issue triggering Asserts
+(1238301)
+Editor: Disabled the Texture2D editor in inspector debug mode.
+(1197056)
+Editor: Fixed callbacks to SceneClosing and SceneClosed in some situations.
+(1003257)
+Editor: Fixed not being able to build with Linear Color Space after resetting Player Settings
+(1163436)
+Editor: Makes shortcuts value based instead of location based in the Linux editor thereby making shortcuts consistent for all keyboard layouts.
+(1186110)
+Editor: Objective C and Objective C++ plugin files will now be included when building a project with the IL2CPP backend.
+(1189679)
+Graphics: Add a getter for GameObject scene culling mask.
+(1248283)
+Graphics: Fix incorrect uploading of builtin shader parameters such as view, proj, viewProj matrices in some rare situations.
+Graphics: Fixed a crash when SetGlobalConstantBuffer was called with a null buffer.
+(1254370)
+Graphics: Fixed a crash when using the Inspector to select a different Mesh for a SkinnedMeshRenderer.
+(1230006)
+iOS: fixed Screen.orientation being Unknown for several frames at startup
+(1251276)
+Package Manager: Fixed correctly building scripts against the currently enabled built-in packages at editor startup time.
+Particles: Don't try to use GPU Instancing on devices that can't do Structure Buffer reads in Vertex Shaders.
+(1255008)
+Physics: Fixed an issue where Physics.BakeMesh would not manage calls from multiple threads correctly.
+(1200588)
+Scripting: Debugger improvements and crash fixes
+(1249172)
+Scripting: Fix an error for async debug of a generic method
+(1241280)
+Scripting: Fixed crash that was occurred when the managed debugger would attempt to load a pdb that had zero sequence points
+(1241344)
+Scripting: Fixing case where ArrayTypeMismatchException was being thrown incorrectly
+(1235903)
+
+System Requirements
+For development
+OS: Windows 7 SP1+, 8, 10, 64-bit versions only; macOS 10.12+. (Server versions of Windows & OS X are not tested.)
+CPU: SSE2 instruction set support.
+GPU: Graphics card with DX10 (shader model 4.0) capabilities.
+The rest mostly depends on the complexity of your projects.
+Additional platform development requirements:
+
+iOS: Mac computer running minimum macOS 10.12.6 and Xcode 9.4 or higher.
+Android: Android SDK and Java Development Kit (JDK); IL2CPP scripting backend requires Android NDK.
+Universal Windows Platform: Windows 10 (64-bit), Visual Studio 2015 with C++ Tools component or later and Windows 10 SDK
+
+For running Unity games
+Generally content developed with Unity can run pretty much everywhere. How well it runs is dependent on the complexity of your project. More detailed requirements:
+
+Desktop:
+
+OS: Windows 7 SP1+, macOS 10.12+, Ubuntu 16.04+
+Graphics card with DX10 (shader model 4.0) capabilities.
+CPU: SSE2 instruction set support.
+
+iOS player requires iOS 10.0 or higher.
+Android: OS 4.4 or later; ARMv7 CPU with NEON support; OpenGL ES 2.0 or later.
+WebGL: Any recent desktop version of Firefox, Chrome, Edge or Safari.
+Universal Windows Platform: Windows 10 and a graphics card with DX10 (shader model 4.0) capabilities
+Exported Android Gradle projects require Android Studio 3.4 and later to build
+

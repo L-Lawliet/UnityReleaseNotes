@@ -1,0 +1,34 @@
+/unity/whats-new/2018.4.22f1
+Release notes
+Known Issues in 2018.4.22f1
+
+Animation: Animator.Update CPU time spikes when multiple animations are playing
+(1184690)
+Graphics - General:  'task.rasterData.vertexBuffer == NULL' errors when using a Particle System
+(1226357)
+Package Manager: Immutable packages altered by the API Updater are reverted to their original state when packages are resolved, which can lead to slower import performance in that context.
+Scene Management: Prefab Variant Transform fileId changes
+(1238280)
+Scene Management: Unity Editor freezes/crashes when opening a specific Scene
+(1228147)
+Shuriken: Crash on CreateDirect3D11SurfaceFromDXGISurface when calling DrawRenderer with a Trail Renderer
+(1216216)
+macOS: If the Android Tools are not installed through the Hub, macOS 10.15 (Catalina) default security settings will prevent the Android NDK binaries being executed. These settings have to be changed or a signed Android NDK (r16b) will be needed to build Android. More information here: https://developer.android.com/ndk/downloads/older_releases.
+
+2018.4.22f1 Release Notes
+Fixes
+
+Android: Fixed a crash after executing Application.Quit() when using IL2CPP.
+Build Pipeline: Fixed an issue which was preventing mesh compression on iphone when building with the scriptable build pipeline.
+(1222846)
+Graphics: Removed some unnecessary warnings.
+(1193536)
+iOS: Fixed an issue where a custom storyboard might not be found at runtime.
+(1225171)
+MacOS: Fixed an issue that prevented the Game Center UI from showing on macOS.
+(1215479)
+Profiler: Fixed an Editor crash when loading corrupted profiler data.
+(1131782)
+Universal Windows Platform: Enabled the Lightmap Encoding options for UWP player settings.
+(1225842)
+

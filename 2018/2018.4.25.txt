@@ -1,0 +1,84 @@
+/unity/whats-new/2018.4.25
+Release notes
+Known Issues in 2018.4.25f1
+
+Animation: Animator.Update CPU time spikes when multiple animations are playing
+(1184690)
+Asset Importers: Crash on VertexDeclarationD3D11::GetInputLayout when importing a broken FBX file
+(1239074)
+Audio:  Editor crashes on changing 'System Sample Rate' when Audio track preview is being played in Timeline window
+(1232743)
+MacOS: [Mac] Many artifacts can be seen in Scene View when Scene Light is enabled and HDR is on with Metal API and Mac OS X 10.15.4
+(1240265)
+Package Manager: Immutable packages altered by the API Updater are reverted to their original state when packages are resolved, which can lead to slower import performance in that context.
+Profiling: Performance issue in "Profiler" UI with increasing number of events
+(967289)
+Scene Management: Unity crashes when opening a project with two identical scenes, one of them being unloaded
+(1069650)
+macOS: If the Android Tools are not installed through the Hub, macOS 10.15 (Catalina) default security settings will prevent the Android NDK binaries being executed. These settings have to be changed or a signed Android NDK (r16b) will be needed to build Android. More information here: https://developer.android.com/ndk/downloads/older_releases.
+
+2018.4.25f1 Release Notes
+Fixes
+
+Android: Allow Android's OS setting to force rendering outside safe area.
+(1223467)
+Android: Fix Cutout is calculated incorrectly when device is not in full screen mode.
+(1204141)
+Android: Fixed an issue where Gradle builds could fail if a settings.gradle file exists in the root of the project
+(1164013)
+Animation: Fixed crash when using binary2text on *.bundle with Playable Director
+(1184027)
+Asset Bundles: Fixed handling of shaders in Asset Bundles to make them more deterministic
+(1255960, 1255970)
+Asset Import: Fixed assert errors of memory leak when EditorSceneManager.NewScene is called in OnPostprocessAllAssets.
+(1249386)
+Editor: Fire SceneOpening/SceneOpened callbacks when scene reloaded
+(1147043)
+Editor: Fixed game view flickering when resizing it while frame debugger is enabled.
+(1231978)
+Editor: Fixed not being able to build with Linear Color Space after resetting Player Settings
+(1163436)
+Editor: Fixed the Shuriken Icon issue in inspector.
+(1198543)
+Graphics: Fix incorrect uploading of builtin shader parameters such as view, proj, viewProj matrices in some rare situations on Nintendo Switch.
+Graphics: Fix issue where SRP would allocate memory each frame
+(1165372)
+Graphics: Fixed crash when using lines/trails with command buffers.
+(1216216)
+Graphics: Fixed Visible AO artifact on XBOX ONE
+(1167455)
+IL2CPP: Fixed crash when null is thrown in a try block
+(1248335)
+IL2CPP: Generate less source code for managed debugging.
+(1205136)
+IL2CPP: Throw a System.IO.FileNotFoundException exception when a file is not found for UWP builds.
+(1248611)
+iOS: Fixed iPhone bluetooth controller buttons not registering input
+(1241180)
+macOS: Fixed issue where the color picker would select the wrong color when using a non-sRGB color profile on your monitor.
+(1218845)
+Mobile: Prevent iOS/tvOS simulator builds from being appended with device builds
+(1216005)
+Particles: Disabled Particle System "Open In Editor" button when editing a preset.
+(1198545)
+Particles: Fixed deselect when clicking a preset ParticleSystem icon.
+(1198545)
+Particles: Fixed sub-emitters using the wrong position when first emitting.
+(1247219)
+Scripting: Fixed the editor crash with popup "The file 'MemoryStream' is corrupted!"
+(1244125)
+Switch: Fixed an issue where tightly packed neighboring compute constants overwrite each other when set.
+(1225604)
+Switch: Fixed support for rendering into cubemap faces
+(1171657)
+UI: Dirty the canvas batch when a element is enabled. This will ensure it gets put back into the render order
+(1077708)
+UI: Fixed UI Flickers in Game View when Camera.Render is Selected in the Frame Debugger
+(1172637)
+XR: Fixed order of single-pass instancing shader variables for gles3
+(1187259)
+
+Changes
+
+Package Manager: Updated the Package Manager UI package to 2.0.13.
+

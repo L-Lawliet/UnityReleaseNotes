@@ -1,0 +1,18 @@
+/unity/whats-new/2017.4.18
+Release notes
+Fixes
+
+2D: Fixed a crash when packing certain Sprite Atlas on Android. (1017666, 1101608)
+Android: Fixed Android Gradle manifest merging when plugins are missing SDK target version in manifest. (1084622, 1090922)
+Android: Texture2DArray and Texture3D now check if the filtering mode is supported by the GPU and downgrade when necessary. (1066181)
+IL2CPP: Fixed crash when using StructLayout attribute and specifying a Pack value. (1099207)
+iOS: Fixed a crash when using using static const std::string in Xcode 9. (1050875, 1102753)
+iOS: Fixed AudioClips with future timestamps import issue. (951169, 1104104)
+Kernel: Fixed an issue which could cause an error when reading files from disk. (1092419)
+Mobile: Android gradle daemons are now killed when the editor is shut down instead of after every build. (1041385)
+Package Manager: Fixed an issue where errors were not handled in a consistent manner when a package cannot be found on the registry.
+Shaders: Allow loading shaders from AssetBundles that were created in 2017.2. (1091064)
+WebGL: Fixed camera viewport rect bug in WebGL + Linear color space. (957652)
+WebGL: Fixed canvas resize when using Linear color space. (977579)
+
+Changeset: a9236f402e28

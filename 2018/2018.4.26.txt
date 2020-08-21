@@ -1,0 +1,117 @@
+/unity/whats-new/2018.4.26
+Release notes
+Known Issues in 2018.4.26f1
+
+Animation: Animator.Update CPU time spikes when multiple animations are playing
+(1184690)
+Asset Importers: Crash on VertexDeclarationD3D11::GetInputLayout when importing a broken FBX file
+(1239074)
+MacOS: [Mac] Many artifacts can be seen in Scene View when Scene Light is enabled and HDR is on with Metal API and Mac OS X 10.15.4
+(1240265)
+Package Manager: Immutable packages altered by the API Updater are reverted to their original state when packages are resolved, which can lead to slower import performance in that context.
+macOS: If the Android Tools are not installed through the Hub, macOS 10.15 (Catalina) default security settings will prevent the Android NDK binaries being executed. These settings have to be changed or a signed Android NDK (r16b) will be needed to build Android. More information here: https://developer.android.com/ndk/downloads/older_releases.
+
+2018.4.26f1 Release Notes
+Fixes
+
+AI: Resolves an issue where NavMeshQuery::Raycast could get stuck in an infinite loop if the NavMesh contains degenerate polygons.
+(1254813)
+Android: Fixed an issue when using blend shapes with GPU skinning on older Adreno devices with OpenGL ES.
+(1253349)
+Android: Fixed memory leak when resolving stacktraces on ARM64, for ex., when calling Debug.Log.
+(1235461)
+Animation: Fixed animation does not play correctly when Optimized Game Object functionality is used.
+(1185568)
+Asset Import: Fixed an issue where clips did not fill the entire timeline in the Animation Inspector.
+(1202394)
+Asset Pipeline: Prevent PluginImporter importing from root folders in registered asset folders.
+(1193341)
+Audio: Fixed editor crash on changing 'System Sample Rate' when Audio track preview is being played in Timeline window.
+(1232743)
+Build Pipeline: Reduce amount of garbage collection performed inside the ContentBuildInterface.
+Editor: Fixed crashing when loading a project with duplicate scenes.
+(1069650)
+Editor: Fixed editor performance regression due to too many GetTreeViewFolderSelection calls.
+(1244193)
+Editor: Fixed issue causing clicking on Debug.Log(...) entries in the console window to fail to open source files in various situations.
+(1181364)
+Editor: Fixed issue with RuntimeInitializeOnLoadMethodAttribute not working in players builds inside player-only code blocks and inside player-only .asmdef assemblies.
+(1071599)
+Editor: Fixed tab dragging on Windows from a secondary monitor where the taskbar is on the left edge of the screen.
+(1233409)
+Graphics: Fixed Editor view repaint causing geometry explosion randomly.
+(1267126)
+Graphics: Fixed occasional "Invalid memory pointer" error when a GPU instanced mesh particle system is visible.
+(1256196)
+Graphics: Fixed warmup of shaders with instancing variant crashing on some graphics api.
+(1245347)
+Graphics: Solved performance issues with reflection probe anchors when reloading scenes.
+IL2CPP: Added handling for enum types with more than 32784 fields.
+(1258202)
+IL2CPP: Corrected Array.CreateInstance(Type, int[], int[]) to create an SZ_ARRAY when passed rank of {1} and lower bounds of {0}.
+(1217556)
+IL2CPP: Fixed ArgumentException thrown in Socket constructor when using Windows SDK 10.0.19041.0.
+(1251011)
+IL2CPP: Fixed ARM64 release build failure that could occur in some circumstances.
+(1251628)
+IL2CPP: Fixed managed stacktrace resolving on old Android devices (5.0 and lower), previously stacktrace resolving would fail and would show zero frames, now it should show proper managed stacktrace.
+(1242285)
+iOS: Fixed crash in WebCamTexture when permission has been denied to the cameras.
+(1217018)
+iOS: Fixed occasional crash on exit coming from iOS calling [UIViewController prefersHomeIndicatorAutoHidden] or [UIViewController preferredScreenEdgesDeferringSystemGestures] after unity have been killed.
+iOS: Fixed storyboards sometimes still rotating to forbidden orientations on iOS 13+.
+(1266961)
+iOS: Fixed unintended storyboard rotation if device changes orientation during initial application loading.
+(1190428)
+iOS: Fixed xcode archive validation error when using custom storyboard.
+(1264496)
+iOS: On iOS13 it is now possible to customize launchscreen viewcontroller, so it will adhere to unity settings for statusbar appearance and enabled orientations.
+(1253671)
+macOS: Fixed issue where a system dialog pops up in batch mode after a previous crash.
+(1183783)
+macOS: Hide dock icon in batchmode.
+(1183783)
+Particles: Fixed crash when using ParticleSystemRenderer.BakeMesh with Mesh particles and GPU instancing.
+(1262125)
+Physics: Fixed an issue with cloth not updating its skinned mesh properly on the first frame it becomes visible.
+(1254174)
+Physics: Fixed an issue with cloth where having all particles pinned would cause the the bounds of its related SkinnedMeshRenderer to get corrupted.
+(1224213)
+Physics: Fixed an issue with Cloth.SetSelfAndInterCollisionIndices where setting a 0 length List would cause cloth to not clear it's internal array of indices.
+(1153027)
+Profiler: Fixed an issue that could cause the Editor to crash when selecting batch thumbnails in the UI Details Profiler module.
+(1241230)
+Profiler: Optimized frame stats calculation when selecting a sample in Profiler Window.
+(967289)
+Scripting: Debugger improvements and crash fixes.
+(1249172)
+Scripting: Fixed an error for async debug of a generic method.
+(1241280)
+Scripting: Fixed case where ArrayTypeMismatchException was being thrown incorrectly.
+(1235903)
+Scripting: Fixed crash that was occurred when the managed debugger would attempt to load a pdb that had zero sequence points.
+(1241344)
+Scripting: Fixed illegal modification of components on GameObject.
+(1022204)
+Shaders: Fixed a shader compiler crash when two cbuffers with the same name are declared within the same shader. This now results in a compilation error.
+(1242162)
+Shaders: Fixed an issue which was causing Shaders build on newer versions of Unity not to load on an older version within the same Minor Version patch set.
+(1252232)
+Shaders: Fixed an issue which would causes shader requirements not to be serialised correctly.
+Text: Fixed for GetPathsToOSFonts() not returning any valid font file paths on iOS.
+(1262883)
+TextCore: Fixed potential Array Out Of Bounds error when fetching Glyph Pair Adjustment records.
+(1262879)
+TextMeshPro: Fixed for GetPathsToOSFonts() not returning any valid font file paths on iOS.
+(1262883)
+TextMeshPro: Fixed potential Array Out Of Bounds error when fetching Glyph Pair Adjustment records.
+(1262879)
+UI: Fixed the issue where the vertices were not stripped for rich text in multi line.
+(1182818)
+XR: Added build error when attempting to build ARCore with invalid Graphics API targets.
+(1129305)
+XR: Fixed PhotoCaptureFrame apis when using Hololens 2.
+(1207427)
+XR: Recenters the Headset when Oculus' Reset View is called from the OS.
+(1159322)
+

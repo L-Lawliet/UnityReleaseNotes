@@ -1,0 +1,106 @@
+/unity/whats-new/2018.4.14
+Release notes
+Known Issues in 2018.4.14f1
+
+Animation: Animator.Update CPU time spikes when multiple animations are playing
+(1184690)
+Animation: Editor crashes with WalkTypeTree when enforcing T-Pose to avatar after clearing all bones mapping
+(1092815)
+Scene Management: Duplicated child nested prefab is not created in the same position
+(1157320)
+Shuriken: Billboard Particle System rolls in the Game View with "Allow Roll" disabled when a Camera is rotating around it
+(1081596)
+Shuriken: ParticleSystem.SetParticles crashes the Editor when writing particle list to array and Particle System has a size module enabled
+(1197761)
+Shuriken: Semaphore.WaitForSignal causes a slow editor when entering Play mode
+(1178300)
+uGUI: Upgrading the project results in missing System.Serializable UnityEvent function
+(1196591)
+
+2018.4.14f1 Release Notes
+Fixes
+
+2D: Fixed sprites atlas storing hash changes when atlas is built on a different machine.
+(1186887)
+AI: Fixed issue where changes in the bounds of the build sources causes UpdateNavMeshData() to be slow as it regenerate more portions of the NavMesh than necessary.
+(1183826)
+Android: Fixed Android cutout in non fullscreen mode and split view.
+(1183674)
+Android: Fixed the functionality of FatalError and AccessViolation ForcedCrashCategory's on POSIX platforms.
+(1142726)
+Asset Pipeline: Fixed re-serialization making changes to Nested Prefabs.
+(1162736)
+Editor: Added support for async method execution in batch mode.
+(1146672)
+Editor: Fixed "stackTraceLogType" command line argument.
+(1181994)
+Editor: Fixed a performance regression in the test runner api result reporting, introduced in 2018.3.
+(1109865)
+Editor: Fixed bug where crash reports wouldn't be available.
+(1192488)
+Editor: Fixed crash when calling RenderTexture.ReleaseTemporary twice for same texture.
+(1091561)
+Editor: Fixed crash when calling TextureImporter.ReadTextureSettings with a null argument.
+(1187147)
+Editor: Fixed editor crash on switching target platform when project contains a dll asset with a define constraint.
+(1164392)
+Editor: Fixed Editor freeze if Profiler is unable to connect to Player.
+(1008321)
+Editor: Fixed UnityEngine.MinAttribute not restricting the value of a variable when using the Inspector window.
+(1183703)
+Graphics: Fixed an issue where Meshes with Keep Quads enabled would not be rendered.
+(1179051)
+Graphics: Fixed crash in dynamic batching when mesh still has indices but misses vertex data.
+(1158179)
+Graphics: Fixed sprite artifacts in Metal Editor support.
+(1184453)
+iOS: Automatically Sign setting in Editor and Xcode project is now in Sync, and the default Automatically Sign setting in Editor is now set to False.
+(1170274)
+iOS: Fixed accelerometer not completely decoupled from gyroscope as it should be.
+(1085244)
+iOS: Fixed incorrect dpi shown on iPhone 11 pro.
+(1187030)
+macOS: [MacOS] Fixed issue where you could not switch to Windowed mode via script when Allow FullScreen option was disabled.
+(1080571)
+Mobile: Fixed issue 1154440, aspect ratio will be respected properly on devices running Android 7.0 and below as well as 8.0 and above now.
+(1154440)
+Package Manager: Fixed packages not correctly loaded if the project path contained non-ASCII characters.
+(1186344)
+Physics: Fixed a crash that happened when a MeshCollider overlapping a trigger got its sharedMesh set to null and then immediately destroyed.
+(1155827)
+Physics: Fixed an issue with Cloth where changing a SkinnedMeshRenderer's Mesh would cause the Editor to crash.
+(1162918)
+Profiler: Fixed an issue where console errors appear while displaying UI Details in the profiler window.
+(1190589)
+Profiler: Fixed CPU profiler changing it's view type back to Timeline on entering PlayMode.
+(1175479)
+Profiler: Fixed Profiler Window reopening to CPU Profiler Details pane when all charts are closed.
+(1185208)
+SceneManager: Fixed editor crash when using terrainData.splatPrototypes and Terrain's layer assets aren't found View on Crashes HQ.
+(1143775)
+Scripting: 50% GC allocation improvement in logging methods.
+(1174548)
+Scripting: Fixed crash when calling System.Diagnostics.Process APIs after domain reload.
+(1194176)
+Shaders: Fixed broken shaders on asset bundles built with 2017 or older version of Unity.
+(1195750)
+Terrain: Terrain loaded via Asset Bundles & Player data retains and consumes it's own shader list and falls back to Shader. Find only when an error occurs.
+(1122023)
+Timeline: Fixed copying a Control Clip during play mode throwing exceptions.
+(1141581)
+UI: Fixed CanvasRenderer's not respecting current sorting layer / sibling order.
+(1176348)
+Version Control: Fixed for a bug where ignored/unmapped files in Perforce workspaces would cause logspam to appear when selected.
+(1148796)
+Windows: Fixed 'localhost' not excluded from Proxy causing Editor components to fail.
+(1194537)
+Windows: Multi-display: Fixed non-primary display aspect ratio in windowed mode.
+(1134231)
+XR: Fixed Holographic Emulation Window remoting bug that caused Unity to remote to Hololens 1 devices when Hololens 2 was selected.
+XR: Fixed remoting to V2 devices from UWP x64 apps.
+
+Changes
+
+XR: Updated to Oculus 1.38 plugin and added support for valid tracking poses even when devices aren't fully tracked.
+(1197386)
+
